@@ -1052,9 +1052,10 @@
 	
 	#about {
 		.blurb-container {
+			width: 1250px;
 			height: 450px;
 			border: 1px solid $dark;
-			background: url(../img/olga.jpg) no-repeat top left;
+			background: url(../img/lg/olga.jpg) no-repeat top left; 
 		}//row
 		.blurb {
 			height: 100%;

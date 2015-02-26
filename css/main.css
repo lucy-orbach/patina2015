@@ -9204,9 +9204,10 @@ footer {
   }
 
   #about .blurb-container {
+    width: 1250px;
     height: 450px;
     border: 1px solid #33261c;
-    background: url(../img/olga.jpg) no-repeat top left;
+    background: url(../img/lg/olga.jpg) no-repeat top left;
   }
   #about .blurb {
     height: 100%;
