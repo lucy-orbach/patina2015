@@ -1,0 +1,51 @@
+// $off:  #fefdfa;
+$sand:  #fefaf3;
+$zepia: #e4dccc;
+// $olive: #54573b;
+
+$ocre: #f39605;
+$ocre-lt: #fbbd5c;
+
+
+$brown: #473b31;
+$dark: #33261c;
+
+
+
+
+
+
+
+/* mix-in */
+@mixin transBr(){
+	background-color: transparentize($dark, 0.1);
+	a {
+		color: $ocre-lt;
+	}
+	a:hover {
+		color: ocre;
+	}
+}
+
+@mixin shadow( $hv:2px, $vv:1px) {
+	-webkit-box-shadow: $hv $hv $hv $vv  rgba(0,0,0, 0.3);
+	-moz-box-shadow: $hv $hv $hv $vv rgba(0,0,0, 0.3);
+	box-shadow: $hv $hv $hv $vv rgba(0,0,0, 0.3);
+}
+
+@mixin transition($prop:all, $time:0.8s) {
+  transition: $prop $time; 
+}
+
+@mixin sprite( $size:100%) {
+  background: url(../img/sprites.png) no-repeat;
+  background-size: $size;
+}
+
+@mixin radius ( $rad:20px) {
+  -webkit-border-radius: $rad;
+  -moz-border-radius: $rad;
+  border-radius: $rad;
+}
+
+

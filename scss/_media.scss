@@ -1,0 +1,1175 @@
+//******** MOBILE XSM 15px ******
+@media only screen and (max-width: 767px) {
+	.hidden-xs {
+		display: none !important;
+	}//hidden-xs
+	.navbar {
+		.navbar-toggle {
+			padding-top: 12px;
+		}
+		.icon-bar {
+			background-color: $ocre-lt;
+		}
+		.navbar-brand {
+  		font-size: 24px; 
+		}//navbar-brand
+		.contact {
+			display: none;
+		}
+	} //navbar
+	.navbar.cases-head {
+		li{
+			width: 50%;
+			&:first-child {
+				text-align: left;
+			}
+			&:last-child {
+				text-align: right;
+			}
+		}
+	}//caseshead
+
+	.jumbotron {
+		background: url('../img/xsm/bowtieXSM.jpg') no-repeat top center;
+		.container {
+			padding-top: 30px;
+			padding-bottom: 20px;
+		}
+		h1 {
+			font-size: 30px;
+		}
+	}//jumbotron
+	
+	.section {
+		padding: 50px 0px 20px;
+		text-align: center;
+		h2 {
+			font-size: 18px;
+			margin-bottom: 20px;
+		}//navbar-brand
+		h6.mobile-only {
+			margin-top: 50px;
+		}
+	}//section
+
+	#imgNav {
+		ul * {
+			height: 90px;
+		}//ul
+		li {
+			&:first-child .txt-container {
+				border-top: 1px dotted $ocre-lt;
+			}//first-child
+			&:nth-child(2) .txt-container {
+				padding-top: 20px;
+			}//second child
+		}//li
+		.img-container {
+			position: absolute;
+			width: 90px;
+			height: 100%;
+			padding: 0px;
+			margin: 0px;
+			background: $ocre url('../img/xsm/sprites-idx.jpg')no-repeat center top;
+			&.srv {
+				background-position: 0px 0px;
+			}
+			&.about {
+				background-position: -200px -0px;
+			}//about
+
+		}//img-container
+		.txt-container {
+			position: relative;
+			height: 100%;
+			float: right;
+			padding: 13px 30px 10px 20px;
+			margin: 0px;
+			border-bottom: 1px dotted $ocre-lt;
+			&:after {
+				content: "\e080";
+				position: absolute;
+				right: 10px;
+				top: 30px;
+				padding-left: 10px;
+				color: $zepia;
+				@include transition();
+			}//after
+		}//txt-container
+		h4 {
+			color: $dark;
+			text-align: left;
+			@include transition();
+		}//h4
+		li:hover {
+			.txt-container:after {
+				color: $ocre;
+				@include transition();
+			}//after
+			h4 {
+				color: $ocre;
+				@include transition();
+			}//h4
+		}//li:hover
+	}//imgNav
+
+	#services {
+		background: $sand url('../img/xsm/services.jpg') no-repeat center 50px;
+			padding: 70px 15px;
+		.container {
+			margin: 15px;
+			padding: 10px;
+			//background-color: transparentize($sand, 0.3);
+			//@include shadow();
+		}
+	}//services
+	
+	#about {
+		padding-top: 0;
+		.container {
+			padding: 0px;	
+		}
+		.img-container {
+			width: 100%;
+			height: 250px;
+			background: url('../img/xsm/olga.jpg') no-repeat top left;
+			background-size: 100%;
+		}//img-container
+		.testimonials {
+			li {
+				padding-bottom: 30px;
+				margin-bottom: 15px;
+				border-bottom: 1px dotted $zepia;
+			}
+		}
+	}//about
+
+	#caseWall {
+		.container {
+			padding: 20px 0px;
+		}//container
+		.frame {
+			height: 140px;
+			padding: 10px 5px;
+			border-bottom: 1px dotted $ocre;
+			overflow: hidden;
+			@include transition();
+			a {
+				color: $dark;
+			}//a
+			&:hover {
+				background-color: $zepia;
+				@include transition();
+			}
+		}//frame 
+		.details {
+			position: relative;
+			min-height: 120px;
+			padding-left: 125px;
+			padding-right: 25px;
+			text-align: left;
+			font-size: 1.2rem;
+			&:before {
+				content:'';
+				position: absolute;
+				left: 0px;
+				display: block;
+				width: 120px;
+				height: 120px;
+				border: 1px solid $dark;
+				background: $dark url(../img/xsm/sprites.png) no-repeat;
+			}//:before
+			&:after {
+				content: '\e080';
+				position: absolute;
+				right: 5px;
+				top: 50px;
+				font-family: 'Glyphicons Halflings';
+				font-size: 2rem;
+			}//after
+		}//details
+		li:first-child {
+			font-weight: bold;
+		}//li
+		#girl {
+			.details:before {
+				background-position: 0px 0px;
+				}		
+		}//girl
+		#elephant {
+			.details:before {
+				background-position: -120px 0px;
+			}
+		}//elephant
+		#street {
+			.details:before {
+				background-position: -240px 0px;
+			}
+		}//st
+		#landscape {
+			.details:before {
+				background-position: -360px 0px;
+			}
+		}//landscape
+		#bird {
+			.details:before {
+				background-position: -480px 0px;
+			}		
+		}//bird
+		#mrsPitt  {
+			.details:before {
+				background-position: 0px -120px
+			}
+		}//mrsPitt
+		#virgin  {
+			.details:before {
+				background-position: -120px -120px
+			}
+		}//virgin
+		#lilacs {
+			.details:before {
+				background-position: -240px -120px
+			}
+		}//lilacs
+		#womanPortrait {
+			.details:before {
+				background-position: -360px -120px
+			}	
+		}//woman
+		#saints {
+			.details:before {
+				background-position: -480px -120px;
+			}
+		}//saints
+		#manPortrait {
+			.details:before {
+				background-position: -600px -120px
+			}
+		}//manPortrait
+	}//casewall
+
+	#pageContent {
+		padding-top: 70px;
+		.container {
+			position: relative;
+			width: 100%;
+		}//container
+	}//pageContent
+
+	footer {
+		position: fixed;
+		bottom: 0px;
+		z-index: 1000;
+		width: 100%;
+		height: 40px;
+		padding: 0px;
+		margin: 0px;
+		-webkit-box-shadow: 0px -2px 2px 1px rgba(0, 0, 0, 0.3);
+		-moz-box-shadow:    0px -2px 2px 1px rgba(0, 0, 0, 0.3);
+		box-shadow:         0px -2px 2px 1px rgba(0, 0, 0, 0.3);
+		cursor: pointer;
+		@include transBr();
+		@include transition();
+		&.open {
+			height: 120px;
+			background-color: $dark;
+			@include transition();
+			&:before {
+				content: '\e088';
+				position: absolute;
+				top: 7px;
+				right: 7px;
+				color: $zepia;
+				font-weight: lighter;
+				z-index: 1000;
+			}
+		}//open
+		.container {
+			padding: 0px;
+		}//container
+		nav {
+			position: relative;
+			top: 0px;
+			width: 100%;
+			padding: 0px;
+			margin: 0px;	
+		}//nav
+		h5 {
+				margin: 7px auto 15px;
+				text-align: center;
+				color: $ocre-lt;
+		}//h5
+		li {
+			position: relative;
+			height: 40px;
+			&:after {
+			content: '';
+			position: absolute;
+			top: 5px;
+			left: 35%;
+			font-size: 2rem;
+			color: $sand;
+			}//after
+			&#call:after {
+				content: '\e182';
+			}
+			&#text:after {
+				content: '\e111';
+			}
+			&#emailUs:after {
+				content: '\2709';
+			}
+			&#showMap:after {
+				content: '\e062';
+			}
+		}//li
+		a {
+			position: relative;
+			z-index: 1500;
+			display: block;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			color: $sand;
+			text-indent: -9999px;
+			border-radius: 10px;
+			&:hover {
+				background-color: transparentize($sand,0.8);
+			}
+		}//a
+	}//footer
+
+	//////////////////////
+	aside.caseMenu {
+		position: absolute;
+		top: -200%;
+		right: 0px;
+		width: 100%;
+		margin: 0px;
+		background-color: rgba(247, 246, 244, 0.95);
+		@include transition();
+		&.open {
+			top: 0px;
+			@include transition();
+		}	
+		h4, .thumb {
+			display: none;
+		}
+		li {
+			height: auto;
+			&:hover {
+				background-color: $sand;
+			}
+		}
+		h5 {
+			margin: 0px;
+		}
+	}//aside
+
+	main.caseContent {
+		width: 100%;
+		.segment,
+		.segment.third {
+			width: 100%;
+		}//segment
+	}//main
+	///////////////////////
+	@media (orientation: landscape) {
+			.navbar li {
+				height: 48px;
+				&.contact {
+					display: block;
+				}
+			}//.navbar li
+			#about {
+				.img-container {
+					width: 100%;
+					height: 300px;
+					float: left;
+					background: url('../img/xsm/olgXSL.jpg') no-repeat top left;
+					background-size: 100%;
+				}//img-container
+				h2.title {
+					position: absolute;
+					top: 0px;
+					right: 0px;
+					width: 50%;
+					height: 300px;
+					padding-top: 150px;
+					margin-top: 0px;
+					margin-bottom: 0px;
+					background-color: transparentize($sand, 0.05);
+				}//h2.title
+				.blurb-container {
+					clear: both;
+				}
+			}//about
+			#imgNav {
+				ul * {
+					height: 120px;
+				}//ul
+				.img-container {
+					width: 120px;
+					background: $ocre url('../img/xsm/sprites-idxL.jpg')no-repeat center top;
+					&.srv {
+						background-position: 0px 0px;
+					}
+					&.about {
+						background-position: -270px -0px;
+					}//about
+				}//img-container
+				.txt-container {
+					padding-top: 40px;
+					&:after {
+						top: 50px;
+					}
+				}
+	}//imgNav
+			footer {
+				height: 0px;
+			}//footer
+	}//landscape
+}// media mobile
+
+
+//*********  KINDLE  SM ********
+@media (min-width: 768px) {
+
+	.mobile-only {
+		display: none !important;
+	}//mobile-only
+
+	.navbar {
+		.container {
+			padding: 0px 10px;
+		}
+		.navbar-brand {
+  		font-size: 3rem;
+  	}
+  	.navbar-collapse {
+  		float: right;
+  	}
+	}//navbar
+
+	.jumbotron {
+		background: url('../img/sm/bowtieSM.jpg') no-repeat center bottom;
+		padding: 100px 0px 75px;
+		h1 {
+			font-size: 48px;
+		}
+		span {
+			font-size: 16px;
+		}
+	}//jumbotron
+
+	.section {
+		padding: 30px 0px;
+		text-align: center;
+		h2 {
+			font-size: 24px;
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}//navbar-brand
+	}//section
+
+	#imgNav {
+		.thumb {
+			position: relative;
+			width: 100%;
+			height: 250px;
+			padding: 0px;
+			margin: 0px;
+			> * {
+				width: 100%;
+				height: 100%;
+				margin: 0px;
+			}//*
+		}//thumb
+		.img-container {
+			position: absolute;
+			top: 0px;
+			overflow: hidden;
+			background: $ocre url('../img/sm/sprites-idx.jpg')no-repeat center top;
+			&.srv {
+				background-position: 0px 0px;
+			}
+			&.about {
+				background-position: -520px -0px;
+			}//about
+
+		}//img-container
+		.txt-container {
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			display: block;
+			width: 100%;
+			height: 60px;
+			vertical-align: middle;
+			@include transBr();
+		}//span
+		h4 {
+			margin: 7px 5px;
+			color: $ocre;
+			@include transition ();
+		}//h4 
+		p {
+			height: 125px;
+			margin: 15px 10px;
+			color: $dark;
+			text-align: center;
+			span:after {
+				content: '>>';
+				color: $ocre;
+				padding-left: 10px;
+			}//span:after
+		}//p
+		li:hover {
+			h4 {
+				color: $ocre-lt;
+				@include transition ();
+			}
+		}
+		li:nth-child(2) h4 {
+			margin-top: 15px;
+		}
+	}//imgnav
+
+	#services, 
+	#caseWall,
+	#resources {
+		.container {
+			width: 90%;
+			margin: 20px auto  30px;
+			padding: 20px 20px 40px;
+		}//
+	}//all
+
+	#services,
+	#resources {
+		margin-top: 50px;
+		background: $sand url('../img/sm/services.jpg') no-repeat center bottom;
+		background-size: cover;
+	}//all
+
+	#services {
+		padding: 30px;
+		p {
+			text-align: left;
+		}//
+		ul {
+			li:not(:first-child) {
+				margin-top: 15px;
+			}
+			li:first-child {
+				padding-top: 0px;
+				padding-bottom: 0;
+			}
+		}//ul
+	}//services
+	
+	#about {
+		.container {
+			margin-top: 20px;
+		}
+		.blurb-container {
+			border: 1px solid $dark;
+			background: url(../img/sm/olga.jpg) no-repeat top left;
+		}//row blurb-c
+		.blurb {
+			height: 100%;
+			padding: 15px;
+			margin: 445px 0px 0px;
+			background-color: $zepia;
+			text-align: left;
+			em {
+				font-weight: bold;
+			}//em
+		}//blurb
+		.testimonials {
+			li {
+				padding-bottom: 50px;
+				margin-bottom: 15px;
+				border-bottom: 1px dotted $zepia;
+			}
+
+		}//testimonials
+	}
+
+	#caseWall {
+		.container {
+			padding-bottom: 50px;
+		}//container
+	}//casewall
+
+	#resources {
+		li { min-height: 300px;}
+	}
+
+	#picWall {
+		position: relative;
+		width: 725px;
+		height: 750px;	
+		margin: 20px auto;
+		.frame {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			padding: 0px;
+			border: 2px solid $dark;
+			background: $dark url('../img/sprites.png') no-repeat;
+			@include shadow();
+			@include transition();
+			.details {
+				position: relative;
+				overflow: hidden;
+				width: 100%;
+				height: 100%;
+				padding: 0px;
+				&:before, &:after {
+					display: none;
+				}
+				ul {
+					position: absolute;
+					bottom: -100%;
+					width: 100%;
+					padding: 5px 3px;
+					background-color: transparentize($dark, 0.2);
+					color: $sand;
+					font-size: 1.1rem;
+					@include transition();
+				}//ul
+				&:hover ul {
+					bottom: 0px;
+					@include transition();
+				}//:hover ul
+			}//details
+		}//frame
+		#girl {
+			top: 15px;
+			left: 0px;
+			width: 205px;
+			height: 229px;
+			background-position: 0px 0px;
+		}//girl
+		#elephant {
+			top: 70px;
+			left: 217px;
+			width: 155px;
+			height: 123px;
+			background-position: -210px 0px;
+		}//elephant
+		#street {
+			top: 0px;
+			left: 385px;
+			width: 160px;
+			height: 240px;
+			background-position: -371px 0px;
+		}//st
+		#landscape {
+			top: 255px;
+			left: 385px;
+			width: 290px;
+			height: 184px;
+			background-position: -536px 0px;
+		}//landscape
+		#bird {
+			top: 420px;
+			left: 25px;
+			width: 179px;
+			height: 229px;
+			background-position: -830px 0px;
+		}//bird
+		#mrsPitt  {
+			top: 450px;
+			left: 525px;
+			width: 190px;
+			height: 200px;
+			background-position: 0px -245px;
+		}//mrsPitt
+		#virgin  {
+			top: 445px;
+			left: 220px;
+			width: 146px;
+			height: 200px;
+			background-position: -215px -245px;
+		}//virgin
+		#lilacs {
+			top: 255px;
+			left: 20px;
+			width: 185px;
+			height: 150px;
+			background-position: -370px -245px;
+		}//lilacs
+		#womanPortrait {
+			top: 208px;
+			left: 215px;
+			width: 158px;
+			height: 231px;
+			background-position: -556px -245px;
+		}//woman
+		#saints {
+			top: 40px;
+			left: 555px;
+			width: 169px;
+			height: 200px;
+			background-position: -722px -250px;
+		}//saints
+		#manPortrait {
+			top: 450px;
+			left: 385px;
+			width: 128px;
+			height: 157px;
+			background-position: -900px -245px;
+		}//manPortrait
+	}//picWall
+
+	footer {
+		background: $dark url('../img/sm/paintings.jpg') no-repeat center bottom;
+		height: 100%;
+		min-height: 100%;
+		.container {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			@include transBr();
+		}//container
+		.row {
+			width: 80%;
+			margin-top: 35px;
+		}
+		#contact li {
+			padding-left: 5px;
+			margin-bottom: 10px;
+			border-left: 3px solid $ocre-lt;
+			padding-bottom: 3px;
+			border-bottom: 1px dotted $ocre-lt;
+			@include transition(all, 0.5s);
+			&:hover {
+				border-left: 6px solid $ocre;
+				@include transition(all, 0.5s);
+				& a {
+					color: $ocre;
+				}
+			}
+		}
+		span.logo {
+			display: inline-block;
+		}
+		p, h6, #contact a, 
+		#contact a:visited {
+			color: $ocre-lt;
+		}
+		h5, #contact a:hover,
+		#contact a:focus {
+			color: $ocre;
+		}
+		h5 {
+			padding-bottom: 5px;
+			border-bottom: 1px solid $ocre;
+		}
+		h6 {
+			margin: 50px auto 25px;
+			text-align: center;
+		}//h6
+	}//footer
+
+
+	#pageContent {
+		position: relative;
+		padding-top: 60px;
+	}//pageContent
+	aside.caseMenu {
+		position: absolute;
+		width: 250px;
+	}//aside
+
+	@media only screen and (max-width: 1199px){
+		.hidden-sm {
+			display: none !important;
+		}//hidden-sm
+		
+		#services {
+			.container {
+				margin: 50px auto 150px;
+				padding: 20px 20px 40px;
+			}
+			h2 {
+				margin-bottom: 50px;
+			}
+			.row {
+				margin: 50px auto;
+			}
+		}//services
+		
+		footer {
+			.row {
+				margin-top: 50px;
+			}
+		}//footer
+		////
+		aside.caseMenu {
+			left: -270px;
+			@include transition();
+			&.show {
+				left: -20px;
+				@include transition();
+			}
+			h4{
+				position: absolute;
+				top: 81px;
+				right: -118px;
+				width: 200px;
+				padding: 5px;
+				margin: 0px;
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+				background-color: $dark;
+				color: $sand; 
+				-webkit-transform: rotate(-90deg);
+				-moz-transform: rotate(-90deg);
+				-ms-transform: rotate(-90deg);
+				-o-transform: rotate(-90deg);
+				filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+				@include shadow();
+			}//h4
+		}//aside
+	}//media only
+
+	#caseList {
+		> li {
+			overflow: hidden;
+			height: 90px;
+			opacity: 0.7;
+			@include transition();
+			> div {
+				float: left;
+			}
+		}//li
+		.thumb {
+			width: 70px;
+			height: 70px;
+			margin: 5px 10px 0px 5px;
+			border: 1px solid $dark;
+			background: $dark url(../img/xsm/sprites.png) no-repeat;
+			background-size: 600%;
+			@include transition();
+		}//thumb
+		h5 {
+			width: 95%;
+		}//h5
+	}//caselist
+
+	//pictures classes
+		#thElephant	.thumb {
+			background-position: -68px 0px;
+		}
+		#thStreet	.thumb {
+			background-position: -136px 0px;
+		} 
+		#thLandscape	.thumb {
+			background-position: -204px 0px;
+		}
+		#thBird	.thumb {
+			background-position: -272px 0px;
+		}
+		#thPitt	.thumb {
+			background-position: 0px -68px;
+		}
+		#thVirgin	.thumb {
+			background-position: -68px -68px;
+		}
+		#thLilacs	.thumb {
+			background-position: -136px -68px;
+		}
+		#thWoman	.thumb {
+			background-position: -204px -68px;
+		}
+		#thSaints	.thumb {
+			background-position: -272px -68px;
+		}
+		#thMan	.thumb {
+			background-position: -340px -68px;
+		}
+	
+	main.caseContent {
+		width: 70%;
+		margin-left: 15%;
+		.segment {
+			width: 50%;
+			float: left;
+			&.third {
+				width: 33%;
+			}//third
+		}//segment
+	}//main
+}// media kindle
+
+
+//*********  iPAD  MD  ********
+@media only screen and (min-width: 900px) {
+
+	.container {
+	  width: 97%;
+	}//container
+
+  .jumbotron {
+		background: $dark url('../img/lg/bowtieLG.jpg') no-repeat center top;
+		h1 {
+			width: 80%;
+			margin: 0px auto;
+		}
+	}//branding
+
+	#imgNav {
+		.thumb {
+			height: 350px;
+		}
+		.img-container {
+			background: $ocre url('../img/md/sprites-idx.jpg')no-repeat center top;
+			&.srv {
+				background-position: 0px 0px;
+			}
+			&.about {
+				background-position: -775px -0px;
+			}//about
+		}//img-container
+	}//imgnav
+ 
+	#caseWall,
+	#resources {
+		.container {
+			margin: 50px auto;
+			padding: 20px 20px 40px;
+		}//
+	}//all
+
+	#services {
+		background: $sand url('../img/md/services.jpg') no-repeat center bottom;
+		ul li:not(:first-child) {
+			margin-top: 15px;
+		}//
+	}//services
+	
+	#about {
+		.container {
+			margin-top: 30px;
+		}
+		.blurb-container {
+			background: url(../img/md/olga.jpg) no-repeat top left;
+		}//row
+		.testimonials li {
+			width: 50%;
+			float: left;
+			border-bottom: none;
+		}
+	}//about
+	#resources {
+		li {
+			min-height: 250px;
+		}
+	}
+	@media only screen and (max-width: 1199px){
+		footer.expand {
+			height: 400px;
+			.row, h6 {
+				margin-top: 50px;
+			}
+		}//footer
+	}
+
+
+} // media ipad
+
+
+//*********  LAPTOP  LG ********
+@media (min-width: 1200px) {
+	.navbar {
+		.navbar-brand {
+  		font-size: 3.5rem;
+  	}
+  }//navbar
+
+	.jumbotron {
+		padding: 150px 0px 100px;
+		h1 {
+			width: 60%;
+		}
+	}//jumbotron
+
+	#intro {
+		.row {
+			overflow: hidden;
+			div {
+				width: 50%;
+				float: left;
+				p {
+				text-align: left;
+				padding: 10px 20px;
+				}//p
+			}//div
+		}//row
+	}//intro
+	
+	#imgNav {
+		width: 1245px;
+		margin: 20px auto;
+		.thumb {
+			height: 415px;
+		}
+		.img-container {
+			background: $ocre url('../img/lg/sprites-idx.jpg') no-repeat center top;
+			&.srv {
+				background-position: 0px 0px;
+			}
+			&.about {
+				background-position: -925px -0px;
+			}//about
+		}//img-container
+	}//imgnav
+
+	#services {
+		.container {
+			margin-bottom: 75px;
+		}
+		h2 {
+			margin-bottom: 50px;
+		}
+		.row {
+			max-width: 1170px;
+			height: 350px;
+			max-height: 550px;
+			background: url('../img/lg/services.png') no-repeat top right;
+			.blurb {
+				height: 550px;
+				padding-top: 50px;
+			}
+			h5 {
+				padding-top: 50px;
+			}
+		}//row
+	}//services
+	
+	#about {
+		.blurb-container {
+			height: 450px;
+			border: 1px solid $dark;
+			background: url(../img/olga.jpg) no-repeat top left;
+		}//row
+		.blurb {
+			height: 100%;
+			padding: 15px;
+			margin: 0;
+			background-color: transparentize($sand, 0.1);
+			text-align: left;
+			em {
+				font-weight: bold;
+			}//em
+		}//blurb
+		.testimonials {
+			width: 80%;
+		}//testimonials
+	}
+
+	///
+	#picWall {
+		width: 1100px;
+		height: 525px;
+		.frame {
+			background: $dark url('../img/lg/sprites.png') no-repeat;
+			@include transition();
+		}//frame
+		#girl {
+			top: 0px;
+			left: 0px;
+		}//girl
+		#elephant {
+			top: 60px;
+			left: 220px;
+		}//elephant
+		#street {
+			top: 0px;
+			left: 395px;
+		}//street
+		#landscape {
+			top: 35px;
+			left: 575px;
+		}//landscape
+		#bird {
+			top: 15px;
+			left: 890px;
+		}//bird
+		#mrsPitt  {
+			top: 245px;
+			left: 15px;
+		}//mrsPitt
+		#virgin  {
+			top: 215px;
+			left: 220px;
+		}//virgin
+		#lilacs {
+			top: 260px;
+			left: 380px;
+		}//lilacs
+		#womanPortrait {
+			top: 240px;
+			left: 580px;
+		}//woman
+		#saints {
+			top: 260px;
+			left: 755px;
+		}//saints
+		#manPortrait {
+			top: 260px;
+			left: 940px;
+		}//manPortrait
+	}//picWall
+
+	#pageContent {
+		.container {
+			overflow: hidden;
+		}//container
+		aside,main {
+			float: left;
+			position: relative;
+		}//aside main
+	}//pageContent
+
+	aside.caseMenu {
+		width: 25%;
+	}//aside
+
+	main.caseContent {
+	width: 70%;
+	margin-left: 0;
+	}//main
+}// media laptop
+
+
+//*********  SCREEN  xLG ********
+@media (min-width: 1680px) {
+	body { 
+		text-align: center;
+		.container {
+			width: 1280px !important;
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}//div
+	}//body
+
+	.jumbotron {
+		background: $dark url('../img/xlg/bowtieXLG.jpg') no-repeat center top;
+	}//jumbotron
+
+	#services {
+		.row {
+			background: url('../img/xlg/services.png') no-repeat top right;
+		}//row
+	}//services
+
+	#about {
+		background: $sand url('../img/xlg/about.png') no-repeat center top;
+	} //about
+}// media screen
+
+
