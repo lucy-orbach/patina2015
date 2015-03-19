@@ -1,13 +1,33 @@
 @import '_myVariables.scss';
-@import '_bootstrap.scss';
 
+html, body {
+	height: 100%;
+}
+
+body {
+	background-color: $sand;
+	font-size: 16px;	
+}
+.wrapper {
+	position: relative;
+	min-height: 100%;
+	padding-bottom: 150px;
+}
+* html .wrapper {
+	height: 100%;
+}
+
+h1 {
+	font-size: 3.5rem;
+}
 
 a.navbar-brand, span.logo, 
 h1, h2, h3, h4, h5, h6,
 label, footer .row,
 input[type='submit'] {
-  font-family: 'Cinzel Decorative', cursive;
+  font-family: 'Cinzel', cursive;
   display: block;
+  color: $ocre;
   &::first-letter {
   	font-size: 120%;
   }//first letter
@@ -18,36 +38,12 @@ input[type='submit'] {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, .9);
 }//txt shadow
 
-
 a, a:link, a:focus, a:visited, a:hover {
 	outline: none;
-	text-decoration: none;
 }
-
 
 :before, :after {
 	font-family: 'Glyphicons Halflings';
-}
-ul {
-	list-style-type: none !important;
-	padding-left: 0px;
-	margin: 0px;
-}  
-
-.container {
-  margin: 0px auto;
-  padding: 0px 15px;
-  overflow: hidden;
-}
-
-.row {
-	width: 100%;
-	margin: 0px auto;
-	overflow: hidden;
-}
-
-.blurb {
-	padding: 15px;
 }
 
 input, textarea, 
@@ -62,100 +58,106 @@ textarea:focus, input:focus {
   border: none;
 }
 
-/// ******  navbar *****
+
+
+ul {
+	//list-style-type: none !important;
+	padding-left: 0px;
+	margin: 0px;
+}  
+
+.container {
+  margin: 0px auto;
+  padding: 0px 15px;
+  //overflow: hidden;
+}
+
+
+.blurb {
+	padding: 15px;
+}
+
+.framed {
+	background-color: $zepia;
+	h3, li {
+		color: $dk-zepia;
+	}
+	ul {
+		padding-left: 15px;
+		text-align: left;
+	}
+	li {
+		margin-bottom: 20px;
+	}
+}
+
+/// ******  HEADER *****
+header {
+	position: relative;
+	min-height: 50px;
+}//header
+.jumbotron {
+	margin-bottom: 0px;
+	background-size: cover !important;
+	a:hover {
+		text-decoration: none;
+	}
+	.banner {
+		text-align: center;
+		h1 a, span {
+			color: $ocre;
+		}
+		h1 a {
+			text-shadow: 0 2px 4px rgba(0,0,0,0.7);	
+		}
+		h2 {
+			color: $sand;
+			margin: 0px;
+			text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+		}
+		span {
+			font-size: 14px;
+		}
+	}//banner
+}//jumbotron 
 .navbar {
-  min-height: 60px;
-  @include transBr();
+	width: 100%;
+	margin-bottom: 0px;
+	@include transBr();
 	@include shadow();
-	a.navbar-brand {
-			color: $ocre-lt;
-		&:hover {
-			color: $ocre-lt;
-		}//a:hover
+	.navbar-brand:hover {
+			color: $ocre;
+			text-decoration: none;
 	}//a
 	.navbar-collapse {
 		li {
 			a, a:visited  {
-				color: $ocre-lt;
+				color: $ocre;
 			}
 			&:hover a, a.active, a:focus{
-				color: $ocre;
+				color: $ocre-lt;
 				background-color: $dark;
 			}//hover active
 			a {
-				padding-top: 22px;
+				padding-top: 10px;
+				padding-bottom: 10px;
 			}
 		}//li
 	}//navbar-collapse
 }// navbar
 /// ******  SECTIONS *****
-.jumbotron,
-#services {
-	margin-bottom: 0px;
-	background-size: cover !important;
-}//jumbotron all page
-
-.jumbotron {
-	color: $sand;
-	text-align: center;
-	h1 {
-		text-shadow: 1px 1px 5px rgba(15, 15, 15, 1);	
-	}//h1
-
-}//jumbotron
-
 .section {	
+	.container {
+		max-width: 1100px;
+	}
 	h2 {
-		width: 100%;
 		text-align: center;
-		color: $ocre;
-		.logo {
-			display: inline-block;
-		}
+		font-size: 3rem;
 	}//section h2	
 }//section
 
-#imgNav {
-	.container {
-		padding: 0px 0px 30px 0px;
-	}//container
-	li {
-		padding: 0px;
-		margin: 0px;
-		overflow: hidden;
-	}
-	.img-container {
-		opacity: 0.7;
-		@include transition();
-	}
-	li:hover {
-		.img-container {
-			opacity: 1;
-			@include transition();
-		}
-	}
-}//imgnav
-
 #services {
-	.container {
-		background-color: transparentize($sand, 0.3);
-		border: 1px solid $dark;
-	}
-	ul {
-		text-align: left;
-		li:not(:first-child) {
-			padding-left: 5px;
-			margin-bottom: 7px;
-			border-left: 3px solid $ocre-lt;
-			padding-bottom: 3px;
-			border-bottom: 1px dotted $ocre-lt;
-		}//li
-		li:first-child {
-			font-weight: bold;
-			text-align: center;
-			padding: 15px 20px;
-		}//li:first-child
-	}//ul
+
 }//services
 
 #caseWall {
@@ -327,8 +329,28 @@ main.caseContent {
 }
 //****** footer  ******//
 footer {
-	color: $sand;
+	color: $ocre;
 	margin-bottom: 0px; 
+	text-align: center;
+	.container {
+			width: 100%;
+			height: 100%;
+			padding: 0px 0px 20px;
+			margin: 0px;
+			@include transBr();
+		}//container
+	#contact {
+		ul {
+			width: 100%;
+			overflow: hidden;
+		}
+		li {
+			width: 33%;
+			float: left;
+			text-align: center;
+			font-size: 14px;
+		}
+	}
 }//footer
 
 

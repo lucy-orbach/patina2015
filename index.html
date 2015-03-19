@@ -9,7 +9,8 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
 
     <!-- CSS-->
-    <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href="css/main.css" rel="stylesheet" type='text/css'> 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -17,139 +18,100 @@
     <![endif]-->
   </head>
   <body>
-    <nav class="navbar navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#headNav">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">PatinA StudiO</a>
-        </div><!--bar-header -->
-        <div id="headNav" class="navbar-collapse collapse"  role="navigation">
-          <ul class="nav navbar-nav">
-            <li><a href="services.html">Services</a></li>
-            <li><a href="caseWall.html">Case Studies </a></li>
-            <li><a href="about.html">About</a></li>
-            <li class="contact"><a id="goContact" href="#">Contact</a></li>
-            <li class="hidden-xs"><a href="resources.html">Resources</a></li>
-          </ul>
-        </div>
-      </div><!-- container -->
-    </nav><!-- navbar -->
-    <section class="jumbotron">
-      <div class="container">
-        <h1>ConservatioN And Restoration of Paintings And Icons</h1>
-        <span>Upper East Side, NYC</span>
-      </div><!-- container  -->
-    </section><!-- branding -->
-    
-    <section id="intro" class="section">
-      <div class="container">
-        <h2>Welcome to <span class="logo">Patina Studio</span></h2>
-        <div class="row">
-          <div>
-            <p class="hidden-xs">Kept and preserved, a painting can endure over centuries. Yet along the way, it develops marks of age or neglect: darkening, cracks, mold. Some of these marks are best left untouched, enhancing the pleasure and value of the work. Others can be carefully repaired, improving the piece's luster and harmony.</p>
-            <p>New York City based painting and icon conservator Olga Nikolic-Litwin faithfully rehabilitates art, and ensures its survival. She approaches every restoration project with care, thought, and respect for the piece and its history — as well as the client's wishes.</p>
-          </div>
-          <div class="hidden-xs">
-            <p>Olga doesn't make old look new again: she sees and coaxes out the beauty within aged paintings and icons, many of which have been reclaimed from basements, rescued from war zones, or betrayed by previous poor restorations.</p>
-            <p>Whether you are restoring an inherited family portrait, a religious icon, or a darkened landscape paining, you are honoring the past while bringing something precious into the future.</p>
-          </div>
-        </div><!-- row -->
-      </div><!-- container  -->
-    </section><!-- intro -->
+    <div class="wrapper">
+      <header>
+        <section class="jumbotron hidden-xs">
+          <div class="container">
+            <div class="banner">
+              <h1><a href="#">Patina Studio</a></h1>
+              <h2>Conservation and Restoration of Paintings and Icons</h2>
+              <span>Upper East Side, NYC</span>
+            </div><!-- banner -->
+          </div><!-- container  -->
+        </section><!-- branding -->
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-header mobile-only">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#headNav">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <h1>
+                <a class="navbar-brand" href="#">Patina Studio</a>
+              </h1>
+            </div><!--bar-header -->
+            <div id="headNav" class="navbar-collapse collapse"  role="navigation">
+              <ul class="nav navbar-nav">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="caseWall.html">Case Studies </a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resources.html">Resources</a></li>
+              </ul>
+            </div>
+          </div><!-- container -->
+        </nav><!-- navbar -->
+      </header>
+      
+      <section id="intro" class="section">
+        <div class="container">
+          <h2>Welcome</h2>
+          <div class="row">
+            <div>
+              <p>Kept and preserved, a painting can endure over centuries. Yet along the way, it develops marks of age or neglect: darkening, cracks, mold. Some of these marks are best left untouched, enhancing the pleasure and value of the work. Others can be carefully repaired, improving the piece's luster and harmony.</p>
+              <p>New York City based painting and icon conservator Olga Nikolic-Litwin faithfully rehabilitates art, and ensures its survival. She approaches every restoration project with care, thought, and respect for the piece and its history — as well as the client's wishes.</p>
+            </div>
+            <div>
+              <p>Olga doesn't make old look new again: she sees and coaxes out the beauty within aged paintings and icons, many of which have been reclaimed from basements, rescued from war zones, or betrayed by previous poor restorations.</p>
+              <p>Whether you are restoring an inherited family portrait, a religious icon, or a darkened landscape paining, you are honoring the past while bringing something precious into the future.</p>
+            </div>
+          </div><!-- row -->
+        </div><!-- container  -->
+      </section><!-- intro -->
+      
 
-    <section id="imgNav" class="section">
-      <div class="container">
-        <h2 class="hidden-xs">Get to Know<span class="logo">Patina Studio</span></h2>
-        <ul class="row">
-          <li class="col-sm-4">
-            <a href="services.html">
-              <div class="thumb">
-                <div class="col-xs-3 img-container srv"></div>
-                <div class="col-xs-9 txt-container">
-                  <h4>Restoration Services</h4>
-                </div>
-              </div>
-              <p class="hidden-xs"><span>Patina Studio offers fine art restoration and conservation services on-site or in studio. Learn how Patina Studio can refresh, revitalize, and faithfully repair your painting or icon.</span></p>
-            </a>  
-          </li>
-          <li class="col-sm-4">
-            <a href="wallCases.html">
-              <div class="thumb">
-                <div class="col-xs-3 img-container cases"></div>
-                <div class="col-xs-9 txt-container">
-                  <h4>Case Studies</h4>
-                </div>
-              </div>
-              <p class="hidden-xs"> <span>Different damages call for different restoration approaches. Observe the before, in-treatment, and after condition of some work samples done by Patina Studio.</span></p>
-            </a>
-          </li>
-          <li class="col-sm-4">
-            <a href="about.html">
-              <div class="thumb">
-                <div class="col-xs-3 img-container about"></div>
-                <div class="col-xs-9 txt-container">
-                  <h4>About the Conservator</h4>
-                </div>
-              </div>
-              <p class="hidden-xs"><span>Patina Studio was founded by painting and icon conservator Olga Nikolic-Litwin. Get to know more about the qualified conservator behind the scenes.</span></p>
-            </li>
-          </a>
-        </ul>
-        <h6 class="mobile-only">© 2002-2014 Olga Nikolic-Litwin, Conservation and Restoration of Paintings and Icons, NYC, New York</h6>
-      </div><!-- container  -->
-    </section><!-- services -->
+    </div>
 
     <footer>
       <div class="container">
         <nav class="mobile-only">
-          <h5>~ CoNtAcT ~</h5>
+          <h5>~ Contact ~</h5>
           <ul class="row">
-            <li id="call" role="Call" class="col-xs-3">
-              <a href="tel://1-212-772-0122">Call Us</a>
+            <li id="call" role="Call" class="col-xs-4">
+              <a href="tel://1-212-772-0122">Call Patina Studio</a>
             </li>
-            <li id="text" role="Send SMS" class="col-xs-3">
-              <a href="sms://+12127720122">Text Us</a>
+            <li id="emailUs"  role="Email" class="col-xs-4">
+              <a href="mailto:olga.nl@verizon.net" target="blank">Email PAtina Studio</a>
             </li>
-            <li id="emailUs"  role="Email" class="col-xs-3">
-              <a href="mailto:olga.nl@verizon.net" target="blank">Email Us</a>
-            </li>
-            <li id="showMap"  role="View Map" class="col-xs-3">
+            <li id="showMap"  role="View Map" class="col-xs-4">
               <a href="https://goo.gl/maps/B38h7" target="blank">Show Map</a>
             </li>
           </ul>
         </nav><!-- mobile only -->
-        <div class="row hidden-xs">
-          <div class="col-sm-12">
-            <h5>CoNtAcT the <span class="logo">PaintingS ConservatoR</span></h5>
-          </div>
-          <div class="col-sm-7 col-md-6">
-            <p>To learn more about Olga’s conservation and restoration services, please call or email. Feel free to send photos of the artwork in question along with your email.</p>
-          </div>
-          <nav id="contact" class="col-sm-5 col-sm-4 pull-right">
-            <ul>
-              <li id="email"  role="Email">
-                <a href="mailto:olga.nl@verizon.net" target="blank">olga.nl@verizon.net</a>
-              </li>
-              <li id="phone" role="Call">
-                <a href="tel://1-212-772-0122">212.772.0122</a>
-              </li>            
-              <li id="address"  role="View Map">
-                <a href="https://goo.gl/maps/B38h7" target="blank">519 East 88 Street New York, NY 10128</a>
-              </li>
-            </ul>
-          </nav>
-        </div><!--row -->
-        <h6 class="hidden-xs">© 2002-2015 Olga Nikolic-Litwin, Conservation and Restoration of Paintings and Icons, NYC, New York</h6>
+        <nav id="contact" class="contact hidden-xs">
+          <ul>
+            <li id="email"  role="Email">
+              <a href="mailto:olga.nl@verizon.net" target="blank"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> olga.nl@verizon.net</a>
+            </li>           
+            <li id="address"  role="View Map">
+              <a href="https://goo.gl/maps/B38h7" target="blank"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> 519 E 88 St. New York, NY 10128</a>
+            </li>
+            <li id="phone" role="Call">
+              <a href="tel://1-212-772-0122"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> (212)772-0122</a>
+            </li> 
+
+          </ul>
+        </nav>
+        <h6>© 2002-2015 Olga Nikolic-Litwin, Conservation and Restoration of Paintings and Icons, NYC, New York</h6>
       </div><!-- container  -->
-    </footer><!-- intro -->
+    </footer><!-- footer -->
+
+
     <!-- jQuery /JavaScript  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

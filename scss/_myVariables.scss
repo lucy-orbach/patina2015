@@ -1,15 +1,12 @@
-// $off:  #fefdfa;
-$sand:  #fefaf3;
-$zepia: #e4dccc;
-// $olive: #54573b;
 
+//$sand:  #fefaf3;
+$sand: #fbf9f3;
+$zepia: #e4dccc;
+$dk-zepia: #44423d;
 $ocre: #f39605;
 $ocre-lt: #fbbd5c;
-
-
 $brown: #473b31;
 $dark: #33261c;
-
 
 
 
@@ -20,10 +17,10 @@ $dark: #33261c;
 @mixin transBr(){
 	background-color: transparentize($dark, 0.1);
 	a {
-		color: $ocre-lt;
+		color: $ocre;
 	}
 	a:hover {
-		color: ocre;
+		color: ocre-lt;
 	}
 }
 
