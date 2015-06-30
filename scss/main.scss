@@ -2,102 +2,83 @@
 
 html, body {
 	height: 100%;
-}
-
+}//html body
 body {
 	background-color: $sand;
 	font-size: 16px;	
-}
+}//body
 .wrapper {
 	position: relative;
 	min-height: 100%;
-	padding-bottom: 150px;
 }
 * html .wrapper {
 	height: 100%;
-}
+}//wrapper
+// headers,links & fonts
+	//font-family
+	a.navbar-brand, span.logo, 
+	h1, h2, h3, h4, h5, h6,
+	label, footer .row,
+	input[type='submit'] {
+	  font-family: 'Cinzel', cursive;
+	  display: block;
+	  color: $ocre;
+	  &::first-letter {
+	  	font-size: 120%;
+	  }//first letter
+	}//font-family
 
-h1 {
-	font-size: 3.5rem;
-}
-
-a.navbar-brand, span.logo, 
-h1, h2, h3, h4, h5, h6,
-label, footer .row,
-input[type='submit'] {
-  font-family: 'Cinzel', cursive;
-  display: block;
-  color: $ocre;
-  &::first-letter {
-  	font-size: 120%;
-  }//first letter
-}//font-family
-
-.navbar-brand, 
-.brand h1 {
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, .9);
-}//txt shadow
-
-a, a:link, a:focus, a:visited, a:hover {
-	outline: none;
-}
-
-:before, :after {
-	font-family: 'Glyphicons Halflings';
-}
-
-input, textarea, 
-textarea:hover, input:hover,
-textarea:active, input:active,
-textarea:focus, input:focus {
-  outline: 0px !important;
-  background-color: transparent;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-}
-
-
-
-ul {
-	//list-style-type: none !important;
-	padding-left: 0px;
-	margin: 0px;
-}  
-
-.container {
-  margin: 0px auto;
-  padding: 0px 15px;
-  //overflow: hidden;
-}
-
-
-.blurb {
-	padding: 15px;
-}
-
-.framed {
-	background-color: $zepia;
-	h3, li {
-		color: $dk-zepia;
+	:before, :after {
+		font-family: 'Glyphicons Halflings';
 	}
+
+	//txt-shadow
+	.navbar-brand, 
+	.brand h1 {
+	  text-shadow: 1px 1px 1px rgba(0, 0, 0, .9);
+	}//txt shadow
+
+	h1 {
+		font-size: 3.5rem;
+	}
+
+	a, a:link, a:focus, a:visited, a:hover {
+		outline: none;
+	}
+	.accent,
+	.framed h4,
+	#caseWall h6,
+	#resources h5 a {
+		color: $wine !important;
+	}
+//form elements
+	input, textarea, 
+	textarea:hover, input:hover,
+	textarea:active, input:active,
+	textarea:focus, input:focus {
+	  outline: 0px !important;
+	  background-color: transparent;
+	  -webkit-appearance: none;
+	  -moz-appearance: none;
+	  appearance: none;
+	  border: none;
+	}
+//lists
 	ul {
-		padding-left: 15px;
-		text-align: left;
-	}
-	li {
-		margin-bottom: 20px;
-	}
-}
-
-/// ******  HEADER *****
+		padding-left: 0px;
+		margin: 0px;
+		&.clean {
+		list-style-type: none !important;	
+		}
+	} //ul 
+//=======================
+// ******  HEADER *****
+//=======================
 header {
 	position: relative;
-	min-height: 50px;
+	//min-height: 50px;
 }//header
 .jumbotron {
-	margin-bottom: 0px;
 	background-size: cover !important;
 	a:hover {
 		text-decoration: none;
@@ -112,7 +93,7 @@ header {
 		}
 		h2 {
 			color: $sand;
-			margin: 0px;
+			//margin: 0px;
 			text-shadow: 0 2px 4px rgba(0,0,0,0.7);
 		}
 		span {
@@ -122,12 +103,13 @@ header {
 }//jumbotron 
 .navbar {
 	width: 100%;
+	//min-height: 40px;
 	margin-bottom: 0px;
-	@include transBr();
+	@include transBr(0.3);
 	@include shadow();
 	.navbar-brand:hover {
-			color: $ocre;
-			text-decoration: none;
+		color: $ocre;
+		text-decoration: none;
 	}//a
 	.navbar-collapse {
 		li {
@@ -137,240 +119,258 @@ header {
 			&:hover a, a.active, a:focus{
 				color: $ocre-lt;
 				background-color: $dark;
+				text-decoration: underline;
 			}//hover active
 			a {
+				height: 100%;
 				padding-top: 10px;
 				padding-bottom: 10px;
 			}
 		}//li
 	}//navbar-collapse
 }// navbar
-/// ******  SECTIONS *****
+
+//=======================
+// ******  SECTIONS *****
+//=======================
 .section {	
 	.container {
-		max-width: 1100px;
+		max-width: 1200px;
 	}
 	h2 {
 		text-align: center;
 		font-size: 3rem;
-	}//section h2	
+	}// h2	
 }//section
 
-#services {
+.section .framed {
+	padding: 0;
+	background-color: $zepia;
+	h3, li {
+		color: $dark;
+	}//h3
+	ul.row {
+		padding: 0px;
+		margin: 0px;
+		li:first-child {
+			padding: 0px;
+		}
+	}
+	.img-container {
+		width: 100%;
+		height: 100%;
+		margin: 0px;
+		padding: 0px;
+		background-color: $dk-zepia;
+		background-size: cover;
+	}//img-container
+	.txt-container {
+		padding: 15px;
+		text-align: left;
+		ul {
+			margin-top: 30px;
+			text-align: left;
+			list-style-type: disc;
+		}//ul
+	}//txt-container
+}//framed
 
-}//services
+#about {
+	h2 {
+		margin-top: 50px;
+	}
+	em {
+		font-weight: 500;
+	}
+	.container {
+		padding-bottom: 0px;
+	}
+	.testimonials {
+		li {
+			padding: 20px;
+			border-bottom: 1px dotted $dk-zepia;
+			overflow: hidden;
+		}
+		p {
+			text-align: left;
+		}//p
+		span{
+			display: block;
+			font-style: italic;
+			padding-right: 70px;
+			margin-bottom: 15px;
+		}//span
+	}//testimonials
+}//about
 
 #caseWall {
-	background-color: $sand;
-	-moz-box-shadow: inset  0  8px 8px -8px #696868, 
-                   inset  0 -8px 8px -8px #696868;
-  -webkit-box-shadow: inset  0  8px 8px -8px #696868, inset  0 -8px 8px -8px #696868;
-  box-shadow: inset  0  8px 8px -8px #696868, 
-              inset  0 -8px 8px -8px #696868;
 	h6 {
 		width: 90%;
 		padding: 2px;
 		margin: 0px auto;
-		border-bottom: 1px solid $dark;
 		text-align: center;
 	}
 }//casewall
 
-#about {
-	.testimonials {
-			margin-bottom: 30px;
-			p {
-				position: relative;
-				padding: 20px 50px 0px;
-				z-index: 10;
-				text-align: left;
-			}//p
-			p:before, p:after {
-				color: $zepia;
-				font-size: 7rem;
-				position: absolute;
-				opacity: 0.5;
-				z-index: 0;
-			}//both
-			p:before {
-				content: '\275D';
-				top: -30px;
-				left: 0px;
-			}//before
-			p:after {
-				content: '\275E';
-				bottom: -30px;
-				right: 10px;
-			}//after
-			span{
-				display: block;
-				font-style: italic;
-				padding-right: 70px;
-			}//span
-		}//testimonials
-}
+#contactPanel {
+	a, a:hover, a:link, a:focus, a:visited {
+		color: $dark;
+		text-decoration: none;
+	}
+	a:hover, #email a {
+		text-decoration: underline;
+	}
+	.container {
+		padding-bottom: 0px;
+	}
+	.framed {
+		padding: 30px 25px;
+	}
+	ul {
+		padding-left: 0px;
+		padding-top: 20px;
+	}
+}//contactPanel
 
 #resources {
 	.container {
-		background-color: transparentize($sand, 0.3);
-		@include shadow();
-		> p {
-			width: 80%;
-			margin: 20px auto; 
+		padding-bottom: 0px;
+	}
+	li, p {
+		text-align: left;
+	}
+	h5 {
+		a {
+			color: $ocre;
+			&:after {
+				content: ' >>';
+				color: lt-ocre;
+				font-size: 12px;
+			}
 		}
+		margin-top: 50px;
+
+	}
+}//resource
+
+#picWall {
+	.pic-frame a {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+#caseThmenu {
+	padding: 70px 10% 30px;
+	ul {
+		overflow: hidden;
 	}
 	li {
-		min-height: 170px;
+		height: 100px;
+		border: 1px solid $dark;
+		background: $zepia url(../img/lg/sprites.jpg);
+		opacity: 0.4;
+		@include transition();
+		&:hover,
+		&.active {
+			opacity: 1;
+			@include transition();
+		}
+	}
+	a {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+#caseContent {
+	h2.title {
+		padding-bottom: 5px;
+		border-bottom: 1px solid $dk-zepia;
+	}
+	h3 {
+		margin-bottom: 0px;
+		color: $brown;
+	}
+	.case-info {
+		display: inline-block;
+		margin: 0px auto;
+		overflow: hidden;
+		li {
+			padding: 0px 12px;
+			color: $brown;	
+		}
+	}//case-info
+	.case-container {
+		margin-top: 0;
 		p {
+			padding-top: 15px;
 			text-align: left;
 		}
 	}
-}//resources
-
-aside.caseMenu {
-	position: relative;
-	z-index: 500;
-	width: 25%;
-	margin: 20px 0px 20px 20px;
-	background-color: $sand;
-	border: 1px solid $dark;
-	@include shadow();
-	h4 {
-		text-align: center;
-	}//h4
-}//aside
-#caseList {
-		> li {
-			width:100%;
-			padding: 5px;
-			border-top: 1px solid $sand;
-			border-bottom: 1px solid $sand;
-			cursor: pointer;
-			@include transition();
-			&.selected,
-			&:hover {
-				border-top-color: $dark;
-				border-bottom-color: $dark;
-				opacity: 1; 
-				@include transition();
-				.thumb {
-					@include transition();
-				}
-			}//selected
-		}//li
-		h5 {
-			width: 95%;
-		}
-}//caselist
-
-main.caseContent {
-	background-color: $sand;
-	h1, h5, .case-intro, span, ul {
-		width: 80%;
-		margin: 50px auto 0px;
-		text-align: center;
+	.step {
+		list-style: none;
 	}
-	h1 {
-		padding-bottom: 3px;
-		border-bottom: 1px solid $sand;
-		font-size: 2.5rem;
-	}
-	h5, ul {
-		margin-top: 0px;
-	}
-	.case-intro {
-		font-size: 1.5rem;
-		line-height: 3rem;
-	}
-	span {
-		display: block;
-		font-size: 1.2rem;
-	}
-	.case-container {
-		overflow: hidden;
-		padding: 30px 30px 50px;
-	}
-	.row {
-		margin-bottom: 45px;
-	}
-	.segment {
-		.img-container, p {
-			width: 80%;
-			height: auto;
-			margin: 0px auto 15px;
-		}
+	.img-section {
+		width: 100%;
+		
 		.img-container {
-			border : 1px solid $dark;
+			width: 100%;
+			height: auto;
+			margin: 20px auto 0px;
+			border: 1px solid $dark;
+			&.none {
+				border: none;
+			}
 		}
-	}//segment
-}//main
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}//img-section
+	.info-section{		
+			margin: 0px auto 15px;
+	}//info-section
+}
 
-#caseLilacs {
-	height: 100%;
-	img[src='img/lg/pics/lilacs2.jpg'],
-	img[src='img/lg/pics/lilacs4.jpg'] {
-		padding: 20px 0px;
-		background-color: $dark;
-	}
-}
-#caseWoman {
-	.img-container {
-		width: 90%;
-		&.reduced {
-			width: 67%;
-		}//reduced
-	}//img-container
-}
-#caseSaints {
-	.segment.relative {
-		position: relative;
-		top: -83px;
-	}
-}
-//****** footer  ******//
+//======================
+//****** FOOTER ******//
+//======================
 footer {
 	color: $ocre;
 	margin-bottom: 0px; 
 	text-align: center;
-	.container {
-			width: 100%;
-			height: 100%;
-			padding: 0px 0px 20px;
-			margin: 0px;
-			@include transBr();
+	.container-fluid {
+			padding: 30px 0px 30px;
+			@include transBr(0.3);
 		}//container
 	#contact {
 		ul {
-			width: 100%;
 			overflow: hidden;
 		}
-		li {
+		li:not(.all) {
 			width: 33%;
 			float: left;
 			text-align: center;
 			font-size: 14px;
 		}
+		.all.small {
+			font-size: 12px;
+		}
+		#email a {
+			text-decoration: underline;
+		}
+		
+		#phone a:hover {
+			text-decoration: none;
+		}
 	}
 }//footer
 
 
-
 @import '_media.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

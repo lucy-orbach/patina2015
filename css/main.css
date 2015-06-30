@@ -11,15 +11,10 @@ body {
 .wrapper {
   position: relative;
   min-height: 100%;
-  padding-bottom: 150px;
 }
 
 * html .wrapper {
   height: 100%;
-}
-
-h1 {
-  font-size: 3.5rem;
 }
 
 a.navbar-brand, span.logo,
@@ -37,17 +32,28 @@ input[type='submit']::first-letter {
   font-size: 120%;
 }
 
+:before, :after {
+  font-family: 'Glyphicons Halflings';
+}
+
 .navbar-brand,
 .brand h1 {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+}
+
+h1 {
+  font-size: 3.5rem;
 }
 
 a, a:link, a:focus, a:visited, a:hover {
   outline: none;
 }
 
-:before, :after {
-  font-family: 'Glyphicons Halflings';
+.accent,
+.framed h4,
+#caseWall h6,
+#resources h5 a {
+  color: #af1050 !important;
 }
 
 input, textarea,
@@ -66,37 +72,15 @@ ul {
   padding-left: 0px;
   margin: 0px;
 }
-
-.container {
-  margin: 0px auto;
-  padding: 0px 15px;
-}
-
-.blurb {
-  padding: 15px;
-}
-
-.framed {
-  background-color: #e4dccc;
-}
-.framed h3, .framed li {
-  color: #44423d;
-}
-.framed ul {
-  padding-left: 15px;
-  text-align: left;
-}
-.framed li {
-  margin-bottom: 20px;
+ul.clean {
+  list-style-type: none !important;
 }
 
 header {
   position: relative;
-  min-height: 50px;
 }
 
 .jumbotron {
-  margin-bottom: 0px;
   background-size: cover !important;
 }
 .jumbotron a:hover {
@@ -113,7 +97,6 @@ header {
 }
 .jumbotron .banner h2 {
   color: #fbf9f3;
-  margin: 0px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
 .jumbotron .banner span {
@@ -123,7 +106,7 @@ header {
 .navbar {
   width: 100%;
   margin-bottom: 0px;
-  background-color: rgba(51, 38, 28, 0.9);
+  background-color: rgba(51, 38, 28, 0.7);
   -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
@@ -144,178 +127,195 @@ header {
 .navbar .navbar-collapse li:hover a, .navbar .navbar-collapse li a.active, .navbar .navbar-collapse li a:focus {
   color: #fbbd5c;
   background-color: #33261c;
+  text-decoration: underline;
 }
 .navbar .navbar-collapse li a {
+  height: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
 .section .container {
-  max-width: 1100px;
+  max-width: 1200px;
 }
 .section h2 {
   text-align: center;
   font-size: 3rem;
 }
 
-#caseWall {
-  background-color: #fbf9f3;
-  -moz-box-shadow: inset  0  8px 8px -8px #696868,  inset  0 -8px 8px -8px #696868;
-  -webkit-box-shadow: inset  0  8px 8px -8px #696868, inset  0 -8px 8px -8px #696868;
-  box-shadow: inset  0  8px 8px -8px #696868,  inset  0 -8px 8px -8px #696868;
+.section .framed {
+  padding: 0;
+  background-color: #f0ebe0;
 }
-#caseWall h6 {
-  width: 90%;
-  padding: 2px;
-  margin: 0px auto;
-  border-bottom: 1px solid #33261c;
-  text-align: center;
+.section .framed h3, .section .framed li {
+  color: #33261c;
 }
-
-#about .testimonials {
-  margin-bottom: 30px;
+.section .framed ul.row {
+  padding: 0px;
+  margin: 0px;
 }
-#about .testimonials p {
-  position: relative;
-  padding: 20px 50px 0px;
-  z-index: 10;
+.section .framed ul.row li:first-child {
+  padding: 0px;
+}
+.section .framed .img-container {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-color: #a5a099;
+  background-size: cover;
+}
+.section .framed .txt-container {
+  padding: 15px;
   text-align: left;
 }
-#about .testimonials p:before, #about .testimonials p:after {
-  color: #e4dccc;
-  font-size: 7rem;
-  position: absolute;
-  opacity: 0.5;
-  z-index: 0;
+.section .framed .txt-container ul {
+  margin-top: 30px;
+  text-align: left;
+  list-style-type: disc;
 }
-#about .testimonials p:before {
-  content: '\275D';
-  top: -30px;
-  left: 0px;
+
+#about h2 {
+  margin-top: 50px;
 }
-#about .testimonials p:after {
-  content: '\275E';
-  bottom: -30px;
-  right: 10px;
+#about em {
+  font-weight: 500;
+}
+#about .container {
+  padding-bottom: 0px;
+}
+#about .testimonials li {
+  padding: 20px;
+  border-bottom: 1px dotted #a5a099;
+  overflow: hidden;
+}
+#about .testimonials p {
+  text-align: left;
 }
 #about .testimonials span {
   display: block;
   font-style: italic;
   padding-right: 70px;
+  margin-bottom: 15px;
+}
+
+#caseWall h6 {
+  width: 90%;
+  padding: 2px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+#contactPanel a, #contactPanel a:hover, #contactPanel a:link, #contactPanel a:focus, #contactPanel a:visited {
+  color: #33261c;
+  text-decoration: none;
+}
+#contactPanel a:hover, #contactPanel #email a {
+  text-decoration: underline;
+}
+#contactPanel .container {
+  padding-bottom: 0px;
+}
+#contactPanel .framed {
+  padding: 30px 25px;
+}
+#contactPanel ul {
+  padding-left: 0px;
+  padding-top: 20px;
 }
 
 #resources .container {
-  background-color: rgba(251, 249, 243, 0.7);
-  -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  padding-bottom: 0px;
 }
-#resources .container > p {
-  width: 80%;
-  margin: 20px auto;
-}
-#resources li {
-  min-height: 170px;
-}
-#resources li p {
+#resources li, #resources p {
   text-align: left;
 }
-
-aside.caseMenu {
-  position: relative;
-  z-index: 500;
-  width: 25%;
-  margin: 20px 0px 20px 20px;
-  background-color: #fbf9f3;
-  border: 1px solid #33261c;
-  -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+#resources h5 {
+  margin-top: 50px;
 }
-aside.caseMenu h4 {
-  text-align: center;
+#resources h5 a {
+  color: #f39605;
+}
+#resources h5 a:after {
+  content: ' >>';
+  color: lt-ocre;
+  font-size: 12px;
 }
 
-#caseList > li {
+#picWall .pic-frame a {
+  display: block;
   width: 100%;
-  padding: 5px;
-  border-top: 1px solid #fbf9f3;
-  border-bottom: 1px solid #fbf9f3;
-  cursor: pointer;
+  height: 100%;
+}
+
+#caseThmenu {
+  padding: 70px 10% 30px;
+}
+#caseThmenu ul {
+  overflow: hidden;
+}
+#caseThmenu li {
+  height: 100px;
+  border: 1px solid #33261c;
+  background: #f0ebe0 url(../img/lg/sprites.jpg);
+  opacity: 0.4;
   transition: all 0.8s;
 }
-#caseList > li.selected, #caseList > li:hover {
-  border-top-color: #33261c;
-  border-bottom-color: #33261c;
+#caseThmenu li:hover, #caseThmenu li.active {
   opacity: 1;
   transition: all 0.8s;
 }
-#caseList > li.selected .thumb, #caseList > li:hover .thumb {
-  transition: all 0.8s;
-}
-#caseList h5 {
-  width: 95%;
-}
-
-main.caseContent {
-  background-color: #fbf9f3;
-}
-main.caseContent h1, main.caseContent h5, main.caseContent .case-intro, main.caseContent span, main.caseContent ul {
-  width: 80%;
-  margin: 50px auto 0px;
-  text-align: center;
-}
-main.caseContent h1 {
-  padding-bottom: 3px;
-  border-bottom: 1px solid #fbf9f3;
-  font-size: 2.5rem;
-}
-main.caseContent h5, main.caseContent ul {
-  margin-top: 0px;
-}
-main.caseContent .case-intro {
-  font-size: 1.5rem;
-  line-height: 3rem;
-}
-main.caseContent span {
+#caseThmenu a {
   display: block;
-  font-size: 1.2rem;
-}
-main.caseContent .case-container {
-  overflow: hidden;
-  padding: 30px 30px 50px;
-}
-main.caseContent .row {
-  margin-bottom: 45px;
-}
-main.caseContent .segment .img-container, main.caseContent .segment p {
-  width: 80%;
-  height: auto;
-  margin: 0px auto 15px;
-}
-main.caseContent .segment .img-container {
-  border: 1px solid #33261c;
-}
-
-#caseLilacs {
+  width: 100%;
   height: 100%;
 }
-#caseLilacs img[src='img/lg/pics/lilacs2.jpg'],
-#caseLilacs img[src='img/lg/pics/lilacs4.jpg'] {
-  padding: 20px 0px;
-  background-color: #33261c;
-}
 
-#caseWoman .img-container {
-  width: 90%;
+#caseContent h2.title {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #a5a099;
 }
-#caseWoman .img-container.reduced {
-  width: 67%;
+#caseContent h3 {
+  margin-bottom: 0px;
+  color: #473b31;
 }
-
-#caseSaints .segment.relative {
-  position: relative;
-  top: -83px;
+#caseContent .case-info {
+  display: inline-block;
+  margin: 0px auto;
+  overflow: hidden;
+}
+#caseContent .case-info li {
+  padding: 0px 12px;
+  color: #473b31;
+}
+#caseContent .case-container {
+  margin-top: 0;
+}
+#caseContent .case-container p {
+  padding-top: 15px;
+  text-align: left;
+}
+#caseContent .step {
+  list-style: none;
+}
+#caseContent .img-section {
+  width: 100%;
+}
+#caseContent .img-section .img-container {
+  width: 100%;
+  height: auto;
+  margin: 20px auto 0px;
+  border: 1px solid #33261c;
+}
+#caseContent .img-section .img-container.none {
+  border: none;
+}
+#caseContent .img-section img {
+  width: 100%;
+  height: auto;
+}
+#caseContent .info-section {
+  margin: 0px auto 15px;
 }
 
 footer {
@@ -323,33 +323,39 @@ footer {
   margin-bottom: 0px;
   text-align: center;
 }
-footer .container {
-  width: 100%;
-  height: 100%;
-  padding: 0px 0px 20px;
-  margin: 0px;
-  background-color: rgba(51, 38, 28, 0.9);
+footer .container-fluid {
+  padding: 30px 0px 30px;
+  background-color: rgba(51, 38, 28, 0.7);
 }
-footer .container a {
+footer .container-fluid a {
   color: #f39605;
 }
-footer .container a:hover {
+footer .container-fluid a:hover {
   color: ocre-lt;
 }
 footer #contact ul {
-  width: 100%;
   overflow: hidden;
 }
-footer #contact li {
+footer #contact li:not(.all) {
   width: 33%;
   float: left;
   text-align: center;
   font-size: 14px;
 }
+footer #contact .all.small {
+  font-size: 12px;
+}
+footer #contact #email a {
+  text-decoration: underline;
+}
+footer #contact #phone a:hover {
+  text-decoration: none;
+}
 
 @media only screen and (max-width: 767px) {
   .navbar {
     position: fixed;
+    z-index: 1000;
     background: url("../img/xsm/bowtieXSM.jpg") no-repeat top center;
     margin-bottom: 0px;
     border: 0px;
@@ -360,7 +366,27 @@ footer #contact li {
   .navbar .navbar-brand {
     height: auto;
     padding: 0px 10px;
-    font-size: 3rem;
+    font-size: 2.5rem;
+  }
+  .navbar .navbar-toggle {
+    background-color: rgba(51, 38, 28, 0.9);
+    width: 85px;
+    height: 30px;
+    padding: 1px;
+    padding-left: 45px;
+  }
+  .navbar .navbar-toggle a {
+    color: #f39605;
+  }
+  .navbar .navbar-toggle a:hover {
+    color: ocre-lt;
+  }
+  .navbar .navbar-toggle:before {
+    content: 'Menu';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    color: #f39605;
   }
   .navbar .icon-bar {
     background-color: #f39605;
@@ -369,30 +395,22 @@ footer #contact li {
     background-color: #33261c;
   }
 
-  .navbar.cases-head li {
-    width: 50%;
-  }
-  .navbar.cases-head li:first-child {
-    text-align: left;
-  }
-  .navbar.cases-head li:last-child {
-    text-align: right;
-  }
-
   .section {
-    padding: 0px;
+    padding: 40px 0px 40px;
   }
   .section .container {
     padding: 25px 15px;
-    margin-right: auto;
-    margin-left: auto;
+  }
+  .section .framed {
+    padding-bottom: 20px;
   }
   .section h2 {
-    font-size: 2.7rem;
+    font-size: 2.5rem;
     margin-top: 0px;
   }
   .section .row {
     padding: 20px 10px;
+    margin: 0px;
   }
   .section .row > div {
     padding: 0px;
@@ -400,46 +418,133 @@ footer #contact li {
   .section h6.mobile-only {
     margin-top: 50px;
   }
-  .section .framed {
-    padding: 0px 20px;
+
+  #services,
+  #about {
+    position: relative;
+    padding-top: 0;
+  }
+  #services .container,
+  #about .container {
+    padding: 0px;
+    margin: 0;
+  }
+  #services h2,
+  #about h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+  #services h2.title,
+  #about h2.title {
+    position: absolute;
+    left: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 70px;
+    margin-top: 0;
+    background-color: rgba(51, 38, 28, 0.7);
+  }
+  #services h2.title a,
+  #about h2.title a {
+    color: #f39605;
+  }
+  #services h2.title a:hover,
+  #about h2.title a:hover {
+    color: ocre-lt;
+  }
+  #services .img-container,
+  #about .img-container {
+    width: 100%;
+    height: 245px;
+    background-size: cover;
+  }
+  #services .txt-container,
+  #about .txt-container {
+    padding: 30px 30px 40px;
   }
 
   #about {
-    padding-top: 0;
+    margin-top: -5px;
   }
-  #about .container {
-    padding: 0px;
+  #about h2.title {
+    top: 175px;
   }
   #about .img-container {
-    width: 100%;
-    height: 250px;
     background: url("../img/xsm/olga.jpg") no-repeat top left;
-    background-size: 100%;
   }
   #about .testimonials li {
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     margin-bottom: 15px;
-    border-bottom: 1px dotted #e4dccc;
+    border-bottom: 1px dotted #a5a099;
   }
 
-  #caseWall .container {
-    padding: 20px 0px;
+  #contactPanel .framed {
+    position: relative;
+    padding-bottom: 270px;
   }
-  #caseWall .frame {
+  #contactPanel .row, #contactPanel .img-container, #contactPanel .txt-container {
+    padding: 0px;
+    margin: 0px;
+  }
+  #contactPanel li.map {
+    position: absolute;
+    bottom: 20px;
+    width: 90%;
+  }
+  #contactPanel .img-container {
+    max-width: 95%;
+    height: 200px;
+    background: url("../img/xsm/map.jpg") no-repeat top right;
+    background-size: cover;
+  }
+  #contactPanel .txt-container ul {
+    margin-top: 0px;
+  }
+
+  #services .container {
+    position: relative;
+    margin-top: -10px;
+  }
+  #services .container .framed {
+    position: absolute;
+    top: 0px;
+  }
+  #services h2.title {
+    top: 175px;
+  }
+  #services .img-container {
+    background: url("../img/xsm/services.jpg") no-repeat top left;
+  }
+
+  #caseWall {
+    padding-bottom: 0;
+  }
+
+  #picWall .container {
+    padding: 0px 0px 40px;
+    border-top: 1px dotted #f39605;
+  }
+  #picWall .pic-frame {
     height: 140px;
-    padding: 10px 5px;
+    padding: 0px 5px 10px;
     border-bottom: 1px dotted #f39605;
     overflow: hidden;
     transition: all 0.8s;
   }
-  #caseWall .frame a {
+  #picWall .pic-frame a {
     color: #33261c;
   }
-  #caseWall .frame:hover {
-    background-color: #e4dccc;
+  #picWall .pic-frame a:hover {
+    text-decoration: none;
+  }
+  #picWall .pic-frame:hover {
+    background-color: #f0ebe0;
     transition: all 0.8s;
   }
-  #caseWall .details {
+  #picWall .pic-frame h6 {
+    color: #a5a099;
+  }
+  #picWall .details {
     position: relative;
     min-height: 120px;
     padding-left: 125px;
@@ -447,17 +552,16 @@ footer #contact li {
     text-align: left;
     font-size: 1.2rem;
   }
-  #caseWall .details:before {
+  #picWall .details:before {
     content: '';
     position: absolute;
     left: 0px;
     display: block;
     width: 120px;
     height: 120px;
-    border: 1px solid #33261c;
-    background: #33261c url(../img/xsm/sprites.png) no-repeat;
+    background: url("../img/xsm/sprites.jpg") no-repeat;
   }
-  #caseWall .details:after {
+  #picWall .details:after {
     content: '\e080';
     position: absolute;
     right: 5px;
@@ -465,71 +569,108 @@ footer #contact li {
     font-family: 'Glyphicons Halflings';
     font-size: 2rem;
   }
-  #caseWall li:first-child {
+  #picWall li:first-child {
     font-weight: bold;
   }
-  #caseWall #girl .details:before {
+  #picWall #girl .details:before {
     background-position: 0px 0px;
   }
-  #caseWall #elephant .details:before {
+  #picWall #elephant .details:before {
     background-position: -120px 0px;
   }
-  #caseWall #street .details:before {
+  #picWall #street .details:before {
     background-position: -240px 0px;
   }
-  #caseWall #landscape .details:before {
+  #picWall #landscape .details:before {
     background-position: -360px 0px;
   }
-  #caseWall #bird .details:before {
+  #picWall #bird .details:before {
     background-position: -480px 0px;
   }
-  #caseWall #mrsPitt .details:before {
+  #picWall #mrsPitt .details:before {
     background-position: 0px -120px;
   }
-  #caseWall #virgin .details:before {
+  #picWall #virgin .details:before {
     background-position: -120px -120px;
   }
-  #caseWall #lilacs .details:before {
+  #picWall #lilacs .details:before {
     background-position: -240px -120px;
   }
-  #caseWall #womanPortrait .details:before {
+  #picWall #womanPortrait .details:before {
     background-position: -360px -120px;
   }
-  #caseWall #saints .details:before {
+  #picWall #saints .details:before {
     background-position: -480px -120px;
   }
-  #caseWall #manPortrait .details:before {
+  #picWall #manPortrait .details:before {
     background-position: -600px -120px;
   }
 
-  #pageContent {
-    padding-top: 70px;
-  }
-  #pageContent .container {
+  #caseContent > .container {
     position: relative;
+    padding: 0px;
+  }
+  #caseContent h3 {
+    padding-top: 40px;
+    padding-left: 12px;
+    font-size: 1.7rem;
+    text-align: left;
+  }
+  #caseContent h2.title {
+    position: absolute;
+    top: 10px;
+    padding-left: 12px;
+    font-size: 1.7rem;
+    text-align: left;
+  }
+  #caseContent .row {
+    padding: 0;
+  }
+  #caseContent .row li.segment {
+    padding: 0;
+  }
+  #caseContent .step {
+    padding: 0;
+  }
+  #caseContent .case-info {
+    font-size: 1rem;
+    overflow: hidden;
+  }
+  #caseContent .case-info li {
+    text-align: left;
+  }
+  #caseContent .case-info li:last-child {
     width: 100%;
+  }
+  #caseContent .info-section {
+    padding: 10px 20px;
+  }
+
+  #caseStreet .case-container {
+    padding: 0px 12px;
+  }
+
+  #caseWoman h3 {
+    padding-top: 55px !important;
   }
 
   footer {
     position: fixed;
     bottom: 0px;
     z-index: 1000;
-    width: 100%;
     height: 40px;
-    padding: 0px;
-    margin: 0px;
     -webkit-box-shadow: 0px -2px 2px 1px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px -2px 2px 1px rgba(0, 0, 0, 0.3);
     box-shadow: 0px -2px 2px 1px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     transition: all 0.8s;
   }
-  footer.open {
-    height: 120px;
+  footer.openUp {
+    height: 145px;
     background-color: #33261c;
     transition: all 0.8s;
   }
-  footer.open:before {
+  footer.openUp:before {
     content: '\e088';
     position: absolute;
     top: 7px;
@@ -538,17 +679,29 @@ footer #contact li {
     font-weight: lighter;
     z-index: 1000;
   }
+  footer .container-fluid {
+    padding-top: 0px;
+  }
+  footer nav, footer ul, footer li {
+    padding: 0px;
+    margin: 0px;
+  }
   footer nav {
     position: relative;
     top: 0px;
     width: 100%;
-    padding: 0px;
-    margin: 0px;
   }
   footer h5 {
-    margin: 7px auto 15px;
+    margin: 0px auto 15px;
     text-align: center;
     color: #f39605;
+    cursor: pointer;
+    height: 40px;
+    line-height: 4rem;
+  }
+  footer ul {
+    width: 90%;
+    margin: 0px auto;
   }
   footer li {
     position: relative;
@@ -588,78 +741,54 @@ footer #contact li {
   footer a:hover {
     background-color: rgba(251, 249, 243, 0.2);
   }
-
-  aside.caseMenu {
-    position: absolute;
-    top: -200%;
-    right: 0px;
-    width: 100%;
-    margin: 0px;
-    background-color: rgba(247, 246, 244, 0.95);
-    transition: all 0.8s;
-  }
-  aside.caseMenu.open {
-    top: 0px;
-    transition: all 0.8s;
-  }
-  aside.caseMenu h4, aside.caseMenu .thumb {
-    display: none;
-  }
-  aside.caseMenu li {
-    height: auto;
-  }
-  aside.caseMenu li:hover {
-    background-color: #fbf9f3;
-  }
-  aside.caseMenu h5 {
-    margin: 0px;
-  }
-
-  main.caseContent {
-    width: 100%;
-  }
-  main.caseContent .segment,
-  main.caseContent .segment.third {
-    width: 100%;
-  }
 }
 @media only screen and (max-width: 767px) and (orientation: landscape) {
   .navbar li {
-    height: 48px;
+    height: 40px;
   }
   .navbar li.contact {
     display: block;
   }
 
+  #about h2:first-child {
+    top: 205px;
+    height: 40px;
+  }
   #about .img-container {
-    width: 100%;
-    height: 300px;
-    float: left;
     background: url("../img/xsm/olgXSL.jpg") no-repeat top left;
-    background-size: 100%;
-  }
-  #about h2.title {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    width: 50%;
-    height: 300px;
-    padding-top: 150px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    background-color: rgba(251, 249, 243, 0.95);
-  }
-  #about .blurb-container {
-    clear: both;
+    background-size: cover;
   }
 
-  footer {
-    height: 0px;
+  #services h2.title {
+    top: -70px;
+  }
+  #services .img-container {
+    background: url("../img/xsm/servicesXSL.jpg") no-repeat top left;
   }
 }
 @media (min-width: 768px) {
   .mobile-only {
     display: none !important;
+  }
+
+  .wrapper {
+    padding-bottom: 75px;
+  }
+
+  .navbar {
+    position: absolute;
+    bottom: 0px;
+  }
+
+  #headNav li {
+    height: 100%;
+    padding: 0px 10px;
+  }
+  #headNav li:nth-child(3) {
+    width: 150px;
+  }
+  #headNav li a {
+    height: 50px;
   }
 
   .jumbotron, footer {
@@ -678,13 +807,7 @@ footer #contact li {
     margin: 0px auto;
   }
 
-  .navbar {
-    position: absolute;
-    bottom: 0px;
-  }
-
   .section .container {
-    padding: 30px;
     text-align: center;
   }
   .section h2 {
@@ -699,189 +822,316 @@ footer #contact li {
     margin-bottom: 2rem;
   }
 
-  .framed {
-    border: 1px solid #473b31;
+  .section .framed {
+    margin-top: 30px;
+    border: 1px solid #a5a099;
+  }
+  .section .framed .img-container {
+    height: 280px;
+  }
+  .section .framed h2.title {
+    width: 90%;
+    margin: 0px auto;
   }
 
-  #section .img-container {
-    background: url("../img/sm/services.jpg");
+  #about .img-container {
+    background: #a5a099 url("../img/sm/olga.jpg") no-repeat top left;
+    background-size: cover;
   }
 
-  #about .container {
-    margin-top: 20px;
+  #contactPanel .img-container {
+    background: url("../img/sm/map.jpg") no-repeat top left;
   }
-  #about .blurb-container {
-    border: 1px solid #33261c;
-    background: url(../img/sm/olga.jpg) no-repeat top left;
+
+  #services .img-container {
+    background: #a5a099 url("../img/sm/services.jpg") no-repeat top left;
   }
-  #about .blurb {
-    height: 100%;
-    padding: 15px;
-    margin: 445px 0px 0px;
-    background-color: #e4dccc;
+  #services .txt-container {
+    padding: 15px 30px;
+  }
+  #services .txt-container ul {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #services p {
     text-align: left;
   }
-  #about .blurb em {
-    font-weight: bold;
-  }
-  #about .testimonials li {
-    padding-bottom: 50px;
-    margin-bottom: 15px;
-    border-bottom: 1px dotted #e4dccc;
-  }
 
-  #caseWall .container {
-    padding-bottom: 50px;
-  }
-
-  #resources li {
-    min-height: 300px;
-  }
-
-  #picWall {
+  #picWall .pic-container {
     position: relative;
-    width: 725px;
-    height: 750px;
-    margin: 20px auto;
+    min-height: 900px;
   }
-  #picWall .frame {
+  #picWall .pic-frame {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    padding: 0px;
+    overflow: hidden;
     border: 2px solid #33261c;
-    background: #33261c url("../img/sprites.png") no-repeat;
+    background: #33261c url("../img/lg/sprites.jpg") no-repeat;
     -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
     transition: all 0.8s;
   }
-  #picWall .frame .details {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    padding: 0px;
-  }
-  #picWall .frame .details:before, #picWall .frame .details:after {
-    display: none;
-  }
-  #picWall .frame .details ul {
-    position: absolute;
-    bottom: -100%;
-    width: 100%;
-    padding: 5px 3px;
-    background-color: rgba(51, 38, 28, 0.8);
-    color: #fbf9f3;
-    font-size: 1.1rem;
-    transition: all 0.8s;
-  }
-  #picWall .frame .details:hover ul {
+  #picWall .pic-frame:hover .details {
     bottom: 0px;
     transition: all 0.8s;
   }
   #picWall #girl {
-    top: 15px;
+    top: 0px;
     left: 0px;
-    width: 205px;
-    height: 229px;
-    background-position: 0px 0px;
+    width: 260px;
+    height: 295px;
   }
   #picWall #elephant {
-    top: 70px;
-    left: 217px;
-    width: 155px;
-    height: 123px;
-    background-position: -210px 0px;
-  }
-  #picWall #street {
-    top: 0px;
-    left: 385px;
-    width: 160px;
-    height: 240px;
-    background-position: -371px 0px;
-  }
-  #picWall #landscape {
-    top: 255px;
-    left: 385px;
-    width: 290px;
-    height: 184px;
-    background-position: -536px 0px;
-  }
-  #picWall #bird {
-    top: 420px;
-    left: 25px;
-    width: 179px;
-    height: 229px;
-    background-position: -830px 0px;
-  }
-  #picWall #mrsPitt {
-    top: 450px;
-    left: 525px;
-    width: 190px;
-    height: 200px;
-    background-position: 0px -245px;
-  }
-  #picWall #virgin {
-    top: 445px;
-    left: 220px;
-    width: 146px;
-    height: 200px;
-    background-position: -215px -245px;
-  }
-  #picWall #lilacs {
-    top: 255px;
-    left: 20px;
-    width: 185px;
-    height: 150px;
-    background-position: -370px -245px;
+    top: 625px;
+    left: 185px;
+    width: 125px;
+    height: 105px;
+    background-position: -279px -58px;
+    background-size: 970%;
   }
   #picWall #womanPortrait {
-    top: 208px;
-    left: 215px;
-    width: 158px;
-    height: 231px;
-    background-position: -556px -245px;
+    top: 625px;
+    left: 325px;
+    width: 145px;
+    height: 200px;
+    background-size: 930%;
+    background-position: -319px -202px;
+  }
+  #picWall #womanPortrait.details {
+    padding-top: 10px;
+    padding-bottom: 0px;
   }
   #picWall #saints {
-    top: 40px;
-    left: 555px;
-    width: 169px;
-    height: 200px;
-    background-position: -722px -250px;
+    top: 0px;
+    left: 275px;
+    width: 150px;
+    height: 180px;
+    background-position: -420px 0px;
+  }
+  #picWall #landscape {
+    top: 0px;
+    left: 445px;
+    width: 290px;
+    height: 180px;
+    background-position: -590px 0px;
+  }
+  #picWall #mrsPitt {
+    top: 310px;
+    left: 40px;
+    width: 220px;
+    height: 275px;
+    background-size: 500%;
+    background-position: -860px 0px;
+  }
+  #picWall #virgin {
+    top: 600px;
+    left: 0px;
+    width: 170px;
+    height: 225px;
+    background-position: -21px -309px;
+  }
+  #picWall #lilacs {
+    top: 200px;
+    left: 275px;
+    width: 215px;
+    height: 175px;
+    background-size: 625%;
+    background-position: -249px -426px;
   }
   #picWall #manPortrait {
-    top: 450px;
-    left: 385px;
-    width: 128px;
-    height: 157px;
-    background-position: -900px -245px;
+    top: 200px;
+    left: 505px;
+    width: 230px;
+    height: 300px;
+    background-position: -433px -230px;
+  }
+  #picWall #street {
+    top: 515px;
+    left: 505px;
+    width: 185px;
+    height: 280px;
+    background-size: 645%;
+    background-position: -718px -206px;
+  }
+  #picWall #bird {
+    top: 390px;
+    left: 295px;
+    width: 175px;
+    height: 220px;
+    background-position: -900px -315px;
+  }
+  #picWall .details {
+    position: absolute;
+    bottom: -200px;
+    background-color: rgba(51, 38, 28, 0.9);
+    color: #fbf9f3;
+    padding: 5px 3px;
+    text-align: center;
+    transition: all 0.8s;
+  }
+  #picWall .details a {
+    color: #f39605;
+  }
+  #picWall .details a:hover {
+    color: ocre-lt;
+  }
+
+  #caseThmenu ul {
+    width: 614px;
+  }
+  #caseThmenu li {
+    background-size: 800%;
+  }
+  #caseThmenu #thGirl {
+    background-size: 600%;
+    background-position: -30px -10px;
+  }
+  #caseThmenu #thLandscape {
+    background-size: 600%;
+    background-position: -705px -80px;
+  }
+  #caseThmenu #thMan {
+    background-position: -333px -185px;
+  }
+  #caseThmenu #thPitt {
+    background-position: -670px -8px;
+  }
+  #caseThmenu #thSaints {
+    background-position: -300px -15px;
+  }
+  #caseThmenu #thLilacs {
+    background-position: -169px -261px;
+  }
+  #caseThmenu #thBird {
+    background-position: -645px -225px;
+  }
+  #caseThmenu #thStreet {
+    background-position: -505px -205px;
+  }
+  #caseThmenu #thWoman {
+    background-size: 1000%;
+    background-position: -252px -169px;
+  }
+  #caseThmenu #thVirgin {
+    background-position: -20px -230px;
+  }
+  #caseThmenu #thElephant {
+    background-size: 1100%;
+    background-position: -270px -57px;
+  }
+
+  #caseContent h2.title {
+    margin-top: -10px;
+  }
+  #caseContent .case-info li {
+    float: left;
+    font-size: 14px;
+  }
+  #caseContent .case-container {
+    padding: 0 5%;
+  }
+  #caseContent .step {
+    padding: 0% 5%;
+  }
+  #caseContent .img-section {
+    width: 100%;
+  }
+  #caseContent .img-section .img-container {
+    width: 100%;
+    height: auto;
+    margin: 20px auto 0px;
+    border: 1px solid #33261c;
+  }
+  #caseContent .img-section .img-container.none {
+    border: none;
+  }
+  #caseContent .img-section img {
+    width: 100%;
+    height: auto;
+  }
+  #caseContent .info-section {
+    min-height: 130px;
+    margin: 0px auto 15px;
+  }
+  #caseContent .info-section.long {
+    height: 200px;
+  }
+
+  #caseMan .segment:nth-child(2) .img-container,
+  #caseMan .segment:nth-child(5) .img-container {
+    padding: 0px 30px;
+  }
+  #caseMan .segment:nth-child(2) .img-container img,
+  #caseMan .segment:nth-child(5) .img-container img {
+    height: 216px;
+  }
+
+  #casePitt .info-section.long {
+    height: 275px;
+  }
+
+  #caseSaints .info-section {
+    height: 150px;
+  }
+  #caseSaints .segment:nth-child(2) .img-container img,
+  #caseSaints .segment:nth-child(3) .img-container,
+  #caseSaints .segment:nth-child(3n) .img-container img {
+    height: 319px;
+    width: auto;
+  }
+
+  #caseLilacs .segment:first-child .img-container,
+  #caseLilacs .segment:nth-child(3) .img-container,
+  #caseLilacs .segment:first-child .img-container img,
+  #caseLilacs .segment:nth-child(3) .img-container img {
+    height: 177px;
+    width: auto;
+  }
+  #caseLilacs .segment:first-child p,
+  #caseLilacs .segment:nth-child(3n) p {
+    padding-left: 20px;
+    padding-right: 10px;
+  }
+
+  #caseBird img {
+    width: 100%;
+  }
+  #caseBird .segment:first-child .img-container img,
+  #caseBird .segment:nth-child(2) .img-container img {
+    height: 400px;
+    width: auto;
+  }
+
+  #caseWoman .segment:first-child .img-container img {
+    height: 386px;
+    width: auto;
+  }
+
+  #caseVirgin .segment:nth-child(2) .img-container {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  #caseElephant .case-container {
+    min-height: 80px;
+    padding: 0px;
+  }
+  #caseElephant .info-section {
+    min-height: 50px;
+  }
+  #caseElephant .info-section p {
+    min-height: 50px;
+    text-align: center;
   }
 
   footer {
     position: relative;
-    width: 100%;
-    height: 140px;
   }
   footer #contact {
-    margin-top: 70px;
-  }
-
-  #pageContent {
-    position: relative;
-    padding-top: 60px;
-  }
-
-  aside.caseMenu {
-    position: absolute;
-    width: 250px;
+    margin: 20px 0px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
-  footer {
-    margin-top: -140px;
-  }
-
   .navbar .navbar-collapse {
     margin: 0px auto;
   }
@@ -891,109 +1141,281 @@ footer #contact li {
     margin: 0px auto;
   }
   .navbar .navbar-collapse .navbar-nav li {
-    width: 20%;
+    width: 15%;
   }
   .navbar .navbar-collapse .navbar-nav li a {
     padding: 10px 3px;
     text-align: center;
   }
 }
-@media (min-width: 768px) {
-  #caseList > li {
-    overflow: hidden;
-    height: 90px;
-    opacity: 0.7;
-    transition: all 0.8s;
-  }
-  #caseList > li > div {
-    float: left;
-  }
-  #caseList .thumb {
-    width: 70px;
-    height: 70px;
-    margin: 5px 10px 0px 5px;
-    border: 1px solid #33261c;
-    background: #33261c url(../img/xsm/sprites.png) no-repeat;
-    background-size: 600%;
-    transition: all 0.8s;
-  }
-  #caseList h5 {
-    width: 95%;
-  }
-
-  #thElephant .thumb {
-    background-position: -68px 0px;
-  }
-
-  #thStreet .thumb {
-    background-position: -136px 0px;
-  }
-
-  #thLandscape .thumb {
-    background-position: -204px 0px;
-  }
-
-  #thBird .thumb {
-    background-position: -272px 0px;
-  }
-
-  #thPitt .thumb {
-    background-position: 0px -68px;
-  }
-
-  #thVirgin .thumb {
-    background-position: -68px -68px;
-  }
-
-  #thLilacs .thumb {
-    background-position: -136px -68px;
-  }
-
-  #thWoman .thumb {
-    background-position: -204px -68px;
-  }
-
-  #thSaints .thumb {
-    background-position: -272px -68px;
-  }
-
-  #thMan .thumb {
-    background-position: -340px -68px;
-  }
-
-  main.caseContent {
-    width: 70%;
-    margin-left: 15%;
-  }
-  main.caseContent .segment {
-    width: 50%;
-    float: left;
-  }
-  main.caseContent .segment.third {
-    width: 33%;
-  }
-}
 @media only screen and (min-width: 900px) {
+  .section .container {
+    min-width: 900px;
+    max-width: 1030px;
+  }
+
   .jumbotron, footer {
     background: #33261c url("../img/md/bowtieMD.jpg") no-repeat center top;
   }
 
-  #about .blurb-container {
-    background: url(../img/md/olga.jpg) no-repeat top left;
+  #about .img-container {
+    height: 400px;
+    background: #a5a099 url("../img/md/olga.jpg") no-repeat top left;
+    background-size: cover;
   }
   #about .testimonials li {
-    width: 50%;
-    float: left;
+    margin: 0px;
+    padding: 0px 10px 20px 0px;
     border-bottom: none;
   }
+  #about .testimonials li:nth-child(even) {
+    padding: 0px 0px 20px 10px;
+  }
+  #about .testimonials p {
+    height: 350px;
+    padding: 20px 20px 70px;
+    margin-bottom: 0px;
+    background-color: #f0ebe0;
+    border: 1px solid #a5a099;
+  }
+  #about .testimonials span {
+    margin-top: -70px;
+  }
 
-  #resources li {
-    min-height: 250px;
+  #contactPanel .img-container {
+    background: url("../img/md/mapMDL.jpg") no-repeat top center;
+  }
+
+  #services .img-container {
+    width: 100%;
+    height: 450px;
+    background: url("../img/md/services.jpg") no-repeat top left;
+    background-size: cover;
+  }
+  #services .txt-container li {
+    margin-bottom: 0px;
+  }
+
+  #picWall .pic-container {
+    position: relative;
+    min-height: 550px;
+    height: 750px;
+  }
+  #picWall .pic-frame {
+    position: absolute;
+    overflow: hidden;
+    border: 2px solid #33261c;
+    background: #33261c url("../img/lg/sprites.jpg") no-repeat;
+    -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+    transition: all 0.8s;
+  }
+  #picWall .pic-frame:hover .details {
+    bottom: 0px;
+    transition: all 0.8s;
+  }
+  #picWall #girl {
+    top: 40px;
+    left: 0px;
+    width: 260px;
+    height: 290px;
+  }
+  #picWall #elephant {
+    top: 550px;
+    left: 230px;
+    width: 120px;
+    height: 90px;
+    background-position: -279px -60px;
+  }
+  #picWall #womanPortrait {
+    top: 660px;
+    left: 230px;
+    width: 120px;
+    height: 160px;
+    background-size: 950%;
+    background-position: -270px -180px;
+  }
+  #picWall #womanPortrait.details {
+    padding-top: 10px;
+    padding-bottom: 0px;
+  }
+  #picWall #saints {
+    top: 350px;
+    left: 590px;
+    width: 150px;
+    height: 180px;
+    background-position: -420px 0px;
+  }
+  #picWall #landscape {
+    top: 0px;
+    left: 280px;
+    width: 290px;
+    height: 180px;
+    background-position: -590px 0px;
+  }
+  #picWall #mrsPitt {
+    top: 40px;
+    left: 590px;
+    width: 230px;
+    height: 290px;
+    background-position: -902px 0px;
+  }
+  #picWall #virgin {
+    top: 550px;
+    left: 385px;
+    width: 170px;
+    height: 220px;
+    background-position: -20px -310px;
+  }
+  #picWall #lilacs {
+    top: 350px;
+    left: 60px;
+    width: 200px;
+    height: 165px;
+    background-size: 625%;
+    background-position: -225px -399px;
+  }
+  #picWall #manPortrait {
+    top: 200px;
+    left: 295px;
+    width: 260px;
+    height: 330px;
+    background-position: -425px -205px;
+  }
+  #picWall #street {
+    top: 550px;
+    left: 20px;
+    width: 180px;
+    height: 270px;
+    background-position: -700px -200px;
+  }
+  #picWall #bird {
+    top: 550px;
+    left: 590px;
+    width: 200px;
+    height: 270px;
+    background-size: 750%;
+    background-position: -1182px -400px;
+  }
+  #picWall .details {
+    position: absolute;
+    bottom: -200px;
+    background-color: rgba(51, 38, 28, 0.9);
+    color: #fbf9f3;
+    padding: 5px 3px;
+    text-align: center;
+    transition: all 0.8s;
+  }
+  #picWall .details a {
+    color: #f39605;
+  }
+  #picWall .details a:hover {
+    color: ocre-lt;
+  }
+
+  #caseThmenu ul {
+    width: 785px;
+  }
+  #caseThmenu li {
+    height: 120px;
+    background-size: 800%;
+  }
+  #caseThmenu #thGirl {
+    background-size: 600%;
+    background-position: -30px -10px;
+  }
+  #caseThmenu #thLandscape {
+    background-size: 400%;
+    background-position: -538px -40px;
+  }
+  #caseThmenu #thMan {
+    background-position: -430px -240px;
+  }
+  #caseThmenu #thPitt {
+    background-position: -860px -20px;
+  }
+  #caseThmenu #thSaints {
+    background-position: -381px -23px;
+  }
+  #caseThmenu #thLilacs {
+    background-position: -200px -340px;
+  }
+  #caseThmenu #thBird {
+    background-position: -825px -285px;
+  }
+  #caseThmenu #thStreet {
+    background-position: -650px -290px;
+  }
+  #caseThmenu #thWoman {
+    background-size: 1000%;
+    background-position: -320px -216px;
+  }
+  #caseThmenu #thVirgin {
+    background-position: -25px -290px;
+  }
+  #caseThmenu #thElephant {
+    background-size: 1100%;
+    background-position: -358px -78px;
+  }
+
+  #caseGirl .img-section {
+    height: 400px;
+  }
+
+  #caseLandscape .img-section {
+    height: 230px;
+  }
+
+  #caseMan .segment:nth-child(2) .img-container,
+  #caseMan .segment:nth-child(5) .img-container {
+    padding: 0px 30px;
+  }
+  #caseMan .segment:nth-child(2) .img-container img,
+  #caseMan .segment:nth-child(5) .img-container img {
+    height: 300px;
+  }
+
+  #caseSaints .case-container {
+    clear: both;
+  }
+  #caseSaints .case-container .segment .img-container img {
+    height: 320px;
+    width: auto;
+  }
+
+  #caseLilacs .segment:first-child .img-container,
+  #caseLilacs .segment:nth-child(3) .img-container,
+  #caseLilacs .segment:first-child .img-container img,
+  #caseLilacs .segment:nth-child(3) .img-container img {
+    height: 252px;
+  }
+
+  #caseWoman .segment .img-container {
+    border: none;
+  }
+  #caseWoman .segment .img-container img {
+    height: 386px;
+    width: auto;
+  }
+
+  #caseElephant .case-container {
+    min-height: 80px;
+  }
+  #caseElephant .case-container > ul > li {
+    padding: 0px 50px;
+  }
+  #caseElephant .info-section {
+    min-height: 50px;
+  }
+  #caseElephant .info-section p {
+    min-height: 50px;
+    text-align: center;
   }
 
   footer #contact {
     width: 80%;
-    margin: 70px auto 0px;
+    margin: 0px auto;
   }
 }
 @media (min-width: 1200px) {
@@ -1024,94 +1446,200 @@ footer #contact li {
     padding: 10px 20px;
   }
 
-  #about .blurb-container {
-    width: 1250px;
-    height: 450px;
-    border: 1px solid #33261c;
-    background: url(../img/lg/olga.jpg) no-repeat top left;
+  #about .img-container {
+    height: 570px;
+    background: #a5a099 url("../img/lg/olga.jpg") no-repeat top left;
+    background-size: cover;
   }
-  #about .blurb {
-    height: 100%;
-    padding: 15px;
-    margin: 0;
-    background-color: rgba(251, 249, 243, 0.9);
-    text-align: left;
-  }
-  #about .blurb em {
-    font-weight: bold;
-  }
-  #about .testimonials {
-    width: 80%;
+  #about .testimonials p {
+    height: 300px;
   }
 
-  #picWall {
-    width: 1100px;
-    height: 525px;
+  #contactPanel .img-container {
+    background: url("../img/lg/map.jpg") no-repeat center left;
   }
-  #picWall .frame {
-    background: #33261c url("../img/lg/sprites.png") no-repeat;
+
+  #services .img-container {
+    height: 425px;
+    background: #a5a099 url("../img/lg/services.jpg") no-repeat top left;
+    background-size: cover;
+  }
+  #services .txt-container {
+    padding: 30px 50px;
+  }
+  #services .txt-container h4 {
+    font-size: 2rem;
+  }
+  #services .txt-container ul {
+    margin-top: 50px;
+  }
+  #services .txt-container li {
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+  }
+
+  #picWall .pic-container {
+    position: relative;
+    height: 550px;
+  }
+  #picWall .pic-frame {
+    position: absolute;
+    overflow: hidden;
+    border: 2px solid #33261c;
+    background: #33261c url("../img/lg/sprites.jpg") no-repeat;
+    -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+    transition: all 0.8s;
+  }
+  #picWall .pic-frame:hover .details {
+    bottom: 0px;
     transition: all 0.8s;
   }
   #picWall #girl {
     top: 0px;
     left: 0px;
+    width: 260px;
+    height: 290px;
   }
   #picWall #elephant {
-    top: 60px;
-    left: 220px;
-  }
-  #picWall #street {
-    top: 0px;
-    left: 395px;
-  }
-  #picWall #landscape {
-    top: 35px;
-    left: 575px;
-  }
-  #picWall #bird {
-    top: 15px;
-    left: 890px;
-  }
-  #picWall #mrsPitt {
-    top: 245px;
-    left: 15px;
-  }
-  #picWall #virgin {
-    top: 215px;
-    left: 220px;
-  }
-  #picWall #lilacs {
-    top: 260px;
-    left: 380px;
+    top: 65px;
+    left: 280px;
+    width: 120px;
+    height: 90px;
+    background-position: -279px -60px;
   }
   #picWall #womanPortrait {
-    top: 240px;
-    left: 580px;
+    top: 180px;
+    left: 280px;
+    width: 120px;
+    height: 160px;
+    background-size: 950%;
+    background-position: -270px -180px;
+  }
+  #picWall #womanPortrait.details {
+    padding-top: 10px;
+    padding-bottom: 0px;
   }
   #picWall #saints {
-    top: 260px;
-    left: 755px;
+    top: 0px;
+    left: 420px;
+    width: 150px;
+    height: 180px;
+    background-position: -420px 0px;
+  }
+  #picWall #landscape {
+    top: 0px;
+    left: 590px;
+    width: 290px;
+    height: 180px;
+    background-position: -590px 0px;
+  }
+  #picWall #mrsPitt {
+    top: 0px;
+    left: 900px;
+    width: 230px;
+    height: 290px;
+    background-position: -902px 0px;
+  }
+  #picWall #virgin {
+    top: 310px;
+    left: 00px;
+    width: 170px;
+    height: 220px;
+    background-position: -20px -310px;
+  }
+  #picWall #lilacs {
+    top: 365px;
+    left: 200px;
+    width: 200px;
+    height: 165px;
+    background-size: 625%;
+    background-position: -225px -399px;
   }
   #picWall #manPortrait {
-    top: 260px;
-    left: 940px;
+    top: 200px;
+    left: 420px;
+    width: 260px;
+    height: 330px;
+    background-position: -425px -205px;
+  }
+  #picWall #street {
+    top: 200px;
+    left: 700px;
+    width: 180px;
+    height: 270px;
+    background-position: -700px -200px;
+  }
+  #picWall #bird {
+    top: 310px;
+    left: 900px;
+    width: 160px;
+    height: 220px;
+    background-position: -930px -320px;
+  }
+  #picWall .details {
+    position: absolute;
+    bottom: -200px;
+    background-color: rgba(51, 38, 28, 0.9);
+    color: #fbf9f3;
+    padding: 5px 3px;
+    text-align: center;
+    transition: all 0.8s;
+  }
+  #picWall .details a {
+    color: #f39605;
+  }
+  #picWall .details a:hover {
+    color: ocre-lt;
   }
 
-  #pageContent .container {
-    overflow: hidden;
+  #caseThmenu {
+    padding: 70px 10% 30px;
   }
-  #pageContent aside, #pageContent main {
-    float: left;
-    position: relative;
+  #caseThmenu ul {
+    width: 1100px;
+    margin: 30px auto;
   }
-
-  aside.caseMenu {
-    width: 25%;
+  #caseThmenu li {
+    height: 100px;
   }
-
-  main.caseContent {
-    width: 70%;
-    margin-left: 0;
+  #caseThmenu #thGirl {
+    background-position: -10px -10px;
+  }
+  #caseThmenu #thLandscape {
+    background-size: 800%;
+    background-position: -435px -15px;
+  }
+  #caseThmenu #thMan {
+    background-position: -295px -168px;
+  }
+  #caseThmenu #thPitt {
+    background-position: -600px -10px;
+  }
+  #caseThmenu #thSaints {
+    background-position: -265px -10px;
+  }
+  #caseThmenu #thLilacs {
+    background-size: 900%;
+    background-position: -150px -260px;
+  }
+  #caseThmenu #thBird {
+    background-position: -575px -195px;
+  }
+  #caseThmenu #thStreet {
+    background-position: -455px -190px;
+  }
+  #caseThmenu #thWoman {
+    background-size: 1000%;
+    background-position: -223px -147px;
+  }
+  #caseThmenu #thVirgin {
+    background-position: -20px -220px;
+  }
+  #caseThmenu #thElephant {
+    background-size: 1250%;
+    background-position: -285px -57px;
   }
 
   footer #contact {
@@ -1130,9 +1658,5 @@ footer #contact li {
 
   .jumbotron, footer {
     background: #33261c url("../img/xlg/bowtieXLG.jpg") no-repeat center top;
-  }
-
-  #about {
-    background: #fbf9f3 url("../img/xlg/about.png") no-repeat center top;
   }
 }

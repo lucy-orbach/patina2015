@@ -1,12 +1,13 @@
 
 //$sand:  #fefaf3;
 $sand: #fbf9f3;
-$zepia: #e4dccc;
-$dk-zepia: #44423d;
+$zepia: #f0ebe0;
+$dk-zepia: #a5a099;
 $ocre: #f39605;
 $ocre-lt: #fbbd5c;
 $brown: #473b31;
 $dark: #33261c;
+$wine: #af1050;
 
 
 
@@ -14,8 +15,8 @@ $dark: #33261c;
 
 
 /* mix-in */
-@mixin transBr(){
-	background-color: transparentize($dark, 0.1);
+@mixin transBr($level:0.1){
+	background-color: transparentize($dark, $level);
 	a {
 		color: $ocre;
 	}

@@ -8,9 +8,11 @@
     <meta name="description" content="Conservation Restoration Paintings Icons UES NYC">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
 
-    <!-- CSS-->
-    <link href='http://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!-- FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'> 
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/main.css" rel="stylesheet" type='text/css'> 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -43,10 +45,12 @@
               </h1>
             </div><!--bar-header -->
             <div id="headNav" class="navbar-collapse collapse"  role="navigation">
-              <ul class="nav navbar-nav">
+              <ul class="nav navbar-nav" >
+                <li><a href="http://patinapal.com">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="caseWall.html">Case Studies </a></li>
                 <li><a href="about.html">About</a></li>
+                <li class="mobile-only"><a href="testimonials.html">Testimonials</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="resources.html">Resources</a></li>
               </ul>
@@ -57,14 +61,15 @@
       
       <section id="intro" class="section">
         <div class="container">
-          <h2>Welcome</h2>
+          <h2 class="hidden-xs">Welcome</h2>
+          <h2 class="mobile-only">Conservation and Restoration of Paintings and Icons</h2>
           <div class="row">
             <div>
               <p>Kept and preserved, a painting can endure over centuries. Yet along the way, it develops marks of age or neglect: darkening, cracks, mold. Some of these marks are best left untouched, enhancing the pleasure and value of the work. Others can be carefully repaired, improving the piece's luster and harmony.</p>
-              <p>New York City based painting and icon conservator Olga Nikolic-Litwin faithfully rehabilitates art, and ensures its survival. She approaches every restoration project with care, thought, and respect for the piece and its history — as well as the client's wishes.</p>
+              <p>New York City based painting and icon conservator <span class="accent">Olga Nikolic-Litwin</span> faithfully rehabilitates art, and ensures its survival. She approaches every restoration project with care, thought, and respect for the piece and its history — as well as the client's wishes.</p>
             </div>
             <div>
-              <p>Olga doesn't make old look new again: she sees and coaxes out the beauty within aged paintings and icons, many of which have been reclaimed from basements, rescued from war zones, or betrayed by previous poor restorations.</p>
+              <p><span class="accent">Olga Nikolic-Litwin</span> doesn't make old look new again: she sees and coaxes out the beauty within aged paintings and icons, many of which have been reclaimed from basements, rescued from war zones, or betrayed by previous poor restorations.</p>
               <p>Whether you are restoring an inherited family portrait, a religious icon, or a darkened landscape paining, you are honoring the past while bringing something precious into the future.</p>
             </div>
           </div><!-- row -->
@@ -75,15 +80,15 @@
     </div>
 
     <footer>
-      <div class="container">
+      <div class="container-fluid">
         <nav class="mobile-only">
           <h5>~ Contact ~</h5>
-          <ul class="row">
+          <ul class="row clean">
             <li id="call" role="Call" class="col-xs-4">
               <a href="tel://1-212-772-0122">Call Patina Studio</a>
             </li>
             <li id="emailUs"  role="Email" class="col-xs-4">
-              <a href="mailto:olga.nl@verizon.net" target="blank">Email PAtina Studio</a>
+              <a href="mailto:olga.nl@verizon.net" target="blank">Email Patina Studio</a>
             </li>
             <li id="showMap"  role="View Map" class="col-xs-4">
               <a href="https://goo.gl/maps/B38h7" target="blank">Show Map</a>
@@ -91,17 +96,20 @@
           </ul>
         </nav><!-- mobile only -->
         <nav id="contact" class="contact hidden-xs">
-          <ul>
+          <ul class="clean">
+            <li class="all"><h5>Patina Studio</h5></li>
             <li id="email"  role="Email">
               <a href="mailto:olga.nl@verizon.net" target="blank"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> olga.nl@verizon.net</a>
             </li>           
             <li id="address"  role="View Map">
+            
               <a href="https://goo.gl/maps/B38h7" target="blank"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> 519 E 88 St. New York, NY 10128</a>
+              
             </li>
             <li id="phone" role="Call">
-              <a href="tel://1-212-772-0122"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> (212)772-0122</a>
+              <a href="tel://1-212-772-0122"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> (212) 772-0122</a>
             </li> 
-
+            <li class="all small">(by appointment only)</li>
           </ul>
         </nav>
         <h6>© 2002-2015 Olga Nikolic-Litwin, Conservation and Restoration of Paintings and Icons, NYC, New York</h6>
@@ -112,6 +120,8 @@
     <!-- jQuery /JavaScript  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
