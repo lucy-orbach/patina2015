@@ -1,8 +1,4 @@
 /* mix-in */
-html, body {
-  height: 100%;
-}
-
 body {
   background-color: #fbf9f3;
   font-size: 16px;
@@ -13,8 +9,8 @@ body {
   min-height: 100%;
 }
 
-* html .wrapper {
-  height: 100%;
+main {
+  padding-bottom: 60px;
 }
 
 a.navbar-brand, span.logo,
@@ -30,6 +26,10 @@ h1::first-letter, h2::first-letter, h3::first-letter, h4::first-letter, h5::firs
 label::first-letter, footer .row::first-letter,
 input[type='submit']::first-letter {
   font-size: 120%;
+}
+
+h2 {
+  margin: 20px 0px;
 }
 
 :before, :after {
@@ -50,7 +50,6 @@ a, a:link, a:focus, a:visited, a:hover {
 }
 
 .accent,
-.framed h4,
 #caseWall h6,
 #resources h5 a {
   color: #af1050 !important;
@@ -131,8 +130,7 @@ header {
 }
 .navbar .navbar-collapse li a {
   height: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 15px;
 }
 
 .section .container {
@@ -143,41 +141,6 @@ header {
   font-size: 3rem;
 }
 
-.section .framed {
-  padding: 0;
-  background-color: #f0ebe0;
-}
-.section .framed h3, .section .framed li {
-  color: #33261c;
-}
-.section .framed ul.row {
-  padding: 0px;
-  margin: 0px;
-}
-.section .framed ul.row li:first-child {
-  padding: 0px;
-}
-.section .framed .img-container {
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  background-color: #a5a099;
-  background-size: cover;
-}
-.section .framed .txt-container {
-  padding: 15px;
-  text-align: left;
-}
-.section .framed .txt-container ul {
-  margin-top: 30px;
-  text-align: left;
-  list-style-type: disc;
-}
-
-#about h2 {
-  margin-top: 50px;
-}
 #about em {
   font-weight: 500;
 }
@@ -322,6 +285,7 @@ footer {
   color: #f39605;
   margin-bottom: 0px;
   text-align: center;
+  letter-spacing: 0.1rem;
 }
 footer .container-fluid {
   padding: 30px 0px 30px;
@@ -335,6 +299,8 @@ footer .container-fluid a:hover {
 }
 footer #contact ul {
   overflow: hidden;
+  max-width: 1100px;
+  margin: 20px auto;
 }
 footer #contact li:not(.all) {
   width: 33%;
@@ -342,38 +308,30 @@ footer #contact li:not(.all) {
   text-align: center;
   font-size: 14px;
 }
-footer #contact .all.small {
-  font-size: 12px;
-}
-footer #contact #email a {
+footer #contact a {
   text-decoration: underline;
-}
-footer #contact #phone a:hover {
-  text-decoration: none;
 }
 
 @media only screen and (max-width: 767px) {
   .navbar {
     position: fixed;
     z-index: 1000;
+    height: 60px;
+    border: none;
     background: url("../img/xsm/bowtieXSM.jpg") no-repeat top center;
-    margin-bottom: 0px;
-    border: 0px;
+    background-size: cover;
   }
   .navbar h1 {
-    margin-top: 10px;
+    margin: 0px;
   }
   .navbar .navbar-brand {
-    height: auto;
-    padding: 0px 10px;
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   .navbar .navbar-toggle {
-    background-color: rgba(51, 38, 28, 0.9);
-    width: 85px;
-    height: 30px;
-    padding: 1px;
+    width: 75px;
     padding-left: 45px;
+    margin-top: 15px;
+    background-color: rgba(51, 38, 28, 0.3);
   }
   .navbar .navbar-toggle a {
     color: #f39605;
@@ -384,9 +342,11 @@ footer #contact #phone a:hover {
   .navbar .navbar-toggle:before {
     content: 'Menu';
     position: absolute;
-    top: 2px;
-    left: 2px;
+    top: 6px;
+    left: 3px;
     color: #f39605;
+    font-size: 14px;
+    font-weight: normal;
   }
   .navbar .icon-bar {
     background-color: #f39605;
@@ -396,17 +356,14 @@ footer #contact #phone a:hover {
   }
 
   .section {
-    padding: 40px 0px 40px;
+    padding: 60px 0px 40px;
   }
   .section .container {
-    padding: 25px 15px;
-  }
-  .section .framed {
-    padding-bottom: 20px;
+    padding: 0px 15px;
+    background-color: #fbf9f3;
   }
   .section h2 {
     font-size: 2.5rem;
-    margin-top: 0px;
   }
   .section .row {
     padding: 20px 10px;
@@ -419,58 +376,55 @@ footer #contact #phone a:hover {
     margin-top: 50px;
   }
 
-  #services,
-  #about {
+  #intro .title-img,
+  #services .title-img,
+  #about .title-img {
     position: relative;
-    padding-top: 0;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 100%;
   }
-  #services .container,
-  #about .container {
-    padding: 0px;
-    margin: 0;
-  }
-  #services h2,
-  #about h2 {
-    font-size: 24px;
-    text-align: center;
-  }
-  #services h2.title,
-  #about h2.title {
+  #intro .title-img h2,
+  #services .title-img h2,
+  #about .title-img h2 {
     position: absolute;
-    left: 0px;
-    z-index: 10;
-    width: 100%;
-    height: 70px;
-    margin-top: 0;
+    bottom: 0px;
+    padding: 5px 15px;
+    margin-bottom: 0px;
     background-color: rgba(51, 38, 28, 0.7);
   }
-  #services h2.title a,
-  #about h2.title a {
+  #intro .title-img h2 a,
+  #services .title-img h2 a,
+  #about .title-img h2 a {
     color: #f39605;
   }
-  #services h2.title a:hover,
-  #about h2.title a:hover {
+  #intro .title-img h2 a:hover,
+  #services .title-img h2 a:hover,
+  #about .title-img h2 a:hover {
     color: ocre-lt;
   }
-  #services .img-container,
-  #about .img-container {
-    width: 100%;
-    height: 245px;
-    background-size: cover;
+  #intro .container,
+  #services .container,
+  #about .container {
+    position: relative;
   }
+  #intro .txt-container,
   #services .txt-container,
   #about .txt-container {
-    padding: 30px 30px 40px;
+    padding: 40px 30px;
   }
 
-  #about {
-    margin-top: -5px;
+  #intro .title-img {
+    background-image: url("../img/xsm/intro.jpg");
   }
-  #about h2.title {
-    top: 175px;
+
+  #services .title-img {
+    background-image: url("../img/xsm/services.jpg");
   }
-  #about .img-container {
-    background: url("../img/xsm/olga.jpg") no-repeat top left;
+
+  #about .title-img {
+    background-image: url("../img/xsm/olga.jpg");
   }
   #about .testimonials li {
     padding-bottom: 50px;
@@ -499,21 +453,6 @@ footer #contact #phone a:hover {
   }
   #contactPanel .txt-container ul {
     margin-top: 0px;
-  }
-
-  #services .container {
-    position: relative;
-    margin-top: -10px;
-  }
-  #services .container .framed {
-    position: absolute;
-    top: 0px;
-  }
-  #services h2.title {
-    top: 175px;
-  }
-  #services .img-container {
-    background: url("../img/xsm/services.jpg") no-repeat top left;
   }
 
   #caseWall {
@@ -681,33 +620,30 @@ footer #contact #phone a:hover {
   }
   footer .container-fluid {
     padding-top: 0px;
+    background-color: rgba(51, 38, 28, 0.9);
   }
-  footer nav, footer ul, footer li {
+  footer .container-fluid a {
+    color: #f39605;
+  }
+  footer .container-fluid a:hover {
+    color: ocre-lt;
+  }
+
+  #mNav {
     padding: 0px;
     margin: 0px;
-  }
-  footer nav {
-    position: relative;
-    top: 0px;
-    width: 100%;
-  }
-  footer h5 {
-    margin: 0px auto 15px;
     text-align: center;
-    color: #f39605;
-    cursor: pointer;
-    height: 40px;
-    line-height: 4rem;
   }
-  footer ul {
-    width: 90%;
+  #mNav ul {
+    width: 80%;
+    padding: 0px;
     margin: 0px auto;
   }
-  footer li {
+  #mNav li {
     position: relative;
     height: 40px;
   }
-  footer li:after {
+  #mNav li:after {
     content: '';
     position: absolute;
     top: 5px;
@@ -715,19 +651,19 @@ footer #contact #phone a:hover {
     font-size: 2rem;
     color: #fbf9f3;
   }
-  footer li#call:after {
+  #mNav li#call:after {
     content: '\e182';
   }
-  footer li#text:after {
+  #mNav li#text:after {
     content: '\e111';
   }
-  footer li#emailUs:after {
+  #mNav li#emailUs:after {
     content: '\2709';
   }
-  footer li#showMap:after {
+  #mNav li#showMap:after {
     content: '\e062';
   }
-  footer a {
+  #mNav a {
     position: relative;
     z-index: 1500;
     display: block;
@@ -738,7 +674,7 @@ footer #contact #phone a:hover {
     text-indent: -9999px;
     border-radius: 10px;
   }
-  footer a:hover {
+  #mNav a:hover {
     background-color: rgba(251, 249, 243, 0.2);
   }
 }
@@ -769,10 +705,6 @@ footer #contact #phone a:hover {
 @media (min-width: 768px) {
   .mobile-only {
     display: none !important;
-  }
-
-  .wrapper {
-    padding-bottom: 75px;
   }
 
   .navbar {
@@ -807,47 +739,31 @@ footer #contact #phone a:hover {
     margin: 0px auto;
   }
 
-  .section .container {
-    text-align: center;
-  }
-  .section h2 {
-    margin-top: 30px;
-    margin-bottom: 50px;
-  }
   .section .row {
     margin: 0px;
   }
   .section p {
     line-height: 2.5rem;
-    margin-bottom: 2rem;
   }
 
   .section .framed {
     margin-top: 30px;
-    border: 1px solid #a5a099;
-  }
-  .section .framed .img-container {
-    height: 280px;
   }
   .section .framed h2.title {
     width: 90%;
     margin: 0px auto;
   }
 
-  #about .img-container {
-    background: #a5a099 url("../img/sm/olga.jpg") no-repeat top left;
-    background-size: cover;
+  #about .framed {
+    background-image: url("../img/sm/olga.jpg");
   }
 
   #contactPanel .img-container {
     background: url("../img/sm/map.jpg") no-repeat top left;
   }
 
-  #services .img-container {
-    background: #a5a099 url("../img/sm/services.jpg") no-repeat top left;
-  }
-  #services .txt-container {
-    padding: 15px 30px;
+  #services .framed {
+    background-image: url("../img/sm/services.jpg");
   }
   #services .txt-container ul {
     margin-left: 20px;
@@ -1158,10 +1074,35 @@ footer #contact #phone a:hover {
     background: #33261c url("../img/md/bowtieMD.jpg") no-repeat center top;
   }
 
-  #about .img-container {
-    height: 400px;
-    background: #a5a099 url("../img/md/olga.jpg") no-repeat top left;
-    background-size: cover;
+  .section .framed {
+    border-top: 1px solid #33261c;
+    margin-bottom: 30px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 40%;
+  }
+  .section .framed h3, .section .framed li {
+    color: #33261c;
+  }
+  .section .framed .txt-container {
+    width: 65%;
+    padding: 50px 0px 50px 50px;
+    margin-left: 35%;
+    text-align: left;
+    background-color: #fbf9f3;
+  }
+  .section .framed .txt-container ul {
+    margin-top: 30px;
+    text-align: left;
+    list-style-type: disc;
+  }
+
+  #intro .framed {
+    background-image: url("../img/intro.jpg");
+  }
+
+  #about .framed {
+    background-image: url("../img/md/olga.jpg");
   }
   #about .testimonials li {
     margin: 0px;
@@ -1186,11 +1127,8 @@ footer #contact #phone a:hover {
     background: url("../img/md/mapMDL.jpg") no-repeat top center;
   }
 
-  #services .img-container {
-    width: 100%;
-    height: 450px;
-    background: url("../img/md/services.jpg") no-repeat top left;
-    background-size: cover;
+  #services .framed {
+    background-image: url("../img/md/services.jpg");
   }
   #services .txt-container li {
     margin-bottom: 0px;
@@ -1434,22 +1372,8 @@ footer #contact #phone a:hover {
     float: right;
   }
 
-  #intro .row {
-    overflow: hidden;
-  }
-  #intro .row div {
-    width: 50%;
-    float: left;
-  }
-  #intro .row div p {
-    text-align: left;
-    padding: 10px 20px;
-  }
-
-  #about .img-container {
-    height: 570px;
-    background: #a5a099 url("../img/lg/olga.jpg") no-repeat top left;
-    background-size: cover;
+  #about .framed {
+    background-image: url("../img/lg/olga.jpg");
   }
   #about .testimonials p {
     height: 300px;
@@ -1459,13 +1383,8 @@ footer #contact #phone a:hover {
     background: url("../img/lg/map.jpg") no-repeat center left;
   }
 
-  #services .img-container {
-    height: 425px;
-    background: #a5a099 url("../img/lg/services.jpg") no-repeat top left;
-    background-size: cover;
-  }
-  #services .txt-container {
-    padding: 30px 50px;
+  #services .framed {
+    background-image: url("../img/lg/services.jpg");
   }
   #services .txt-container h4 {
     font-size: 2rem;
@@ -1640,10 +1559,6 @@ footer #contact #phone a:hover {
   #caseThmenu #thElephant {
     background-size: 1250%;
     background-position: -285px -57px;
-  }
-
-  footer #contact {
-    width: 60%;
   }
 }
 @media (min-width: 1680px) {

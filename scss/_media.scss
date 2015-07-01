@@ -2,35 +2,32 @@
 //**** MOBILE XSM 15px ***
 //=========================
 @media only screen and (max-width: 767px) {
-	// .wrapper	{
-	// 	padding-bottom: 20px;
-	// }
 	.navbar {
 		position: fixed;
 		z-index: 1000;
+		height: 60px;
+		border: none;
 		background: url('../img/xsm/bowtieXSM.jpg') no-repeat top center;
-		margin-bottom: 0px;
-		border: 0px;
+		background-size: cover;
 		h1 {
-			margin-top: 10px;
+			margin: 0px;
 		}
 		.navbar-brand {
-			height: auto;
-			padding: 0px 10px;
-			font-size: 2.5rem;
+			font-size: 3rem;
 		}
 		.navbar-toggle {
-			@include transBr();
-			width: 85px;
-			height: 30px;
-			padding: 1px;
+			width: 75px;
 			padding-left: 45px;
+			margin-top: 15px;
+			@include transBr(0.7);
 			&:before {
 				content:'Menu';
 				position: absolute;
-				top: 2px;
-				left: 2px;
+				top: 6px;
+				left: 3px;
 				color: $ocre;
+				font-size: 14px;
+				font-weight: normal;
 			}
 		}
 		.icon-bar {
@@ -40,18 +37,14 @@
 			background-color: $dark;
 		}
 	} //navbar
-
 	.section {
-		padding: 40px 0px 40px;
+		padding: 60px 0px 40px;
 		.container {
-			padding: 25px 15px;
-		}
-		.framed {
-			padding-bottom: 20px;
+			padding: 0px 15px;
+			background-color: $sand;
 		}
 		h2 {
 			font-size: 2.5rem;
-			margin-top: 0px;
 		}//h2
 		.row {
 			padding: 20px 10px;
@@ -64,46 +57,46 @@
 			margin-top: 50px;
 		}
 	}//section
-
+	
+	#intro,
 	#services,
 	#about {
-		position: relative;
-		padding-top: 0;
-		.container {
-			padding: 0px;	
-			margin: 0;
-		}//container
-		h2 {
-			font-size: 24px;
-			text-align: center;
-			&.title {
+		.title-img {
+			position: relative;
+			height: 250px;
+			background-repeat: no-repeat; 
+			background-position: left bottom;
+			background-size: 100%;
+			h2 {
 				position: absolute;
-				left: 0px;
-				z-index: 10;
-			  width: 100%;
-			  height: 70px;
-				margin-top: 0;
-				@include transBr(0.3);
-			}//:first-child 
-		}//h2
-		.img-container {
-			width: 100%;
-			height: 245px;
-			background-size: cover;
-		}//img-container
-		.txt-container {
-			padding: 30px 30px 40px;
+				bottom: 0px;
+				padding: 5px 15px;
+				margin-bottom: 0px;
+				@include transBr(0.3); 
+			}//h2
+		}//img-title
+		.container {
+			position: relative;
 		}
-	}
+		.m-pushed {
 
-	#about {	
-		margin-top: -5px;
-		h2.title {
-			top: 175px;
-		}	
-		.img-container {
-			background: url('../img/xsm/olga.jpg') no-repeat top left;
-		}//img-container
+		}
+		.txt-container {
+			padding: 40px 30px;
+		}
+	}//intro,services,about
+
+	#intro .title-img {
+		background-image: url('../img/xsm/intro.jpg');
+	}
+	#services .title-img {
+		background-image: url('../img/xsm/services.jpg');
+	}//services
+
+	#about {
+		.title-img {
+		background-image: url('../img/xsm/olga.jpg');
+		}//title-img
 		.testimonials {
 			li {
 				padding-bottom: 50px;
@@ -140,28 +133,9 @@
 		}//txt-container
 	}//contactPanel
 	
-	#services {
-		.container {
-			position: relative;
-			margin-top: -10px;
-			.framed {
-				position: absolute;
-				top: 0px;
-			}
-		}
-		p {
-			//padding: 10px 20px;
-		}
-		h2.title {
-			top: 175px;
-		}
-		.img-container {
-			background: url('../img/xsm/services.jpg') no-repeat top left;
-		}//img-container
-	}//services
 	#caseWall {
-			padding-bottom: 0;
-		}
+		padding-bottom: 0;
+	}
 	#picWall {
 		.container {
 			padding: 0px 0px 40px;
@@ -354,26 +328,16 @@
 		}//open
 		.container-fluid {
 			padding-top: 0px;
+			@include transBr(0.1);
 		}
-		nav, ul, li {
-			padding: 0px;
-			margin: 0px;
-		}
-		nav {
-			position: relative;
-			top: 0px;
-			width: 100%;	
-		}//nav
-		h5 {
-				margin: 0px auto 15px;
-				text-align: center;
-				color: $ocre;
-				cursor: pointer;
-				height: 40px;
-				line-height: 4rem;
-		}//h5
+	}//footer
+	#mNav {
+		padding: 0px;
+		margin: 0px;
+		text-align: center;
 		ul {
-			width: 90%;
+			width: 80%;
+			padding: 0px;
 			margin: 0px auto;
 		}
 		li {
@@ -414,7 +378,8 @@
 				background-color: transparentize($sand,0.8);
 			}
 		}//a
-	}//footer
+	}//mNav
+		
 
 	@media (orientation: landscape) {
 		.navbar li {
@@ -448,14 +413,9 @@
 //******  KINDLE  SM  *****
 //=========================
 @media (min-width: 768px) {
-
 	.mobile-only {
 		display: none !important;
 	}//mobile-only
-
-	.wrapper {
-		padding-bottom: 75px;
-	}
 	
 	.navbar {
 		position: absolute;
@@ -494,29 +454,16 @@
 	}//jumbotron
 
 	.section {
-		.container {
-			//padding: 30px;
-			text-align: center;
-		}
-		h2 {
-			margin-top: 30px;
-			margin-bottom: 50px;
-		}//navbar-brand
 		.row {
 			margin: 0px;
 		}
 		p {
 			line-height: 2.5rem;
-			margin-bottom: 2rem;
 		}
 	}//section
 	
 	.section .framed {
 		margin-top: 30px;
-		border: 1px solid $dk-zepia;
-		.img-container {
-			height: 280px;
-		}
 		h2.title {
 			width: 90%;
 			margin: 0px auto;
@@ -524,9 +471,9 @@
 	}//framed
 	
 	#about {
-		.img-container {
-			background: $dk-zepia url('../img/sm/olga.jpg') no-repeat top left;
-			background-size: cover;
+		.framed {
+			background-image: url('../img/sm/olga.jpg');
+			//background-size: cover;
 		}
 	}//about
 
@@ -537,11 +484,10 @@
 	}//contactPanel
 
 	#services {
-		.img-container {
-			background: $dk-zepia url('../img/sm/services.jpg') no-repeat top left;
+		.framed {
+			background-image: url('../img/sm/services.jpg');
 		}
 		.txt-container {
-			padding: 15px 30px;
 			ul {
 				margin-left: 20px;
 				margin-right: 20px;
@@ -754,7 +700,6 @@
 		}//info-section
 	}//casecontent
 
-	
 	#caseMan {
 		.segment:nth-child(2) .img-container,
 		.segment:nth-child(5) .img-container {
@@ -870,11 +815,38 @@
 		background: $dark url('../img/md/bowtieMD.jpg') no-repeat center top;
 	}//varies
 
+	.section .framed {
+	border-top: 1px solid $dark;
+	margin-bottom: 30px;
+	background-repeat: no-repeat; 
+	background-position: left bottom;
+	background-size: 40%;
+	h3, li {
+		color: $dark;
+	}	
+	.txt-container {
+		width: 65%;
+		padding: 50px 0px 50px 50px;
+		margin-left: 35%;
+		text-align: left;
+		background-color: $sand;
+		ul {
+			margin-top: 30px;
+			text-align: left;
+			list-style-type: disc;
+		}//ul
+	}//txt-container
+}//framed
+	#intro {
+	.framed {
+		background-image: url('../img/intro.jpg');
+	}
+}
+
 	#about {
-		.img-container {
-			height: 400px;
-			background: $dk-zepia url('../img/md/olga.jpg') no-repeat top left;
-			background-size: cover;
+		.framed {
+			background-image: url('../img/md/olga.jpg');
+			//background-size: cover;
 		}
 		.testimonials {
 			li {
@@ -905,11 +877,8 @@
 	}//contactPanel
 	
 	#services {
-		.img-container {
-			width: 100%;
-			height: 450px;
-			background: url('../img/md/services.jpg') no-repeat top left;
-			background-size: cover;
+		.framed {
+			background-image: url('../img/md/services.jpg');
 		}
 		.txt-container {
 			li {
@@ -1168,25 +1137,10 @@
 		float: right;
 	}//navbar-collapse
 
-	#intro {
-		.row {
-			overflow: hidden;
-			div {
-				width: 50%;
-				float: left;
-				p {
-				text-align: left;
-				padding: 10px 20px;
-				}//p
-			}//div
-		}//row
-	}//intro
-	
+
 	#about {
-		.img-container {
-			height: 570px;
-			background: $dk-zepia url('../img/lg/olga.jpg') no-repeat top left;
-			background-size: cover;
+		.framed {
+			background-image: url('../img/lg/olga.jpg');
 		}
 		.testimonials p {
 			height: 300px;
@@ -1200,13 +1154,10 @@
 	}//contactPanel
 
 	#services {
-		.img-container {
-			height: 425px;
-			background: $dk-zepia url('../img/lg/services.jpg') no-repeat top left;
-			background-size: cover;
+		.framed {
+			background-image: url('../img/lg/services.jpg');
 		}
 		.txt-container {
-			padding: 30px 50px;
 			h4 {
 				font-size: 2rem;
 			}
@@ -1378,141 +1329,6 @@
 			background-position: -285px -57px;
 		}
 	}
-// #caseContent {
-	// 	.case-container {
-	// 		overflow: hidden;
-	// 		.img-container, p {
-	// 			width: 85%;
-	// 		}
-	// 		.img-container {
-	// 			margin: 20px auto;
-				
-	// 		}
-	// 		img {
-	// 			width: 100%;
-	// 			height: auto;
-	// 		}
-	// 		p {
-	// 			min-height: 120px;
-	// 			margin: 15px auto;
-	// 			padding: 0px;
-	// 			text-align: left;
-	// 		}
-	// 	}
-	// }//case content
-
-
-	
-	// #caseGirl {
-	// 	.img-container {
-	// 			height: 450px;
-	// 		}
-	// 	p {
-	// 			min-height: 120px;
-	// 		}
-	// }
-	// #caseLandscape {
-	// 	p {
-	// 		height: 125px;
-	// 	}
-	// }#casePitt {
-	// 	p {
-	// 			height: 175px;
-				
-	// 		}
-	// }
-	// #caseSaints {
-	// 	.case-container {
-	// 		span, p {
-	// 			width: 85%;
-	// 		}
-	// 		span {
-	// 			display: block;
-	// 			width: 85%;
-	// 			margin: 0px auto;
-	// 			background: $dark;
-	// 			border: 1px solid black;
-	// 		}
-	// 		.img-container {
-	// 			width: 350px;
-	// 			height: 420px;
-	// 			border: none;
-	// 			&.saint1 {
-	// 				width: 350px;
-	// 			}
-	// 			&.saint2 {
-	// 				width: 230px;
-	// 			}
-	// 			&.saint3{
-	// 				width: 278px;
-	// 			}
-	// 			&.saint4 {
-	// 				width: 350px;
-	// 			}
-	// 		}//img-c
-	// 	}
-	// }//caseSaints
-	// #caseLilacs {
-	// 	// .case-container {
-	// 	// 	li:first-child .img-container,
-	// 	// 	li:nth-child(3) .img-container 
-	// 	// 	 {
-	// 	// 		width: 66%;
-	// 	// 	}
-	// 	// }
-
-	// }//caseLilacs
-	// #caseBird {
-	// 	.case-container {
-	// 		li {
-	// 			height: 720px;
-	// 		}
-	// 		li:nth-child(1) .img-container {
-	// 			width: 75%;
-	// 		}
-	// 	}
-	// }//caseBird
-	// #caseStreet {
-	// 	li.segment:nth-child(2){
-	// 		padding-top: 120px;
-			
-	// 		text-align: left;
-	// 		p {
-	// 			height: 300px;
-	// 			line-height: 3rem;
-	// 		}
-	// 	}
-	// }
-	// #caseWoman {
-	// 	.case-container {
-	// 		li:first-child .img-container {
-	// 			width: 59%;
-	// 		}
-	// 	}
-	// }
-	// #caseElephant {
-	// 	p.intro {
-	// 		height: 75px;
-	// 	}
-	// 	p.small {
-	// 		height: 50px;
-	// 		color: $dk-zepia;
-	// 	}
-	// }
-	// #caseMan {
-	// 	.case-container {
-	// 		.img-container, p {
-	// 			width: 90%;
-	// 		}
-	// 		p {
-	// 			margin-bottom: 50px;
-	// 		}
-	// 	}
-	// }
-
-	footer #contact {
-			width: 60%;
-	}	
 }// media laptop
 
 //=========================
