@@ -1,16 +1,14 @@
 
-//$sand:  #fefaf3;
-$sand: #fbf9f3;
-$zepia: #f0ebe0;
-$dk-zepia: #a5a099;
 $ocre: #f39605;
-$ocre-lt: #fbbd5c;
-$brown: #473b31;
+$sand: #fbf9f3;
 $dark: #33261c;
 $wine: #af1050;
 
+$zepia: #f6f3ec;
+$dk-zepia: #a5a099;
 
-
+$ocre-lt: #fbbd5c;
+$brown: #473b31;
 
 
 
@@ -29,6 +27,9 @@ $wine: #af1050;
 	-webkit-box-shadow: $hv $hv $hv $vv  rgba(0,0,0, 0.3);
 	-moz-box-shadow: $hv $hv $hv $vv rgba(0,0,0, 0.3);
 	box-shadow: $hv $hv $hv $vv rgba(0,0,0, 0.3);
+}
+@mixin txt-shdw() {
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, .9);
 }
 
 @mixin transition($prop:all, $time:0.8s) {

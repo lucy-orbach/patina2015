@@ -21,26 +21,16 @@ main {
 	  &::first-letter {
 	  	font-size: 120%;
 	  }//first letter
-	}//font-family
-
-	h2 {
-		margin: 20px 0px;
 	}
-
-	:before, :after {
-		font-family: 'Glyphicons Halflings';
-	}
-
-	//txt-shadow
-	.navbar-brand, 
-	.brand h1 {
-	  text-shadow: 1px 1px 1px rgba(0, 0, 0, .9);
-	}//txt shadow
-
 	h1 {
 		font-size: 3.5rem;
 	}
-
+	.section h2 {
+		margin: 20px 0px;
+	}
+	:before, :after {
+		font-family: 'Glyphicons Halflings';
+	}
 	a, a:link, a:focus, a:visited, a:hover {
 		outline: none;
 	}
@@ -49,6 +39,7 @@ main {
 	#resources h5 a {
 		color: $wine !important;
 	}
+
 //form elements
 	input, textarea, 
 	textarea:hover, input:hover,
@@ -61,6 +52,7 @@ main {
 	  appearance: none;
 	  border: none;
 	}
+
 //lists
 	ul {
 		padding-left: 0px;
@@ -69,28 +61,28 @@ main {
 		list-style-type: none !important;	
 		}
 	} //ul 
+
 //=======================
 // ******  HEADER *****
 //=======================
 header {
 	position: relative;
 }//header
-.jumbotron {
+.jumbotron, footer{
 	background-size: cover !important;
+	}
+.jumbotron {
 	a:hover {
 		text-decoration: none;
 	}
 	.banner {
 		text-align: center;
-		h1 a, span {
+		h1 a, h2, span {
 			color: $ocre;
-		}
-		h1 a {
-			text-shadow: 0 2px 4px rgba(0,0,0,0.7);	
+			@include txt-shdw();
 		}
 		h2 {
 			color: $sand;
-			text-shadow: 0 2px 4px rgba(0,0,0,0.7);
 		}
 		span {
 			font-size: 14px;
@@ -102,28 +94,26 @@ header {
 	margin-bottom: 0px;
 	@include transBr(0.3);
 	@include shadow();
+	@include txt-shdw();
 	.navbar-brand:hover {
 		color: $ocre;
 		text-decoration: none;
 	}//a
 	.navbar-collapse {
-		li {
+			a {
+				height: 50px;
+				padding-top: 15px;
+			}
 			a, a:visited  {
 				color: $ocre;
 			}
-			&:hover a, a.active, a:focus{
+			li:hover a, a.active, a:focus{
 				color: $ocre-lt;
 				background-color: $dark;
 				text-decoration: underline;
 			}//hover active
-			a {
-				height: 100%;
-				padding-top: 15px;
-			}
-		}//li
 	}//navbar-collapse
 }// navbar
-
 //=======================
 // ******  SECTIONS *****
 //=======================
@@ -133,14 +123,27 @@ header {
 	}
 	h2 {
 		text-align: center;
-		font-size: 3rem;
 	}// h2	
+	p {
+			line-height: 2.5rem;
+		}
 }//section
-
-
-
-
-
+.section .framed {
+		h3, li {
+			color: $dark;
+		}	
+		.txt-container {
+			text-align: left;
+			ul {
+				margin-top: 30px;
+				text-align: left;
+				list-style-type: disc;
+			}//ul
+			li {
+				margin-bottom: 10px;
+			}
+		}//txt-container
+}//framed
 
 #about {
 	em {
@@ -150,19 +153,16 @@ header {
 		padding-bottom: 0px;
 	}
 	.testimonials {
+		margin: 0px;
 		li {
-			padding: 20px;
-			border-bottom: 1px dotted $dk-zepia;
-			overflow: hidden;
+			padding: 20px 20px 50px;
 		}
-		p {
-			text-align: left;
-		}//p
 		span{
 			display: block;
+			position: absolute;
+			bottom: 20px;
+			right: 40px;
 			font-style: italic;
-			padding-right: 70px;
-			margin-bottom: 15px;
 		}//span
 	}//testimonials
 }//about
@@ -170,11 +170,17 @@ header {
 #caseWall {
 	h6 {
 		width: 90%;
-		padding: 2px;
-		margin: 0px auto;
+		margin: 0px auto 20px;
 		text-align: center;
 	}
 }//casewall
+#picWall {
+	.pic-frame a {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
 
 #contactPanel {
 	a, a:hover, a:link, a:focus, a:visited {
@@ -217,13 +223,7 @@ header {
 	}
 }//resource
 
-#picWall {
-	.pic-frame a {
-		display: block;
-		width: 100%;
-		height: 100%;
-	}
-}
+
 
 #caseThmenu {
 	padding: 70px 10% 30px;
@@ -333,7 +333,6 @@ footer {
 		// }
 	}
 }//footer
-
 
 @import '_media.scss';
 

@@ -28,21 +28,16 @@ input[type='submit']::first-letter {
   font-size: 120%;
 }
 
-h2 {
+h1 {
+  font-size: 3.5rem;
+}
+
+.section h2 {
   margin: 20px 0px;
 }
 
 :before, :after {
   font-family: 'Glyphicons Halflings';
-}
-
-.navbar-brand,
-.brand h1 {
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
-}
-
-h1 {
-  font-size: 3.5rem;
 }
 
 a, a:link, a:focus, a:visited, a:hover {
@@ -79,24 +74,22 @@ header {
   position: relative;
 }
 
-.jumbotron {
+.jumbotron, footer {
   background-size: cover !important;
 }
+
 .jumbotron a:hover {
   text-decoration: none;
 }
 .jumbotron .banner {
   text-align: center;
 }
-.jumbotron .banner h1 a, .jumbotron .banner span {
+.jumbotron .banner h1 a, .jumbotron .banner h2, .jumbotron .banner span {
   color: #f39605;
-}
-.jumbotron .banner h1 a {
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
 }
 .jumbotron .banner h2 {
   color: #fbf9f3;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
 .jumbotron .banner span {
   font-size: 14px;
@@ -109,6 +102,7 @@ header {
   -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
 }
 .navbar a {
   color: #f39605;
@@ -120,17 +114,17 @@ header {
   color: #f39605;
   text-decoration: none;
 }
-.navbar .navbar-collapse li a, .navbar .navbar-collapse li a:visited {
+.navbar .navbar-collapse a {
+  height: 50px;
+  padding-top: 15px;
+}
+.navbar .navbar-collapse a, .navbar .navbar-collapse a:visited {
   color: #f39605;
 }
-.navbar .navbar-collapse li:hover a, .navbar .navbar-collapse li a.active, .navbar .navbar-collapse li a:focus {
+.navbar .navbar-collapse li:hover a, .navbar .navbar-collapse a.active, .navbar .navbar-collapse a:focus {
   color: #fbbd5c;
   background-color: #33261c;
   text-decoration: underline;
-}
-.navbar .navbar-collapse li a {
-  height: 100%;
-  padding-top: 15px;
 }
 
 .section .container {
@@ -138,7 +132,24 @@ header {
 }
 .section h2 {
   text-align: center;
-  font-size: 3rem;
+}
+.section p {
+  line-height: 2.5rem;
+}
+
+.section .framed h3, .section .framed li {
+  color: #33261c;
+}
+.section .framed .txt-container {
+  text-align: left;
+}
+.section .framed .txt-container ul {
+  margin-top: 30px;
+  text-align: left;
+  list-style-type: disc;
+}
+.section .framed .txt-container li {
+  margin-bottom: 10px;
 }
 
 #about em {
@@ -147,26 +158,30 @@ header {
 #about .container {
   padding-bottom: 0px;
 }
-#about .testimonials li {
-  padding: 20px;
-  border-bottom: 1px dotted #a5a099;
-  overflow: hidden;
+#about .testimonials {
+  margin: 0px;
 }
-#about .testimonials p {
-  text-align: left;
+#about .testimonials li {
+  padding: 20px 20px 50px;
 }
 #about .testimonials span {
   display: block;
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
   font-style: italic;
-  padding-right: 70px;
-  margin-bottom: 15px;
 }
 
 #caseWall h6 {
   width: 90%;
-  padding: 2px;
-  margin: 0px auto;
+  margin: 0px auto 20px;
   text-align: center;
+}
+
+#picWall .pic-frame a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 #contactPanel a, #contactPanel a:hover, #contactPanel a:link, #contactPanel a:focus, #contactPanel a:visited {
@@ -205,12 +220,6 @@ header {
   font-size: 12px;
 }
 
-#picWall .pic-frame a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
 #caseThmenu {
   padding: 70px 10% 30px;
 }
@@ -220,7 +229,7 @@ header {
 #caseThmenu li {
   height: 100px;
   border: 1px solid #33261c;
-  background: #f0ebe0 url(../img/lg/sprites.jpg);
+  background: #f6f3ec url(../img/lg/sprites.jpg);
   opacity: 0.4;
   transition: all 0.8s;
 }
@@ -316,19 +325,19 @@ footer #contact a {
   .navbar {
     position: fixed;
     z-index: 1000;
-    height: 60px;
     border: none;
     background: url("../img/xsm/bowtieXSM.jpg") no-repeat top center;
-    background-size: cover;
+    background-size: 100% 60px;
   }
   .navbar h1 {
     margin: 0px;
   }
   .navbar .navbar-brand {
     font-size: 3rem;
+    padding: 15px 0px;
   }
   .navbar .navbar-toggle {
-    width: 75px;
+    width: 65px;
     padding-left: 45px;
     margin-top: 15px;
     background-color: rgba(51, 38, 28, 0.3);
@@ -343,7 +352,7 @@ footer #contact a {
     content: 'Menu';
     position: absolute;
     top: 6px;
-    left: 3px;
+    left: 0px;
     color: #f39605;
     font-size: 14px;
     font-weight: normal;
@@ -352,11 +361,18 @@ footer #contact a {
     background-color: #f39605;
   }
   .navbar .navbar-collapse {
-    background-color: #33261c;
+    background-color: rgba(51, 38, 28, 0.9);
+    transition: all 0.8s;
+  }
+  .navbar .navbar-collapse a {
+    color: #f39605;
+  }
+  .navbar .navbar-collapse a:hover {
+    color: ocre-lt;
   }
 
   .section {
-    padding: 60px 0px 40px;
+    padding: 50px 0px 40px;
   }
   .section .container {
     padding: 0px 15px;
@@ -390,6 +406,7 @@ footer #contact a {
   #about .title-img h2 {
     position: absolute;
     bottom: 0px;
+    width: 100%;
     padding: 5px 15px;
     margin-bottom: 0px;
     background-color: rgba(51, 38, 28, 0.7);
@@ -408,11 +425,17 @@ footer #contact a {
   #services .container,
   #about .container {
     position: relative;
+    padding: 30px 15px;
   }
   #intro .txt-container,
   #services .txt-container,
   #about .txt-container {
-    padding: 40px 30px;
+    padding: 0px 0px 40px;
+  }
+  #intro ul,
+  #services ul,
+  #about ul {
+    padding: 0px 15px;
   }
 
   #intro .title-img {
@@ -425,11 +448,6 @@ footer #contact a {
 
   #about .title-img {
     background-image: url("../img/xsm/olga.jpg");
-  }
-  #about .testimonials li {
-    padding-bottom: 50px;
-    margin-bottom: 15px;
-    border-bottom: 1px dotted #a5a099;
   }
 
   #contactPanel .framed {
@@ -477,7 +495,7 @@ footer #contact a {
     text-decoration: none;
   }
   #picWall .pic-frame:hover {
-    background-color: #f0ebe0;
+    background-color: #f6f3ec;
     transition: all 0.8s;
   }
   #picWall .pic-frame h6 {
@@ -593,6 +611,17 @@ footer #contact a {
     padding-top: 55px !important;
   }
 
+  #testimonials li {
+    padding: 0px 0px 30px;
+    border-bottom: 1px dotted #a5a099;
+    margin-bottom: 10px;
+  }
+  #testimonials span {
+    display: block;
+    width: 100%;
+    text-align: right;
+  }
+
   footer {
     position: fixed;
     bottom: 0px;
@@ -686,20 +715,20 @@ footer #contact a {
     display: block;
   }
 
-  #about h2:first-child {
-    top: 205px;
-    height: 40px;
-  }
-  #about .img-container {
-    background: url("../img/xsm/olgXSL.jpg") no-repeat top left;
-    background-size: cover;
+  #intro .title-img {
+    background-image: url("../img/xsm/introXSL.jpg");
   }
 
-  #services h2.title {
-    top: -70px;
+  #services .title-img {
+    background-image: url("../img/xsm/services.jpg");
   }
-  #services .img-container {
-    background: url("../img/xsm/servicesXSL.jpg") no-repeat top left;
+
+  #about .title-img {
+    background-image: url("../img/xsm/olgaXSL.jpg");
+  }
+
+  footer {
+    position: relative;
   }
 }
 @media (min-width: 768px) {
@@ -711,21 +740,20 @@ footer #contact a {
     position: absolute;
     bottom: 0px;
   }
-
-  #headNav li {
-    height: 100%;
-    padding: 0px 10px;
+  .navbar .navbar-collapse ul {
+    width: 90%;
+    float: none;
+    margin: 0px auto;
   }
-  #headNav li:nth-child(3) {
+  .navbar .navbar-collapse ul li {
+    width: 15%;
+  }
+  .navbar .navbar-collapse ul li:nth-child(3) {
     width: 150px;
   }
-  #headNav li a {
-    height: 50px;
-  }
-
-  .jumbotron, footer {
-    background: url("../img/sm/bowtieSM.jpg") no-repeat center top;
-    background-size: cover !important;
+  .navbar .navbar-collapse ul a {
+    padding: 15px 10px;
+    text-align: center;
   }
 
   .jumbotron {
@@ -739,38 +767,36 @@ footer #contact a {
     margin: 0px auto;
   }
 
-  .section .row {
-    margin: 0px;
-  }
-  .section p {
-    line-height: 2.5rem;
+  .jumbotron, footer {
+    background: url("../img/sm/bowtieSM.jpg") no-repeat center top;
   }
 
   .section .framed {
-    margin-top: 30px;
+    border-top: 1px solid #33261c;
+    background-repeat: no-repeat;
+    background-position: left bottom;
   }
-  .section .framed h2.title {
-    width: 90%;
-    margin: 0px auto;
+  .section .framed .txt-container {
+    width: 60%;
+    padding: 30px 10px 30px 30px;
+    margin-left: 40%;
+    background-color: #f6f3ec;
   }
 
-  #about .framed {
-    background-image: url("../img/sm/olga.jpg");
-  }
-
-  #contactPanel .img-container {
-    background: url("../img/sm/map.jpg") no-repeat top left;
+  #intro .framed {
+    background-image: url("../img/sm/intro.jpg");
   }
 
   #services .framed {
     background-image: url("../img/sm/services.jpg");
   }
-  #services .txt-container ul {
-    margin-left: 20px;
-    margin-right: 20px;
+
+  #about .framed {
+    margin-bottom: 60px;
   }
-  #services p {
-    text-align: left;
+
+  #contactPanel .img-container {
+    background: url("../img/sm/map.jpg") no-repeat top left;
   }
 
   #picWall .pic-container {
@@ -781,7 +807,7 @@ footer #contact a {
     position: absolute;
     overflow: hidden;
     border: 2px solid #33261c;
-    background: #33261c url("../img/lg/sprites.jpg") no-repeat;
+    background: #33261c url("../img/sprites.jpg") no-repeat;
     -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
@@ -794,50 +820,72 @@ footer #contact a {
   #picWall #girl {
     top: 0px;
     left: 0px;
-    width: 260px;
+    width: 250px;
     height: 295px;
-  }
-  #picWall #elephant {
-    top: 625px;
-    left: 185px;
-    width: 125px;
-    height: 105px;
-    background-position: -279px -58px;
-    background-size: 970%;
-  }
-  #picWall #womanPortrait {
-    top: 625px;
-    left: 325px;
-    width: 145px;
-    height: 200px;
-    background-size: 930%;
-    background-position: -319px -202px;
-  }
-  #picWall #womanPortrait.details {
-    padding-top: 10px;
-    padding-bottom: 0px;
-  }
-  #picWall #saints {
-    top: 0px;
-    left: 275px;
-    width: 150px;
-    height: 180px;
-    background-position: -420px 0px;
   }
   #picWall #landscape {
     top: 0px;
-    left: 445px;
+    left: 430px;
     width: 290px;
     height: 180px;
     background-position: -590px 0px;
   }
+  #picWall #manPortrait {
+    top: 195px;
+    left: 495px;
+    width: 225px;
+    height: 300px;
+    background-position: -433px -230px;
+  }
   #picWall #mrsPitt {
     top: 310px;
-    left: 40px;
+    left: 30px;
     width: 220px;
     height: 275px;
     background-size: 500%;
     background-position: -860px 0px;
+  }
+  #picWall #saints {
+    top: 0px;
+    left: 265px;
+    width: 150px;
+    height: 180px;
+    background-position: -420px 0px;
+  }
+  #picWall #lilacs {
+    top: 195px;
+    left: 265px;
+    width: 215px;
+    height: 175px;
+    background-size: 625%;
+    background-position: -249px -426px;
+  }
+  #picWall #bird {
+    top: 385px;
+    left: 285px;
+    width: 175px;
+    height: 220px;
+    background-position: -900px -315px;
+  }
+  #picWall #street {
+    top: 510px;
+    left: 495px;
+    width: 180px;
+    height: 277px;
+    background-size: 700%;
+    background-position: -766px -224px;
+  }
+  #picWall #womanPortrait {
+    top: 620px;
+    left: 330px;
+    width: 150px;
+    height: 205px;
+    background-size: 945%;
+    background-position: -338px -217px;
+  }
+  #picWall #womanPortrait.details {
+    padding-top: 10px;
+    padding-bottom: 0px;
   }
   #picWall #virgin {
     top: 600px;
@@ -846,35 +894,13 @@ footer #contact a {
     height: 225px;
     background-position: -21px -309px;
   }
-  #picWall #lilacs {
-    top: 200px;
-    left: 275px;
-    width: 215px;
-    height: 175px;
-    background-size: 625%;
-    background-position: -249px -426px;
-  }
-  #picWall #manPortrait {
-    top: 200px;
-    left: 505px;
-    width: 230px;
-    height: 300px;
-    background-position: -433px -230px;
-  }
-  #picWall #street {
-    top: 515px;
-    left: 505px;
-    width: 185px;
-    height: 280px;
-    background-size: 645%;
-    background-position: -718px -206px;
-  }
-  #picWall #bird {
-    top: 390px;
-    left: 295px;
-    width: 175px;
-    height: 220px;
-    background-position: -900px -315px;
+  #picWall #elephant {
+    top: 620px;
+    left: 185px;
+    width: 130px;
+    height: 111px;
+    background-position: -302px -63px;
+    background-size: 970%;
   }
   #picWall .details {
     position: absolute;
@@ -1047,124 +1073,123 @@ footer #contact a {
     margin: 20px 0px;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
-  .navbar .navbar-collapse {
-    margin: 0px auto;
-  }
-  .navbar .navbar-collapse .navbar-nav {
-    width: 90%;
-    float: none;
-    margin: 0px auto;
-  }
-  .navbar .navbar-collapse .navbar-nav li {
-    width: 15%;
-  }
-  .navbar .navbar-collapse .navbar-nav li a {
-    padding: 10px 3px;
-    text-align: center;
-  }
-}
-@media only screen and (min-width: 900px) {
-  .section .container {
-    min-width: 900px;
-    max-width: 1030px;
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .section .framed {
+    margin-bottom: 30px;
   }
 
+  #about .framed {
+    background-image: url("../img/sm/olga.jpg");
+    background-size: 100%;
+    background-position: center top;
+  }
+  #about .framed .txt-container {
+    width: 100%;
+    padding: 30px 10px;
+    margin-top: 330px;
+    margin-left: 0px;
+  }
+  #about .testimonials {
+    border-top: 1px solid #33261c;
+    padding-top: 20px;
+  }
+  #about .testimonials li {
+    border-bottom: 1px dotted #a5a099;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 980px) {
   .jumbotron, footer {
     background: #33261c url("../img/md/bowtieMD.jpg") no-repeat center top;
   }
 
-  .section .framed {
-    border-top: 1px solid #33261c;
-    margin-bottom: 30px;
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    background-size: 40%;
-  }
-  .section .framed h3, .section .framed li {
-    color: #33261c;
-  }
-  .section .framed .txt-container {
-    width: 65%;
-    padding: 50px 0px 50px 50px;
-    margin-left: 35%;
-    text-align: left;
-    background-color: #fbf9f3;
-  }
-  .section .framed .txt-container ul {
-    margin-top: 30px;
-    text-align: left;
-    list-style-type: disc;
+  .section .container {
+    min-width: 90%;
   }
 
-  #intro .framed {
-    background-image: url("../img/intro.jpg");
+  .section h2 {
+    font-size: 3rem;
   }
 
   #about .framed {
     background-image: url("../img/md/olga.jpg");
   }
-  #about .testimonials li {
-    margin: 0px;
-    padding: 0px 10px 20px 0px;
-    border-bottom: none;
+  #about .testimonials {
+    margin-left: -20px;
+    margin-right: -20px;
   }
-  #about .testimonials li:nth-child(even) {
-    padding: 0px 0px 20px 10px;
+  #about .testimonials li {
+    width: 50%;
+    float: left;
+    border: 20px solid #fbf9f3;
+    margin-bottom: 0px;
+    background-color: #f6f3ec;
   }
   #about .testimonials p {
-    height: 350px;
-    padding: 20px 20px 70px;
-    margin-bottom: 0px;
-    background-color: #f0ebe0;
-    border: 1px solid #a5a099;
-  }
-  #about .testimonials span {
-    margin-top: -70px;
+    min-height: 200px;
   }
 
   #contactPanel .img-container {
     background: url("../img/md/mapMDL.jpg") no-repeat top center;
   }
 
-  #services .framed {
-    background-image: url("../img/md/services.jpg");
+  #picWall .container {
+    width: 880px;
   }
-  #services .txt-container li {
-    margin-bottom: 0px;
-  }
-
   #picWall .pic-container {
-    position: relative;
-    min-height: 550px;
-    height: 750px;
-  }
-  #picWall .pic-frame {
-    position: absolute;
-    overflow: hidden;
-    border: 2px solid #33261c;
-    background: #33261c url("../img/lg/sprites.jpg") no-repeat;
-    -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
-    transition: all 0.8s;
-  }
-  #picWall .pic-frame:hover .details {
-    bottom: 0px;
-    transition: all 0.8s;
+    margin-bottom: 60px;
   }
   #picWall #girl {
-    top: 40px;
-    left: 0px;
+    top: 35px;
     width: 260px;
-    height: 290px;
   }
-  #picWall #elephant {
+  #picWall #landscape {
+    left: 290px;
+    width: 270px;
+  }
+  #picWall #manPortrait {
+    top: 210px;
+    left: 300px;
+    width: 250px;
+    height: 320px;
+    background-position: -430px -209px;
+  }
+  #picWall #mrsPitt {
+    top: 40px;
+    left: 590px;
+    width: 230px;
+    height: 290px;
+    background-position: -902px 1px;
+  }
+  #picWall #saints {
+    top: 350px;
+    left: 590px;
+    width: 150px;
+    height: 180px;
+    background-position: -420px 0px;
+  }
+  #picWall #lilacs {
+    top: 350px;
+    left: 60px;
+    width: 200px;
+    height: 165px;
+    background-size: 625%;
+    background-position: -225px -399px;
+  }
+  #picWall #bird {
     top: 550px;
-    left: 230px;
-    width: 120px;
-    height: 90px;
-    background-position: -279px -60px;
+    left: 590px;
+    width: 200px;
+    height: 270px;
+    background-size: 750%;
+    background-position: -1182px -400px;
+  }
+  #picWall #street {
+    top: 550px;
+    left: 20px;
+    width: 180px;
+    height: 270px;
+    background-position: -766px -232px;
   }
   #picWall #womanPortrait {
     top: 660px;
@@ -1178,27 +1203,6 @@ footer #contact a {
     padding-top: 10px;
     padding-bottom: 0px;
   }
-  #picWall #saints {
-    top: 350px;
-    left: 590px;
-    width: 150px;
-    height: 180px;
-    background-position: -420px 0px;
-  }
-  #picWall #landscape {
-    top: 0px;
-    left: 280px;
-    width: 290px;
-    height: 180px;
-    background-position: -590px 0px;
-  }
-  #picWall #mrsPitt {
-    top: 40px;
-    left: 590px;
-    width: 230px;
-    height: 290px;
-    background-position: -902px 0px;
-  }
   #picWall #virgin {
     top: 550px;
     left: 385px;
@@ -1206,35 +1210,12 @@ footer #contact a {
     height: 220px;
     background-position: -20px -310px;
   }
-  #picWall #lilacs {
-    top: 350px;
-    left: 60px;
-    width: 200px;
-    height: 165px;
-    background-size: 625%;
-    background-position: -225px -399px;
-  }
-  #picWall #manPortrait {
-    top: 200px;
-    left: 295px;
-    width: 260px;
-    height: 330px;
-    background-position: -425px -205px;
-  }
-  #picWall #street {
+  #picWall #elephant {
     top: 550px;
-    left: 20px;
-    width: 180px;
-    height: 270px;
-    background-position: -700px -200px;
-  }
-  #picWall #bird {
-    top: 550px;
-    left: 590px;
-    width: 200px;
-    height: 270px;
-    background-size: 750%;
-    background-position: -1182px -400px;
+    left: 230px;
+    width: 120px;
+    height: 90px;
+    background-position: -279px -60px;
   }
   #picWall .details {
     position: absolute;
@@ -1357,8 +1338,9 @@ footer #contact a {
   }
 }
 @media (min-width: 1200px) {
-  .jumbotron, footer {
-    background: #33261c url("../img/lg/bowtieLG.jpg") no-repeat center top;
+  .navbar .navbar-collapse {
+    width: 65%;
+    float: right;
   }
 
   .jumbotron .banner {
@@ -1368,33 +1350,21 @@ footer #contact a {
     text-align: center;
   }
 
-  .navbar .navbar-collapse {
-    float: right;
+  .jumbotron, footer {
+    background: #33261c url("../img/lg/bowtieLG.jpg") no-repeat center top;
   }
 
-  #about .framed {
-    background-image: url("../img/lg/olga.jpg");
+  .section .container {
+    min-width: 900px;
+    max-width: 1030px;
   }
+
   #about .testimonials p {
-    height: 300px;
+    min-height: 175px;
   }
 
   #contactPanel .img-container {
     background: url("../img/lg/map.jpg") no-repeat center left;
-  }
-
-  #services .framed {
-    background-image: url("../img/lg/services.jpg");
-  }
-  #services .txt-container h4 {
-    font-size: 2rem;
-  }
-  #services .txt-container ul {
-    margin-top: 50px;
-  }
-  #services .txt-container li {
-    margin-bottom: 10px;
-    font-size: 1.6rem;
   }
 
   #picWall .pic-container {

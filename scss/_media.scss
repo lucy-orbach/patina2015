@@ -5,18 +5,18 @@
 	.navbar {
 		position: fixed;
 		z-index: 1000;
-		height: 60px;
 		border: none;
 		background: url('../img/xsm/bowtieXSM.jpg') no-repeat top center;
-		background-size: cover;
+		background-size: 100% 60px;
 		h1 {
 			margin: 0px;
 		}
 		.navbar-brand {
 			font-size: 3rem;
+			padding: 15px 0px;
 		}
 		.navbar-toggle {
-			width: 75px;
+			width: 65px;
 			padding-left: 45px;
 			margin-top: 15px;
 			@include transBr(0.7);
@@ -24,7 +24,7 @@
 				content:'Menu';
 				position: absolute;
 				top: 6px;
-				left: 3px;
+				left: 0px;
 				color: $ocre;
 				font-size: 14px;
 				font-weight: normal;
@@ -34,11 +34,12 @@
 			background-color: $ocre;
 		}
 		.navbar-collapse {
-			background-color: $dark;
+			@include transBr(0.1);
+			@include transition();
 		}
 	} //navbar
 	.section {
-		padding: 60px 0px 40px;
+		padding: 50px 0px 40px;
 		.container {
 			padding: 0px 15px;
 			background-color: $sand;
@@ -70,6 +71,7 @@
 			h2 {
 				position: absolute;
 				bottom: 0px;
+				width: 100%;
 				padding: 5px 15px;
 				margin-bottom: 0px;
 				@include transBr(0.3); 
@@ -77,33 +79,25 @@
 		}//img-title
 		.container {
 			position: relative;
-		}
-		.m-pushed {
-
+			padding: 30px 15px;
 		}
 		.txt-container {
-			padding: 40px 30px;
+			padding: 0px 0px 40px;
+		}
+		ul {
+			padding: 0px 15px;
 		}
 	}//intro,services,about
-
 	#intro .title-img {
 		background-image: url('../img/xsm/intro.jpg');
 	}
 	#services .title-img {
 		background-image: url('../img/xsm/services.jpg');
 	}//services
-
 	#about {
 		.title-img {
 		background-image: url('../img/xsm/olga.jpg');
 		}//title-img
-		.testimonials {
-			li {
-				padding-bottom: 50px;
-				margin-bottom: 15px;
-				border-bottom: 1px dotted $dk-zepia;
-			}
-		}//testimonials
 	}//about
 
 	#contactPanel {
@@ -302,6 +296,18 @@
 			padding-top: 55px !important;
 		}
 	}
+	#testimonials {
+		li {
+			padding: 0px 0px 30px;
+			border-bottom: 1px dotted $dk-zepia;
+			margin-bottom: 10px;
+		}
+		span {
+			display: block;
+			width: 100%;
+			text-align: right;
+		}
+	}
 	footer {
 		position: fixed;
 		bottom: 0px;
@@ -380,7 +386,6 @@
 		}//a
 	}//mNav
 		
-
 	@media (orientation: landscape) {
 		.navbar li {
 			height: 40px;
@@ -388,24 +393,20 @@
 				display: block;
 			}
 		}//.navbar li
-		#about {
-			h2:first-child {
-				top: 205px;
-				height: 40px;
-			}
-			.img-container {
-				background: url('../img/xsm/olgXSL.jpg') no-repeat top left;
-				background-size: cover;
-			}//img-container
-		}//about
-		#services {
-			h2.title {
-				top: -70px;
-			}
-			.img-container {
-				background: url('../img/xsm/servicesXSL.jpg') no-repeat top left;
-			}//img-container
+
+		#intro .title-img {
+			background-image: url('../img/xsm/introXSL.jpg');
+		}
+		#services .title-img {
+			background-image: url('../img/xsm/services.jpg');
 		}//services
+		#about .title-img {
+			background-image: url('../img/xsm/olgaXSL.jpg');
+		}//about
+
+		footer {
+			position: relative;
+		}
 	}//landscape
 }// media mobile
 
@@ -416,30 +417,25 @@
 	.mobile-only {
 		display: none !important;
 	}//mobile-only
-	
 	.navbar {
 		position: absolute;
 		bottom: 0px;
-	}//navbar
-
-	#headNav {
-		li {
-			height: 100%;
-			padding: 0px 10px;
-			&:nth-child(3) {
-				width: 150px;
+		.navbar-collapse ul {
+			width: 90%;
+			float: none;
+			margin: 0px auto;
+			li {
+				width: 15%;
+				&:nth-child(3) {
+					width: 150px;
+				}
 			}
 			a {
-				height: 50px;
+				padding: 15px 10px;
+				text-align: center;
 			}
 		}
-	}
-
-	.jumbotron, footer {
-		background: url('../img/sm/bowtieSM.jpg') no-repeat center top;
-		background-size: cover !important;
-	}
-
+	}//navbar	
 	.jumbotron {
 		padding: 10px 10px 70px;
 		.banner {
@@ -452,51 +448,35 @@
 			}
 		}
 	}//jumbotron
-
-	.section {
-		.row {
-			margin: 0px;
-		}
-		p {
-			line-height: 2.5rem;
-		}
-	}//section
-	
+	.jumbotron, footer {
+		background: url('../img/sm/bowtieSM.jpg') no-repeat center top;
+	}
 	.section .framed {
-		margin-top: 30px;
-		h2.title {
-			width: 90%;
-			margin: 0px auto;
-		}
+		border-top: 1px solid $dark;
+		background-repeat: no-repeat;
+		background-position: left bottom;
+		.txt-container {
+			width: 60%;
+			padding: 30px 10px 30px 30px;
+			margin-left: 40%;
+			background-color: $zepia;
+		}//txt-container
 	}//framed
-	
-	#about {
-		.framed {
-			background-image: url('../img/sm/olga.jpg');
-			//background-size: cover;
-		}
-	}//about
-
+	#intro .framed {
+		background-image: url('../img/sm/intro.jpg');
+		//background-size: 70%;
+	}
+	#services	.framed {
+		background-image: url('../img/sm/services.jpg');
+	}//services
+	#about .framed {
+		margin-bottom: 60px;
+	}
 	#contactPanel {
 		.img-container {
 			background: url('../img/sm/map.jpg') no-repeat top left;
 		}//img-container
 	}//contactPanel
-
-	#services {
-		.framed {
-			background-image: url('../img/sm/services.jpg');
-		}
-		.txt-container {
-			ul {
-				margin-left: 20px;
-				margin-right: 20px;
-			}
-		}
-		p {
-			text-align: left;
-		}
-	}//services
 
 	#picWall {
 		.pic-container {
@@ -507,7 +487,7 @@
 			position: absolute;
 			overflow: hidden;
 			border: 2px solid $dark;
-			background: $dark url('../img/lg/sprites.jpg') no-repeat;
+			background: $dark url('../img/sprites.jpg') no-repeat;
 			@include shadow();
 			@include transition();
 			&:hover .details {
@@ -518,51 +498,73 @@
 		#girl {
 			top: 0px;
 			left: 0px;
-			width: 260px;
+			width: 250px;
 			height: 295px;
 		}//girl
-		#elephant {
-			top: 625px;
-			left: 185px;
-			width: 125px;
-			height: 105px;
-			background-position: -279px -58px;
-			background-size: 970%;
-		}//elephant
-		#womanPortrait {
-			top: 625px;
-			left: 325px;
-			width: 145px;
-			height: 200px;
-			background-size: 930%;
-			background-position: -319px -202px;
-			&.details {
-				padding-top: 10px;
-				padding-bottom: 0px;
-			}
-		}//woman
-		#saints {
-			top: 0px;
-			left: 275px;
-			width: 150px;
-			height: 180px;
-			background-position: -420px 0px;
-		}//saints
 		#landscape {
 			top: 0px;
-			left: 445px;
+			left: 430px;
 			width: 290px;
 			height: 180px;
 			background-position: -590px 0px;
 		}//landscape
+		#manPortrait {
+			top: 195px;
+			left: 495px;
+			width: 225px;
+			height: 300px;
+			background-position: -433px -230px;
+		}//manPortrait
 		#mrsPitt  {
 			top: 310px;
-			left: 40px;
+			left: 30px;
 			width: 220px;
 			height: 275px;
 			background-size: 500%;
 			background-position: -860px 0px;
 		}//mrsPitt
+		#saints {
+			top: 0px;
+			left: 265px;
+			width: 150px;
+			height: 180px;
+			background-position: -420px 0px;
+		}//saints
+		#lilacs {
+			top: 195px;
+			left: 265px;
+			width: 215px;
+			height: 175px;
+			background-size: 625%;
+			background-position: -249px -426px;
+		}//lilacs
+		#bird {
+			top: 385px;
+			left: 285px;
+			width: 175px;
+			height: 220px;
+			background-position: -900px -315px;
+		}//bird	
+		#street {
+			top: 510px;
+			left: 495px;
+			width: 180px;
+			height: 277px;
+			background-size: 700%;
+			background-position: -766px -224px;
+		}//street
+		#womanPortrait {
+			top: 620px;
+			left: 330px;
+			width: 150px;
+			height: 205px;
+			background-size: 945%;
+			background-position: -338px -217px;
+			&.details {
+				padding-top: 10px;
+				padding-bottom: 0px;
+			}
+		}//woman
 		#virgin  {
 			top: 600px;
 			left: 0px;
@@ -570,36 +572,14 @@
 			height: 225px;
 			background-position: -21px -309px;
 		}//virgin
-		#lilacs {
-			top: 200px;
-			left: 275px;
-			width: 215px;
-			height: 175px;
-			background-size: 625%;
-			background-position: -249px -426px;
-		}//lilacs
-		#manPortrait {
-			top: 200px;
-			left: 505px;
-			width: 230px;
-			height: 300px;
-			background-position: -433px -230px;
-		}//manPortrait
-		#street {
-			top: 515px;
-			left: 505px;
-			width: 185px;
-			height: 280px;
-			background-size: 645%;
-			background-position: -718px -206px;
-		}//street
-		#bird {
-			top: 390px;
-			left: 295px;
-			width: 175px;
-			height: 220px;
-			background-position: -900px -315px;
-		}//bird	
+		#elephant {
+			top: 620px;
+			left: 185px;
+			width: 130px;
+			height: 111px;
+			background-position: -302px -63px;
+			background-size: 970%;
+		}//elephant
 		.details {
 			position: absolute;
 			bottom: -200px;
@@ -656,7 +636,6 @@
 			background-position: -270px -57px;
 		}
 	}
-
 	#caseContent {
 		h2.title {
 			margin-top: -10px;
@@ -781,91 +760,65 @@
 			margin: 20px 0px;
 		}
 	}//footer
-
-	@media only screen and (max-width: 1199px){
-		.navbar .navbar-collapse {
-			margin: 0px auto;
-			.navbar-nav {
-				width: 90%;
-				float: none;
-				margin: 0px auto;
+	@media only screen and (max-width: 979px) {
+		.section .framed {
+			margin-bottom: 30px;
+		}
+		#about{
+		 	.framed {
+		 		background-image: url('../img/sm/olga.jpg');
+				background-size: 100%;
+				background-position: center top;
+				.txt-container {
+					width: 100%;
+					padding: 30px 10px;
+					margin-top: 330px;
+					margin-left: 0px;
+				}
+			}
+			.testimonials {
+				border-top: 1px solid $dark;
+				padding-top: 20px;
 				li {
-					width: 15%;
-					a {
-						padding: 10px 3px;
-						text-align: center;
-					}//a
-				}//li
-			}//navbar-nav
-		}//navbar-collapse
-	}//media only
-	
+					border-bottom: 1px dotted $dk-zepia;
+					margin-bottom: 20px;
+				}
+			}
+		}//about
+	}
 }// media kindle
 
 //=========================
 //******  iPAD  MD   ******
 //=========================
-@media only screen and (min-width: 900px) {
-	.section .container {
-		min-width: 900px;
-		max-width: 1030px;
-	}//container
-
+@media only screen and (min-width: 980px) {
 	.jumbotron, footer {
 		background: $dark url('../img/md/bowtieMD.jpg') no-repeat center top;
 	}//varies
+	.section .container {
+		min-width: 90%;
+		
+	}//container
 
-	.section .framed {
-	border-top: 1px solid $dark;
-	margin-bottom: 30px;
-	background-repeat: no-repeat; 
-	background-position: left bottom;
-	background-size: 40%;
-	h3, li {
-		color: $dark;
-	}	
-	.txt-container {
-		width: 65%;
-		padding: 50px 0px 50px 50px;
-		margin-left: 35%;
-		text-align: left;
-		background-color: $sand;
-		ul {
-			margin-top: 30px;
-			text-align: left;
-			list-style-type: disc;
-		}//ul
-	}//txt-container
-}//framed
-	#intro {
-	.framed {
-		background-image: url('../img/intro.jpg');
+	.section h2 {
+		font-size: 3rem;
 	}
-}
-
 	#about {
 		.framed {
-			background-image: url('../img/md/olga.jpg');
-			//background-size: cover;
+			background-image: url('../img/md/olga.jpg');	
 		}
 		.testimonials {
+			margin-left: -20px;
+			margin-right: -20px;
 			li {
-				margin: 0px;
-				padding: 0px 10px 20px 0px;
-				border-bottom: none;
-				&:nth-child(even){
-					padding: 0px 0px 20px 10px;
-				}
-			}
-			p {
-				height: 350px;
-				padding: 20px 20px 70px;
+				width: 50%;
+				float: left;
+				border: 20px solid $sand;
 				margin-bottom: 0px;
 				background-color: $zepia;
-				border: 1px solid $dk-zepia;
 			}
-			span {
-				margin-top: -70px;
+			p {
+				min-height: 200px;
 			}
 		}
 	}//about
@@ -875,49 +828,65 @@
 			background: url('../img/md/mapMDL.jpg') no-repeat top center;
 		}//img-container
 	}//contactPanel
-	
-	#services {
-		.framed {
-			background-image: url('../img/md/services.jpg');
-		}
-		.txt-container {
-			li {
-				margin-bottom: 0px;
-			}
-		}
-	}//services
-
 	#picWall {
-		.pic-container {
-			position: relative;
-			min-height:  550px;
-			height: 750px;
+		.container {
+			width: 880px;
 		}
-		.pic-frame {
-			position: absolute;
-			overflow: hidden;
-			border: 2px solid $dark;
-			background: $dark url('../img/lg/sprites.jpg') no-repeat;
-			@include shadow();
-			@include transition();
-			&:hover .details {
-				bottom: 0px;
-				@include transition();
-			}
-		}//frame
+		.pic-container {
+			margin-bottom: 60px;
+		}
 		#girl {
-			top: 40px;
-			left: 0px;
+			top: 35px;
 			width: 260px;
-			height: 290px;
 		}//girl
-		#elephant {
+		#landscape {
+			left: 290px;
+			width: 270px;
+		}//landscape
+		#manPortrait {
+			top: 210px;
+			left: 300px;
+			width: 250px;
+			height: 320px;
+			background-position: -430px -209px;
+		}//manPortrait
+		#mrsPitt  {
+			top: 40px;
+			left: 590px;
+			width: 230px;
+			height: 290px;
+			background-position: -902px 1px;
+		}//mrsPitt
+		#saints {
+			top: 350px;
+			left: 590px;
+			width: 150px;
+			height: 180px;
+			background-position: -420px 0px;
+		}//saints
+		#lilacs {
+			top: 350px;
+			left: 60px;
+			width: 200px;
+			height: 165px;
+			background-size: 625%;
+			background-position: -225px -399px;
+		}//lilacs
+		#bird {
 			top: 550px;
-			left: 230px;
-			width: 120px;
-			height: 90px;
-			background-position: -279px -60px;
-		}//elephant
+			left: 590px;
+			width: 200px;
+			height: 270px;
+			background-size: 750%;
+			background-position: -1182px -400px;
+		}//bird
+		#street {
+			top: 550px;
+			left: 20px;
+			width: 180px;
+			height: 270px;
+			background-position: -766px -232px;
+		}//street
 		#womanPortrait {
 			top: 660px;
 			left: 230px;
@@ -930,27 +899,6 @@
 				padding-bottom: 0px;
 			}
 		}//woman
-		#saints {
-			top: 350px;
-			left: 590px;
-			width: 150px;
-			height: 180px;
-			background-position: -420px 0px;
-		}//saints
-		#landscape {
-			top: 0px;
-			left: 280px;
-			width: 290px;
-			height: 180px;
-			background-position: -590px 0px;
-		}//landscape
-		#mrsPitt  {
-			top: 40px;
-			left: 590px;
-			width: 230px;
-			height: 290px;
-			background-position: -902px 0px;
-		}//mrsPitt
 		#virgin  {
 			top: 550px;
 			left: 385px;
@@ -958,36 +906,21 @@
 			height: 220px;
 			background-position: -20px -310px;
 		}//virgin
-		#lilacs {
-			top: 350px;
-			left: 60px;
-			width: 200px;
-			height: 165px;
-			background-size: 625%;
-			background-position: -225px -399px;
-		}//lilacs
-		#manPortrait {
-			top: 200px;
-			left: 295px;
-			width: 260px;
-			height: 330px;
-			background-position: -425px -205px;
-		}//manPortrait
-		#street {
+		#elephant {
 			top: 550px;
-			left: 20px;
-			width: 180px;
-			height: 270px;
-			background-position: -700px -200px;
-		}//street
-		#bird {
-			top: 550px;
-			left: 590px;
-			width: 200px;
-			height: 270px;
-			background-size: 750%;
-			background-position: -1182px -400px;
-		}//bird	
+			left: 230px;
+			width: 120px;
+			height: 90px;
+			background-position: -279px -60px;
+		}//elephant
+		
+		
+		
+		
+		
+		
+		
+
 		.details {
 			position: absolute;
 			bottom: -200px;
@@ -998,7 +931,6 @@
 			@include transition();
 		}
 	}//picWall
-	
 	#caseThmenu {
 		ul {
 			width: 785px;
@@ -1107,7 +1039,6 @@
 			}
 		}
 	}
-
 	footer {
 		#contact {
 			width: 80%;
@@ -1120,10 +1051,10 @@
 //*****  LAPTOP  LG  ******
 //=========================
 @media (min-width: 1200px) {
-	.jumbotron, footer {
-		background: $dark url('../img/lg/bowtieLG.jpg') no-repeat center top;
-	}
-
+	.navbar .navbar-collapse {
+		width: 65%;
+		float: right;
+	}//navbar-collapse
 	.jumbotron {
   	.banner {
 			float: left;
@@ -1132,45 +1063,21 @@
 			text-align: center;
 		}//banner
   }//jumbotron
-	
-	.navbar .navbar-collapse {
-		float: right;
-	}//navbar-collapse
-
-
-	#about {
-		.framed {
-			background-image: url('../img/lg/olga.jpg');
-		}
-		.testimonials p {
-			height: 300px;
-		}//testimonials
+	.jumbotron, footer {
+		background: $dark url('../img/lg/bowtieLG.jpg') no-repeat center top;
+	}	
+	.section .container {
+		min-width: 900px;
+		max-width: 1030px;
+	}//container
+	#about .testimonials p {
+		min-height: 175px;
 	}
-	
 	#contactPanel {
 		.img-container {
 			background: url('../img/lg/map.jpg') no-repeat center left;
 		}//img-container
 	}//contactPanel
-
-	#services {
-		.framed {
-			background-image: url('../img/lg/services.jpg');
-		}
-		.txt-container {
-			h4 {
-				font-size: 2rem;
-			}
-			ul {
-				margin-top: 50px;
-			}
-			li {
-				margin-bottom: 10px;
-				font-size: 1.6rem;
-			}
-		}
-	}//services
-	
 	#picWall {
 		.pic-container {
 			position: relative;
@@ -1280,7 +1187,6 @@
 			@include transition();
 		}
 	}//picWall
-
 	#caseThmenu {
 		padding: 70px 10% 30px;
 		ul {
