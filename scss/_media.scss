@@ -481,7 +481,7 @@
 	#picWall {
 		.pic-container {
 			position: relative;
-			min-height: 900px;
+			height: 900px;
 		}
 		.pic-frame {
 			position: absolute;
@@ -506,79 +506,74 @@
 			left: 430px;
 			width: 290px;
 			height: 180px;
-			background-position: -590px 0px;
+			background-position: -564px 0px;
 		}//landscape
 		#manPortrait {
 			top: 195px;
 			left: 495px;
 			width: 225px;
 			height: 300px;
-			background-position: -433px -230px;
+			background-position: -420px -208px;
 		}//manPortrait
 		#mrsPitt  {
 			top: 310px;
-			left: 30px;
-			width: 220px;
-			height: 275px;
-			background-size: 500%;
-			background-position: -860px 0px;
+			left: 15px;
+			width: 235px;
+			height: 285px;
+			background-position: -862px 0px;
 		}//mrsPitt
 		#saints {
 			top: 0px;
 			left: 265px;
 			width: 150px;
 			height: 180px;
-			background-position: -420px 0px;
+			background-position: -409px 0px;
 		}//saints
 		#lilacs {
 			top: 195px;
 			left: 265px;
 			width: 215px;
-			height: 175px;
-			background-size: 625%;
-			background-position: -249px -426px;
+			height: 180px;
+			background-position: -182px -304px;
 		}//lilacs
 		#bird {
-			top: 385px;
-			left: 285px;
-			width: 175px;
-			height: 220px;
-			background-position: -900px -315px;
+			top: 390px;
+			left: 265px;
+			width: 215px;
+			height: 270px;
+			background-position: -855px -305px;
 		}//bird	
 		#street {
 			top: 510px;
 			left: 495px;
 			width: 180px;
-			height: 277px;
-			background-size: 700%;
-			background-position: -766px -224px;
+			height: 275px;
+			background-position: -668px -197px;
 		}//street
 		#womanPortrait {
-			top: 620px;
-			left: 330px;
-			width: 150px;
-			height: 205px;
-			background-size: 945%;
-			background-position: -338px -217px;
+			top: 675px;
+			left: 350px;
+			width: 130px;
+			height: 185px;
+			background-position: -271px -104px;
 			&.details {
 				padding-top: 10px;
 				padding-bottom: 0px;
 			}
 		}//woman
 		#virgin  {
-			top: 600px;
+			top: 610px;
 			left: 0px;
-			width: 170px;
-			height: 225px;
-			background-position: -21px -309px;
+			width: 180px;
+			height: 248px;
+			background-position: -0px -305px;
 		}//virgin
 		#elephant {
-			top: 620px;
-			left: 185px;
+			top: 675px;
+			left: 200px;
 			width: 130px;
-			height: 111px;
-			background-position: -302px -63px;
-			background-size: 970%;
+			height: 105px;
+			background-position: -270px -1px;
 		}//elephant
 		.details {
 			position: absolute;
@@ -795,11 +790,10 @@
 	.jumbotron, footer {
 		background: $dark url('../img/md/bowtieMD.jpg') no-repeat center top;
 	}//varies
-	.section .container {
-		min-width: 90%;
-		
+	.section .container,
+	#picWall .container {
+		width: 960px;	
 	}//container
-
 	.section h2 {
 		font-size: 3rem;
 	}
@@ -828,108 +822,86 @@
 			background: url('../img/md/mapMDL.jpg') no-repeat top center;
 		}//img-container
 	}//contactPanel
+	
 	#picWall {
-		.container {
-			width: 880px;
-		}
 		.pic-container {
-			margin-bottom: 60px;
+			height: 800px;
 		}
 		#girl {
-			top: 35px;
-			width: 260px;
+			top: 45px;
+			width: 245px;
+			height: 299px;
 		}//girl
 		#landscape {
-			left: 290px;
-			width: 270px;
+			left: 410px;
+			width: 275px;
+			height: 165px;
+			background-size: 385%;
+			background-position: -535px -10px;
 		}//landscape
 		#manPortrait {
-			top: 210px;
-			left: 300px;
+			top: 180px;
+			left: 435px;
 			width: 250px;
-			height: 320px;
-			background-position: -430px -209px;
+			height: 315px;
+			background-size: 475%;
+			background-position: -442px -225px;
 		}//manPortrait
 		#mrsPitt  {
-			top: 40px;
-			left: 590px;
+			top: 45px;
+			left: 700px;
 			width: 230px;
-			height: 290px;
-			background-position: -902px 1px;
 		}//mrsPitt
 		#saints {
-			top: 350px;
-			left: 590px;
-			width: 150px;
-			height: 180px;
-			background-position: -420px 0px;
+			left: 260px;
+			width: 135px;
+			height: 165px;
+			background-size: 770%;
+			background-position: -377px -2px;
 		}//saints
 		#lilacs {
-			top: 350px;
-			left: 60px;
-			width: 200px;
-			height: 165px;
-			background-size: 625%;
-			background-position: -225px -399px;
+			top: 510px;
+			left: 435px;
+			width: 250px;
+			height: 200px;
+			background-size: 504%;
+			background-position: -203px -344px;
 		}//lilacs
 		#bird {
-			top: 550px;
-			left: 590px;
-			width: 200px;
-			height: 270px;
-			background-size: 750%;
-			background-position: -1182px -400px;
-		}//bird
+			top: 345px;
+			left: 700px;
+			width: 205px;
+			height: 247px;
+		}//bird	
 		#street {
-			top: 550px;
-			left: 20px;
-			width: 180px;
-			height: 270px;
-			background-position: -766px -232px;
+			top: 360px;
+			left: 85px;
+			width: 160px;
+			height: 245px;
+			background-size: 630%;
+			background-position: -598px -177px;
 		}//street
 		#womanPortrait {
-			top: 660px;
-			left: 230px;
-			width: 120px;
-			height: 160px;
-			background-size: 950%;
-			background-position: -270px -180px;
-			&.details {
-				padding-top: 10px;
-				padding-bottom: 0px;
-			}
+			top: 180px;
+			left: 260px;
+			width: 160px;
+			height: 200px;
+			background-size: 850%;
+			background-position: -326px -135px;
 		}//woman
 		#virgin  {
-			top: 550px;
-			left: 385px;
-			width: 170px;
-			height: 220px;
-			background-position: -20px -310px;
+			top: 510px;
+			left: 265px;
+			width: 150px;
+			height: 200px;
+			background-size: 620%;
+			background-position: -0px -253px;
 		}//virgin
 		#elephant {
-			top: 550px;
-			left: 230px;
-			width: 120px;
-			height: 90px;
-			background-position: -279px -60px;
+			top: 395px;
+			left: 275px;
+			height: 100px;
 		}//elephant
-		
-		
-		
-		
-		
-		
-		
-
-		.details {
-			position: absolute;
-			bottom: -200px;
-			@include transBr();
-			color: $sand;
-			padding: 5px 3px;
-			text-align: center;
-			@include transition();
-		}
 	}//picWall
 	#caseThmenu {
 		ul {
@@ -1067,8 +1039,8 @@
 		background: $dark url('../img/lg/bowtieLG.jpg') no-repeat center top;
 	}	
 	.section .container {
-		min-width: 900px;
-		max-width: 1030px;
+		width: 1024px;
+		//max-width: 1030px;
 	}//container
 	#about .testimonials p {
 		min-height: 175px;
@@ -1079,113 +1051,92 @@
 		}//img-container
 	}//contactPanel
 	#picWall {
-		.pic-container {
-			position: relative;
-			height: 550px;
+		.container {
+			width: 1140px;
+			margin: 0px auto;
 		}
-		.pic-frame {
-			position: absolute;
-			overflow: hidden;
-			border: 2px solid $dark;
-			background: $dark url('../img/lg/sprites.jpg') no-repeat;
-			@include shadow();
-			@include transition();
-			&:hover .details {
-				bottom: 0px;
-				@include transition();
-			}
-		}//frame
+		.pic-container {
+			height: 630px;
+		}
 		#girl {
 			top: 0px;
-			left: 0px;
-			width: 260px;
+			width: 250px;
 			height: 290px;
+			background-position: -15px 0px;
 		}//girl
-		#elephant {
-			top: 65px;
-			left: 280px;
-			width: 120px;
-			height: 90px;
-			background-position: -279px -60px;
-		}//elephant
-		#womanPortrait {
-			top: 180px;
-			left: 280px;
-			width: 120px;
-			height: 160px;
-			background-size: 950%;
-			background-position: -270px -180px;
-			&.details {
-				padding-top: 10px;
-				padding-bottom: 0px;
-			}
-		}//woman
-		#saints {
-			top: 0px;
-			left: 420px;
-			width: 150px;
-			height: 180px;
-			background-position: -420px 0px;
-		}//saints
 		#landscape {
-			top: 0px;
-			left: 590px;
-			width: 290px;
-			height: 180px;
-			background-position: -590px 0px;
+			left: 575px;
+			width: 285px;
+			height: 170px;
+			background-position: -555px -5px;
 		}//landscape
+		#manPortrait {
+			top: 190px;
+			left: 410px;
+			width: 260px;
+			height: 340px;
+			background-position: -459px -220px;
+		}//manPortrait
 		#mrsPitt  {
 			top: 0px;
-			left: 900px;
-			width: 230px;
+			left: 880px;
 			height: 290px;
-			background-position: -902px 0px;
+			background-size: 470%;
+			background-position: -831px 3px;
 		}//mrsPitt
-		#virgin  {
-			top: 310px;
-			left: 00px;
-			width: 170px;
-			height: 220px;
-			background-position: -20px -310px;
-		}//virgin
+		#saints {
+			left: 410px;
+			width: 145px;
+			height: 170px;
+			background-position: -408px -5px;
+		}//saints
 		#lilacs {
 			top: 365px;
-			left: 200px;
-			width: 200px;
+			left: 185px;
+			width: 205px;
 			height: 165px;
-			background-size: 625%;
-			background-position: -225px -399px;
+			background-size: 575%;
+			background-position: -215px -333px;
 		}//lilacs
-		#manPortrait {
-			top: 200px;
-			left: 420px;
-			width: 260px;
-			height: 330px;
-			background-position: -425px -205px;
-		}//manPortrait
-		#street {
-			top: 200px;
-			left: 700px;
-			width: 180px;
-			height: 270px;
-			background-position: -700px -200px;
-		}//street
 		#bird {
 			top: 310px;
-			left: 900px;
-			width: 160px;
+			left: 880px;
+			width: 170px;
 			height: 220px;
-			background-position: -930px -320px;
+			background-size: 550%;
+			background-position: -713px -257px;
 		}//bird	
-		.details {
-			position: absolute;
-			bottom: -200px;
-			@include transBr();
-			color: $sand;
-			padding: 5px 3px;
-			text-align: center;
-			@include transition();
-		}
+		#street {
+			top: 190px;
+			left: 690px;
+			width: 170px;
+			height: 260px;
+			background-position: -636px -187px;
+		}//street
+		#womanPortrait {
+			top: 170px;
+			left: 270px;
+			width: 120px;
+			height: 175px;
+			background-size: 950%;
+			background-position: -277px -110px;
+		}//woman
+		#virgin  {
+			top: 310px;
+			left: 0px;
+			width: 165px;
+			height: 220px;
+			background-size: 612%;
+			background-position: 1px -273px;
+		}//virgin
+		#elephant {
+			top: 60px;
+			left: 270px;
+			width: 120px;
+			height: 90px;
+			background-size: 850%;
+			background-position: -242px -2px;
+		}//elephant
 	}//picWall
 	#caseThmenu {
 		padding: 70px 10% 30px;
@@ -1249,7 +1200,6 @@
 			margin-right: auto !important;
 		}//div
 	}//body
-
 	.jumbotron, footer {
 		background: $dark url('../img/xlg/bowtieXLG.jpg') no-repeat center top;
 	}//jumbotron

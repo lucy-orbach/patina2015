@@ -801,7 +801,7 @@ footer #contact a {
 
   #picWall .pic-container {
     position: relative;
-    min-height: 900px;
+    height: 900px;
   }
   #picWall .pic-frame {
     position: absolute;
@@ -828,79 +828,74 @@ footer #contact a {
     left: 430px;
     width: 290px;
     height: 180px;
-    background-position: -590px 0px;
+    background-position: -564px 0px;
   }
   #picWall #manPortrait {
     top: 195px;
     left: 495px;
     width: 225px;
     height: 300px;
-    background-position: -433px -230px;
+    background-position: -420px -208px;
   }
   #picWall #mrsPitt {
     top: 310px;
-    left: 30px;
-    width: 220px;
-    height: 275px;
-    background-size: 500%;
-    background-position: -860px 0px;
+    left: 15px;
+    width: 235px;
+    height: 285px;
+    background-position: -862px 0px;
   }
   #picWall #saints {
     top: 0px;
     left: 265px;
     width: 150px;
     height: 180px;
-    background-position: -420px 0px;
+    background-position: -409px 0px;
   }
   #picWall #lilacs {
     top: 195px;
     left: 265px;
     width: 215px;
-    height: 175px;
-    background-size: 625%;
-    background-position: -249px -426px;
+    height: 180px;
+    background-position: -182px -304px;
   }
   #picWall #bird {
-    top: 385px;
-    left: 285px;
-    width: 175px;
-    height: 220px;
-    background-position: -900px -315px;
+    top: 390px;
+    left: 265px;
+    width: 215px;
+    height: 270px;
+    background-position: -855px -305px;
   }
   #picWall #street {
     top: 510px;
     left: 495px;
     width: 180px;
-    height: 277px;
-    background-size: 700%;
-    background-position: -766px -224px;
+    height: 275px;
+    background-position: -668px -197px;
   }
   #picWall #womanPortrait {
-    top: 620px;
-    left: 330px;
-    width: 150px;
-    height: 205px;
-    background-size: 945%;
-    background-position: -338px -217px;
+    top: 675px;
+    left: 350px;
+    width: 130px;
+    height: 185px;
+    background-position: -271px -104px;
   }
   #picWall #womanPortrait.details {
     padding-top: 10px;
     padding-bottom: 0px;
   }
   #picWall #virgin {
-    top: 600px;
+    top: 610px;
     left: 0px;
-    width: 170px;
-    height: 225px;
-    background-position: -21px -309px;
+    width: 180px;
+    height: 248px;
+    background-position: -0px -305px;
   }
   #picWall #elephant {
-    top: 620px;
-    left: 185px;
+    top: 675px;
+    left: 200px;
     width: 130px;
-    height: 111px;
-    background-position: -302px -63px;
-    background-size: 970%;
+    height: 105px;
+    background-position: -270px -1px;
   }
   #picWall .details {
     position: absolute;
@@ -1103,8 +1098,9 @@ footer #contact a {
     background: #33261c url("../img/md/bowtieMD.jpg") no-repeat center top;
   }
 
-  .section .container {
-    min-width: 90%;
+  .section .container,
+  #picWall .container {
+    width: 960px;
   }
 
   .section h2 {
@@ -1133,104 +1129,83 @@ footer #contact a {
     background: url("../img/md/mapMDL.jpg") no-repeat top center;
   }
 
-  #picWall .container {
-    width: 880px;
-  }
   #picWall .pic-container {
-    margin-bottom: 60px;
+    height: 800px;
   }
   #picWall #girl {
-    top: 35px;
-    width: 260px;
+    top: 45px;
+    width: 245px;
+    height: 299px;
   }
   #picWall #landscape {
-    left: 290px;
-    width: 270px;
+    left: 410px;
+    width: 275px;
+    height: 165px;
+    background-size: 385%;
+    background-position: -535px -10px;
   }
   #picWall #manPortrait {
-    top: 210px;
-    left: 300px;
+    top: 180px;
+    left: 435px;
     width: 250px;
-    height: 320px;
-    background-position: -430px -209px;
+    height: 315px;
+    background-size: 475%;
+    background-position: -442px -225px;
   }
   #picWall #mrsPitt {
-    top: 40px;
-    left: 590px;
+    top: 45px;
+    left: 700px;
     width: 230px;
-    height: 290px;
-    background-position: -902px 1px;
   }
   #picWall #saints {
-    top: 350px;
-    left: 590px;
-    width: 150px;
-    height: 180px;
-    background-position: -420px 0px;
+    left: 260px;
+    width: 135px;
+    height: 165px;
+    background-size: 770%;
+    background-position: -377px -2px;
   }
   #picWall #lilacs {
-    top: 350px;
-    left: 60px;
-    width: 200px;
-    height: 165px;
-    background-size: 625%;
-    background-position: -225px -399px;
+    top: 510px;
+    left: 435px;
+    width: 250px;
+    height: 200px;
+    background-size: 504%;
+    background-position: -203px -344px;
   }
   #picWall #bird {
-    top: 550px;
-    left: 590px;
-    width: 200px;
-    height: 270px;
-    background-size: 750%;
-    background-position: -1182px -400px;
+    top: 345px;
+    left: 700px;
+    width: 205px;
+    height: 247px;
   }
   #picWall #street {
-    top: 550px;
-    left: 20px;
-    width: 180px;
-    height: 270px;
-    background-position: -766px -232px;
+    top: 360px;
+    left: 85px;
+    width: 160px;
+    height: 245px;
+    background-size: 630%;
+    background-position: -598px -177px;
   }
   #picWall #womanPortrait {
-    top: 660px;
-    left: 230px;
-    width: 120px;
-    height: 160px;
-    background-size: 950%;
-    background-position: -270px -180px;
-  }
-  #picWall #womanPortrait.details {
-    padding-top: 10px;
-    padding-bottom: 0px;
+    top: 180px;
+    left: 260px;
+    width: 160px;
+    height: 200px;
+    background-size: 850%;
+    background-position: -326px -135px;
   }
   #picWall #virgin {
-    top: 550px;
-    left: 385px;
-    width: 170px;
-    height: 220px;
-    background-position: -20px -310px;
+    top: 510px;
+    left: 265px;
+    width: 150px;
+    height: 200px;
+    background-size: 620%;
+    background-position: -0px -253px;
   }
   #picWall #elephant {
-    top: 550px;
-    left: 230px;
-    width: 120px;
-    height: 90px;
-    background-position: -279px -60px;
-  }
-  #picWall .details {
-    position: absolute;
-    bottom: -200px;
-    background-color: rgba(51, 38, 28, 0.9);
-    color: #fbf9f3;
-    padding: 5px 3px;
-    text-align: center;
-    transition: all 0.8s;
-  }
-  #picWall .details a {
-    color: #f39605;
-  }
-  #picWall .details a:hover {
-    color: ocre-lt;
+    top: 395px;
+    left: 275px;
+    height: 100px;
   }
 
   #caseThmenu ul {
@@ -1355,8 +1330,7 @@ footer #contact a {
   }
 
   .section .container {
-    min-width: 900px;
-    max-width: 1030px;
+    width: 1024px;
   }
 
   #about .testimonials p {
@@ -1367,120 +1341,91 @@ footer #contact a {
     background: url("../img/lg/map.jpg") no-repeat center left;
   }
 
+  #picWall .container {
+    width: 1140px;
+    margin: 0px auto;
+  }
   #picWall .pic-container {
-    position: relative;
-    height: 550px;
-  }
-  #picWall .pic-frame {
-    position: absolute;
-    overflow: hidden;
-    border: 2px solid #33261c;
-    background: #33261c url("../img/lg/sprites.jpg") no-repeat;
-    -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
-    transition: all 0.8s;
-  }
-  #picWall .pic-frame:hover .details {
-    bottom: 0px;
-    transition: all 0.8s;
+    height: 630px;
   }
   #picWall #girl {
     top: 0px;
-    left: 0px;
-    width: 260px;
+    width: 250px;
     height: 290px;
-  }
-  #picWall #elephant {
-    top: 65px;
-    left: 280px;
-    width: 120px;
-    height: 90px;
-    background-position: -279px -60px;
-  }
-  #picWall #womanPortrait {
-    top: 180px;
-    left: 280px;
-    width: 120px;
-    height: 160px;
-    background-size: 950%;
-    background-position: -270px -180px;
-  }
-  #picWall #womanPortrait.details {
-    padding-top: 10px;
-    padding-bottom: 0px;
-  }
-  #picWall #saints {
-    top: 0px;
-    left: 420px;
-    width: 150px;
-    height: 180px;
-    background-position: -420px 0px;
+    background-position: -15px 0px;
   }
   #picWall #landscape {
-    top: 0px;
-    left: 590px;
-    width: 290px;
-    height: 180px;
-    background-position: -590px 0px;
+    left: 575px;
+    width: 285px;
+    height: 170px;
+    background-position: -555px -5px;
+  }
+  #picWall #manPortrait {
+    top: 190px;
+    left: 410px;
+    width: 260px;
+    height: 340px;
+    background-position: -459px -220px;
   }
   #picWall #mrsPitt {
     top: 0px;
-    left: 900px;
-    width: 230px;
+    left: 880px;
     height: 290px;
-    background-position: -902px 0px;
+    background-size: 470%;
+    background-position: -831px 3px;
   }
-  #picWall #virgin {
-    top: 310px;
-    left: 00px;
-    width: 170px;
-    height: 220px;
-    background-position: -20px -310px;
+  #picWall #saints {
+    left: 410px;
+    width: 145px;
+    height: 170px;
+    background-position: -408px -5px;
   }
   #picWall #lilacs {
     top: 365px;
-    left: 200px;
-    width: 200px;
+    left: 185px;
+    width: 205px;
     height: 165px;
-    background-size: 625%;
-    background-position: -225px -399px;
-  }
-  #picWall #manPortrait {
-    top: 200px;
-    left: 420px;
-    width: 260px;
-    height: 330px;
-    background-position: -425px -205px;
-  }
-  #picWall #street {
-    top: 200px;
-    left: 700px;
-    width: 180px;
-    height: 270px;
-    background-position: -700px -200px;
+    background-size: 575%;
+    background-position: -215px -333px;
   }
   #picWall #bird {
     top: 310px;
-    left: 900px;
-    width: 160px;
+    left: 880px;
+    width: 170px;
     height: 220px;
-    background-position: -930px -320px;
+    background-size: 550%;
+    background-position: -713px -257px;
   }
-  #picWall .details {
-    position: absolute;
-    bottom: -200px;
-    background-color: rgba(51, 38, 28, 0.9);
-    color: #fbf9f3;
-    padding: 5px 3px;
-    text-align: center;
-    transition: all 0.8s;
+  #picWall #street {
+    top: 190px;
+    left: 690px;
+    width: 170px;
+    height: 260px;
+    background-position: -636px -187px;
   }
-  #picWall .details a {
-    color: #f39605;
+  #picWall #womanPortrait {
+    top: 170px;
+    left: 270px;
+    width: 120px;
+    height: 175px;
+    background-size: 950%;
+    background-position: -277px -110px;
   }
-  #picWall .details a:hover {
-    color: ocre-lt;
+  #picWall #virgin {
+    top: 310px;
+    left: 0px;
+    width: 165px;
+    height: 220px;
+    background-size: 612%;
+    background-position: 1px -273px;
+  }
+  #picWall #elephant {
+    top: 60px;
+    left: 270px;
+    width: 120px;
+    height: 90px;
+    background-size: 850%;
+    background-position: -242px -2px;
   }
 
   #caseThmenu {
