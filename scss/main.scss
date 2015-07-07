@@ -182,6 +182,85 @@ header {
 	}
 }
 
+.case-nav {
+	ul {
+		margin: 20px auto 0px;
+		overflow: hidden;
+	}
+	li {
+		border: 1px solid $dark;
+		background: $zepia url(../img/sprites.jpg);
+		opacity: 0.4;
+		@include transition();
+		&:hover,
+		&.active {
+			opacity: 1;
+			@include transition();
+		}
+	}
+	a {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.case {
+	padding-top: 50px;
+	text-align: center;
+	h3, .case-info, h2{
+		text-align: center;
+	}
+	h3 {
+		margin-bottom: 0px;
+		color: $dark;
+	}
+	h2 {
+		padding-bottom: 5px;
+		border-bottom: 1px solid $dk-zepia;
+		margin-top: 0px;
+	}
+	.case-info {
+		display: inline-block;
+		margin: 0px auto;
+		overflow: hidden;
+		li {
+			float: left;
+			padding: 0px 12px;
+		}
+	}//case-info
+	.case-container {
+		margin-top: 0;
+		p {
+			padding-top: 15px;
+			text-align: left;
+		}
+	}
+	.step {
+		list-style: none;
+	}
+	.img-section {
+		width: 100%;
+		
+		.img-container {
+			width: 100%;
+			height: auto;
+			margin: 20px auto 0px;
+			border: 1px solid $dark;
+			&.none {
+				border: none;
+			}
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}//img-section
+	.info-section{		
+			margin: 0px auto 15px;
+	}//info-section
+}
+
 #contactPanel {
 	a, a:hover, a:link, a:focus, a:visited {
 		color: $dark;
@@ -222,82 +301,6 @@ header {
 
 	}
 }//resource
-
-
-
-#caseThmenu {
-	padding: 70px 10% 30px;
-	ul {
-		overflow: hidden;
-	}
-	li {
-		height: 100px;
-		border: 1px solid $dark;
-		background: $zepia url(../img/lg/sprites.jpg);
-		opacity: 0.4;
-		@include transition();
-		&:hover,
-		&.active {
-			opacity: 1;
-			@include transition();
-		}
-	}
-	a {
-		display: block;
-		width: 100%;
-		height: 100%;
-	}
-}
-
-#caseContent {
-	h2.title {
-		padding-bottom: 5px;
-		border-bottom: 1px solid $dk-zepia;
-	}
-	h3 {
-		margin-bottom: 0px;
-		color: $brown;
-	}
-	.case-info {
-		display: inline-block;
-		margin: 0px auto;
-		overflow: hidden;
-		li {
-			padding: 0px 12px;
-			color: $brown;	
-		}
-	}//case-info
-	.case-container {
-		margin-top: 0;
-		p {
-			padding-top: 15px;
-			text-align: left;
-		}
-	}
-	.step {
-		list-style: none;
-	}
-	.img-section {
-		width: 100%;
-		
-		.img-container {
-			width: 100%;
-			height: auto;
-			margin: 20px auto 0px;
-			border: 1px solid $dark;
-			&.none {
-				border: none;
-			}
-		}
-		img {
-			width: 100%;
-			height: auto;
-		}
-	}//img-section
-	.info-section{		
-			margin: 0px auto 15px;
-	}//info-section
-}
 
 //======================
 //****** FOOTER ******//

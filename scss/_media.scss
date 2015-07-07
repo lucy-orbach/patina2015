@@ -135,7 +135,6 @@
 			padding: 0px 0px 40px;
 			border-top: 1px dotted $ocre;
 		}//container
-
 		.pic-frame {
 			height: 140px;
 			padding: 0px 5px 10px;
@@ -586,169 +585,168 @@
 		}
 	}//picWall
 
-	#caseThmenu {
+	.case-nav {
 		ul {
 			width: 614px;
 		}
 		li {
-			background-size: 800%;
-		}
-		#thGirl {
-			background-size: 600%;
-			background-position: -30px -10px;
-		}
-		#thLandscape {
-			background-size: 600%;
-			background-position: -705px -80px;
-		}
-		#thMan {
-			background-position: -333px -185px;
-		}
-		#thPitt {
-			background-position: -670px -8px;
-		}
-		#thSaints {
-			background-position: -300px -15px;
-		}
-		#thLilacs {
-			background-position: -169px -261px;
-		}
-		#thBird {
-			background-position: -645px -225px;
-		}
-		#thStreet {
-			background-position: -505px -205px;
-		} 
-		#thWoman {
-			background-size: 1000%;
-			background-position: -252px -169px;
-		}
-		#thVirgin {
-			background-position: -20px -230px;
-		}
-		#thElephant {
-			background-size: 1100%;
-			background-position: -270px -57px;
+			height: 120px;
+			background-size: 725%;
+			&.girl {
+				background-position: -30px -10px;
+			}
+			&.land {
+				background-position: -850px -98px;
+			}
+			&.man {
+				background-position: -296px -163px;
+			}
+			&.pitt {
+				background-position: -603px -8px;
+			}
+			&.saints {
+				background-position: -269px -0px;
+			}
+			&.lilacs {
+				background-position: -137px -200px;
+			}
+			&.bird {
+				background-position: -579px -208px;
+			}
+			&.street {
+				background-position: -450px -186px;
+			} 
+			&.woman {
+				background-size: 850%;
+				background-position: -209px -88px;
+			}
+			&.virgin {
+				background-position: -11px -210px;
+			}
+			&.elephant {
+				background-size: 1270%;
+				background-position: -335px 0px;
+			}
 		}
 	}
-	#caseContent {
-		h2.title {
-			margin-top: -10px;
-		}
-		.case-info 	li {
-			float: left;
-			font-size: 14px;
-		}//case-info
-		.case-container {
-			padding: 0 5%;
-			.segment p {
-				//min-height: 130px;
-			}
-		}
-		.step {
-			padding: 0% 5%;
-		}
-		.img-section {
-			width: 100%;
+	// #caseContent {
+	// 	h2.title {
+	// 		margin-top: -10px;
+	// 	}
+	// 	.case-info 	li {
+	// 		float: left;
+	// 		font-size: 14px;
+	// 	}//case-info
+	// 	.case-container {
+	// 		padding: 0 5%;
+	// 		.segment p {
+	// 			//min-height: 130px;
+	// 		}
+	// 	}
+	// 	.step {
+	// 		padding: 0% 5%;
+	// 	}
+	// 	.img-section {
+	// 		width: 100%;
 			
-			.img-container {
-				width: 100%;
-				height: auto;
-				margin: 20px auto 0px;
-				border: 1px solid $dark;
-				&.none {
-					border: none;
-				}
-			}
-			img {
-				width: 100%;
-				height: auto;
-			}
-		}//img-section
-		.info-section{	
-				min-height: 130px;
-				margin: 0px auto 15px;
-				&.long {
-					height: 200px;
-				}	
-		}//info-section
-	}//casecontent
+	// 		.img-container {
+	// 			width: 100%;
+	// 			height: auto;
+	// 			margin: 20px auto 0px;
+	// 			border: 1px solid $dark;
+	// 			&.none {
+	// 				border: none;
+	// 			}
+	// 		}
+	// 		img {
+	// 			width: 100%;
+	// 			height: auto;
+	// 		}
+	// 	}//img-section
+	// 	.info-section{	
+	// 			min-height: 130px;
+	// 			margin: 0px auto 15px;
+	// 			&.long {
+	// 				height: 200px;
+	// 			}	
+	// 	}//info-section
+	// }//casecontent
 
-	#caseMan {
-		.segment:nth-child(2) .img-container,
-		.segment:nth-child(5) .img-container {
-			padding: 0px 30px;
-			img {
-				height: 216px;
-			}
-		}
-	}
-	#casePitt {
-		.info-section.long {
-			height: 275px
-		}
-	}
-	#caseSaints {
-		.info-section {
-			height: 150px;
-		}
-		.segment:nth-child(2) .img-container img,
-		.segment:nth-child(3) .img-container,
-		.segment:nth-child(3n) .img-container img {
-				height: 319px;
-				width: auto;
+	// #caseMan {
+	// 	.segment:nth-child(2) .img-container,
+	// 	.segment:nth-child(5) .img-container {
+	// 		padding: 0px 30px;
+	// 		img {
+	// 			height: 216px;
+	// 		}
+	// 	}
+	// }
+	// #casePitt {
+	// 	.info-section.long {
+	// 		height: 275px
+	// 	}
+	// }
+	// #caseSaints {
+	// 	.info-section {
+	// 		height: 150px;
+	// 	}
+	// 	.segment:nth-child(2) .img-container img,
+	// 	.segment:nth-child(3) .img-container,
+	// 	.segment:nth-child(3n) .img-container img {
+	// 			height: 319px;
+	// 			width: auto;
 			
-		}
-	}
-	#caseLilacs {
-		.segment:first-child .img-container,
-		.segment:nth-child(3) .img-container,
-		.segment:first-child .img-container img,
-		.segment:nth-child(3) .img-container img {
-			height: 177px;
-			width: auto;
-		}
-		.segment:first-child p,
-		.segment:nth-child(3n) p {
-			padding-left: 20px;
-			padding-right: 10px;
-		}
-	}
-	#caseBird {
-		img {
-			width: 100%;
-		}
-		.segment:first-child .img-container img,
-		.segment:nth-child(2) .img-container img {
-				height: 400px;
-				width: auto;
-		}
-	}
-	#caseWoman {
-		.segment:first-child .img-container img {
-				height: 386px;
-				width: auto;
-		}
-	}
-	#caseVirgin {
-		.segment:nth-child(2) .img-container {
-			padding-left: 6px;
-			padding-right: 6px;
-		}
-	}
-	#caseElephant {
-		.case-container {
-			min-height: 80px;
-			padding: 0px;
-		}
-		.info-section {
-			min-height: 50px;
-		 p {
-		 		min-height: 50px;
-				text-align: center;
-			}
-		}
-	}
+	// 	}
+	// }
+	// #caseLilacs {
+	// 	.segment:first-child .img-container,
+	// 	.segment:nth-child(3) .img-container,
+	// 	.segment:first-child .img-container img,
+	// 	.segment:nth-child(3) .img-container img {
+	// 		height: 177px;
+	// 		width: auto;
+	// 	}
+	// 	.segment:first-child p,
+	// 	.segment:nth-child(3n) p {
+	// 		padding-left: 20px;
+	// 		padding-right: 10px;
+	// 	}
+	// }
+	// #caseBird {
+	// 	img {
+	// 		width: 100%;
+	// 	}
+	// 	.segment:first-child .img-container img,
+	// 	.segment:nth-child(2) .img-container img {
+	// 			height: 400px;
+	// 			width: auto;
+	// 	}
+	// }
+	// #caseWoman {
+	// 	.segment:first-child .img-container img {
+	// 			height: 386px;
+	// 			width: auto;
+	// 	}
+	// }
+	// #caseVirgin {
+	// 	.segment:nth-child(2) .img-container {
+	// 		padding-left: 6px;
+	// 		padding-right: 6px;
+	// 	}
+	// }
+	// #caseElephant {
+	// 	.case-container {
+	// 		min-height: 80px;
+	// 		padding: 0px;
+	// 	}
+	// 	.info-section {
+	// 		min-height: 50px;
+	// 	 p {
+	// 	 		min-height: 50px;
+	// 			text-align: center;
+	// 		}
+	// 	}
+	// }
 	footer {
 		position: relative;
 		#contact {
@@ -822,7 +820,7 @@
 			background: url('../img/md/mapMDL.jpg') no-repeat top center;
 		}//img-container
 	}//contactPanel
-	
+
 	#picWall {
 		.pic-container {
 			height: 800px;
@@ -903,114 +901,109 @@
 			height: 100px;
 		}//elephant
 	}//picWall
-	#caseThmenu {
+	
+	.case-nav {
 		ul {
-			width: 785px;
+			width: 960px;
 		}
 		li {
-			height: 120px;
-			background-size: 800%;
-		}
-		#thGirl {
-			background-size: 600%;
-			background-position: -30px -10px;
-		}
-		#thLandscape {
-			background-size: 400%;
-			background-position: -538px -40px;
-		}
-		#thMan {
-			background-position: -430px -240px;
-		}
-		#thPitt {
-			background-position: -860px -20px;
-		}
-		#thSaints {
-			background-position: -381px -23px;
-		}
-		#thLilacs {
-			background-position: -200px -340px;
-		}
-		#thBird {
-			background-position: -825px -285px;
-		}
-		#thStreet {
-			background-position: -650px -290px;
-		} 
-		#thWoman {
-			background-size: 1000%;
-			background-position: -320px -216px;
-		}
-		#thVirgin {
-			background-position: -25px -290px;
-		}
-		#thElephant {
-			background-size: 1100%;
-			background-position: -358px -78px;
-		}
-	}
-	#caseGirl {
-		.img-section {
-			height: 400px;
-		}
-	}
-	#caseLandscape {
-		.img-section {
-			height: 230px;
-		}
-	}
-	#caseMan {
-		.segment:nth-child(2) .img-container,
-		.segment:nth-child(5) .img-container {
-			padding: 0px 30px;
-			img {
-				height: 300px;
+			height: 87px;
+			background-size: 700%;
+			&.land {
+				background-position: -850px -10px;
+			}
+			&.man {
+				background-position: -216px -129px;
+			}
+			&.pitt {
+				background-position: -451px -8px;
+			}
+			&.saints {
+				background-position: -201px -0px;
+			}
+			&.lilacs {
+				background-position: -101px -153px;
+			}
+			&.bird {
+				background-position: -427px -159px;
+			}
+			&.street {
+				background-position: -339px -142px;
+			} 
+			&.woman {
+				background-position: -163px -74px;
+			}
+			&.virgin {
+				background-position: -5px -165px;
+			}
+			&.elephant {
+				background-position: -257px 0px;
 			}
 		}
 	}
-	#caseSaints {
-		.case-container {
-			clear: both;
-		 .segment .img-container img {
-				height: 320px;
-				width: auto;
-			}
-		}
-	}
-	#caseLilacs {
-		.segment:first-child .img-container,
-		.segment:nth-child(3) .img-container,
-		.segment:first-child .img-container img,
-		.segment:nth-child(3) .img-container img {
-			height: 252px;
+	
+	// #caseGirl {
+	// 	.img-section {
+	// 		height: 400px;
+	// 	}
+	// }
+	// #caseLandscape {
+	// 	.img-section {
+	// 		height: 230px;
+	// 	}
+	// }
+	// #caseMan {
+	// 	.segment:nth-child(2) .img-container,
+	// 	.segment:nth-child(5) .img-container {
+	// 		padding: 0px 30px;
+	// 		img {
+	// 			height: 300px;
+	// 		}
+	// 	}
+	// }
+	// #caseSaints {
+	// 	.case-container {
+	// 		clear: both;
+	// 	 .segment .img-container img {
+	// 			height: 320px;
+	// 			width: auto;
+	// 		}
+	// 	}
+	// }
+	// #caseLilacs {
+	// 	.segment:first-child .img-container,
+	// 	.segment:nth-child(3) .img-container,
+	// 	.segment:first-child .img-container img,
+	// 	.segment:nth-child(3) .img-container img {
+	// 		height: 252px;
 			
-		}
-	}
-	#caseWoman {
-		.segment .img-container  {
-			border:none;
-		}
-		.segment .img-container img {
-				height: 386px;
-				width: auto;
+	// 	}
+	// }
+	// #caseWoman {
+	// 	.segment .img-container  {
+	// 		border:none;
+	// 	}
+	// 	.segment .img-container img {
+	// 			height: 386px;
+	// 			width: auto;
 
-		}
-	}
-	#caseElephant {
-		.case-container {
-			min-height: 80px;
-			> ul >li {
-				padding:  0px 50px;
-			}
-		}
-		.info-section {
-			min-height: 50px;
-		 p {
-		 		min-height: 50px;
-				text-align: center;
-			}
-		}
-	}
+	// 	}
+	// }
+	// #caseElephant {
+	// 	.case-container {
+	// 		min-height: 80px;
+	// 		> ul >li {
+	// 			padding:  0px 50px;
+	// 		}
+	// 	}
+	// 	.info-section {
+	// 		min-height: 50px;
+	// 	 p {
+	// 	 		min-height: 50px;
+	// 			text-align: center;
+	// 		}
+	// 	}
+	// }
 	footer {
 		#contact {
 			width: 80%;
@@ -1138,52 +1131,43 @@
 			background-position: -242px -2px;
 		}//elephant
 	}//picWall
-	#caseThmenu {
-		padding: 70px 10% 30px;
+	.case-nav {
 		ul {
 			width: 1100px;
-			margin: 30px auto;
 		}
 		li {
 			height: 100px;
-			//background-size: 600%;
-		}
-		#thGirl {
-			background-position: -10px -10px;
-		}
-		#thLandscape {
-			background-size: 800%;
-			background-position: -435px -15px;
-		}
-		#thMan {
-			background-position: -295px -168px;
-		}
-		#thPitt {
-			background-position: -600px -10px;
-		}
-		#thSaints {
-			background-position: -265px -10px;
-		}
-		#thLilacs {
-			background-size: 900%;
-			background-position: -150px -260px;
-		}
-		#thBird {
-			background-position: -575px -195px;
-		}
-		#thStreet {
-			background-position: -455px -190px;
-		} 
-		#thWoman {
-			background-size: 1000%;
-			background-position: -223px -147px;
-		}
-		#thVirgin {
-			background-position: -20px -220px;
-		}
-		#thElephant {
-			background-size: 1250%;
-			background-position: -285px -57px;
+			background-size: 750%;
+			&.land {
+				background-position: -394px -10px;
+			}
+			&.man {
+				background-position: -273px -148px;
+			}
+			&.pitt {
+				background-position: -562px -8px;
+			}
+			&.saints {
+				background-position: -250px -4px;
+			}
+			&.lilacs {
+				background-position: -122px -186px;
+			}
+			&.bird {
+				background-position: -535px -194px;
+			}
+			&.street {
+				background-position: -423px -182px;
+			} 
+			&.woman {
+				background-position: -185px -81px;
+			}
+			&.virgin {
+				background-position: -5px -194px;
+			}
+			&.elephant {
+				background-position: -291px 0px;
+			}
 		}
 	}
 }// media laptop

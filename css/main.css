@@ -184,6 +184,81 @@ header {
   height: 100%;
 }
 
+.case-nav ul {
+  margin: 20px auto 0px;
+  overflow: hidden;
+}
+.case-nav li {
+  border: 1px solid #33261c;
+  background: #f6f3ec url(../img/sprites.jpg);
+  opacity: 0.4;
+  transition: all 0.8s;
+}
+.case-nav li:hover, .case-nav li.active {
+  opacity: 1;
+  transition: all 0.8s;
+}
+.case-nav a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.case {
+  padding-top: 50px;
+  text-align: center;
+}
+.case h3, .case .case-info, .case h2 {
+  text-align: center;
+}
+.case h3 {
+  margin-bottom: 0px;
+  color: #33261c;
+}
+.case h2 {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #a5a099;
+  margin-top: 0px;
+}
+.case .case-info {
+  display: inline-block;
+  margin: 0px auto;
+  overflow: hidden;
+}
+.case .case-info li {
+  float: left;
+  padding: 0px 12px;
+}
+.case .case-container {
+  margin-top: 0;
+}
+.case .case-container p {
+  padding-top: 15px;
+  text-align: left;
+}
+.case .step {
+  list-style: none;
+}
+.case .img-section {
+  width: 100%;
+}
+.case .img-section .img-container {
+  width: 100%;
+  height: auto;
+  margin: 20px auto 0px;
+  border: 1px solid #33261c;
+}
+.case .img-section .img-container.none {
+  border: none;
+}
+.case .img-section img {
+  width: 100%;
+  height: auto;
+}
+.case .info-section {
+  margin: 0px auto 15px;
+}
+
 #contactPanel a, #contactPanel a:hover, #contactPanel a:link, #contactPanel a:focus, #contactPanel a:visited {
   color: #33261c;
   text-decoration: none;
@@ -218,76 +293,6 @@ header {
   content: ' >>';
   color: lt-ocre;
   font-size: 12px;
-}
-
-#caseThmenu {
-  padding: 70px 10% 30px;
-}
-#caseThmenu ul {
-  overflow: hidden;
-}
-#caseThmenu li {
-  height: 100px;
-  border: 1px solid #33261c;
-  background: #f6f3ec url(../img/lg/sprites.jpg);
-  opacity: 0.4;
-  transition: all 0.8s;
-}
-#caseThmenu li:hover, #caseThmenu li.active {
-  opacity: 1;
-  transition: all 0.8s;
-}
-#caseThmenu a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-#caseContent h2.title {
-  padding-bottom: 5px;
-  border-bottom: 1px solid #a5a099;
-}
-#caseContent h3 {
-  margin-bottom: 0px;
-  color: #473b31;
-}
-#caseContent .case-info {
-  display: inline-block;
-  margin: 0px auto;
-  overflow: hidden;
-}
-#caseContent .case-info li {
-  padding: 0px 12px;
-  color: #473b31;
-}
-#caseContent .case-container {
-  margin-top: 0;
-}
-#caseContent .case-container p {
-  padding-top: 15px;
-  text-align: left;
-}
-#caseContent .step {
-  list-style: none;
-}
-#caseContent .img-section {
-  width: 100%;
-}
-#caseContent .img-section .img-container {
-  width: 100%;
-  height: auto;
-  margin: 20px auto 0px;
-  border: 1px solid #33261c;
-}
-#caseContent .img-section .img-container.none {
-  border: none;
-}
-#caseContent .img-section img {
-  width: 100%;
-  height: auto;
-}
-#caseContent .info-section {
-  margin: 0px auto 15px;
 }
 
 footer {
@@ -913,152 +918,47 @@ footer #contact a {
     color: ocre-lt;
   }
 
-  #caseThmenu ul {
+  .case-nav ul {
     width: 614px;
   }
-  #caseThmenu li {
-    background-size: 800%;
+  .case-nav li {
+    height: 120px;
+    background-size: 725%;
   }
-  #caseThmenu #thGirl {
-    background-size: 600%;
+  .case-nav li.girl {
     background-position: -30px -10px;
   }
-  #caseThmenu #thLandscape {
-    background-size: 600%;
-    background-position: -705px -80px;
+  .case-nav li.land {
+    background-position: -850px -98px;
   }
-  #caseThmenu #thMan {
-    background-position: -333px -185px;
+  .case-nav li.man {
+    background-position: -296px -163px;
   }
-  #caseThmenu #thPitt {
-    background-position: -670px -8px;
+  .case-nav li.pitt {
+    background-position: -603px -8px;
   }
-  #caseThmenu #thSaints {
-    background-position: -300px -15px;
+  .case-nav li.saints {
+    background-position: -269px -0px;
   }
-  #caseThmenu #thLilacs {
-    background-position: -169px -261px;
+  .case-nav li.lilacs {
+    background-position: -137px -200px;
   }
-  #caseThmenu #thBird {
-    background-position: -645px -225px;
+  .case-nav li.bird {
+    background-position: -579px -208px;
   }
-  #caseThmenu #thStreet {
-    background-position: -505px -205px;
+  .case-nav li.street {
+    background-position: -450px -186px;
   }
-  #caseThmenu #thWoman {
-    background-size: 1000%;
-    background-position: -252px -169px;
+  .case-nav li.woman {
+    background-size: 850%;
+    background-position: -209px -88px;
   }
-  #caseThmenu #thVirgin {
-    background-position: -20px -230px;
+  .case-nav li.virgin {
+    background-position: -11px -210px;
   }
-  #caseThmenu #thElephant {
-    background-size: 1100%;
-    background-position: -270px -57px;
-  }
-
-  #caseContent h2.title {
-    margin-top: -10px;
-  }
-  #caseContent .case-info li {
-    float: left;
-    font-size: 14px;
-  }
-  #caseContent .case-container {
-    padding: 0 5%;
-  }
-  #caseContent .step {
-    padding: 0% 5%;
-  }
-  #caseContent .img-section {
-    width: 100%;
-  }
-  #caseContent .img-section .img-container {
-    width: 100%;
-    height: auto;
-    margin: 20px auto 0px;
-    border: 1px solid #33261c;
-  }
-  #caseContent .img-section .img-container.none {
-    border: none;
-  }
-  #caseContent .img-section img {
-    width: 100%;
-    height: auto;
-  }
-  #caseContent .info-section {
-    min-height: 130px;
-    margin: 0px auto 15px;
-  }
-  #caseContent .info-section.long {
-    height: 200px;
-  }
-
-  #caseMan .segment:nth-child(2) .img-container,
-  #caseMan .segment:nth-child(5) .img-container {
-    padding: 0px 30px;
-  }
-  #caseMan .segment:nth-child(2) .img-container img,
-  #caseMan .segment:nth-child(5) .img-container img {
-    height: 216px;
-  }
-
-  #casePitt .info-section.long {
-    height: 275px;
-  }
-
-  #caseSaints .info-section {
-    height: 150px;
-  }
-  #caseSaints .segment:nth-child(2) .img-container img,
-  #caseSaints .segment:nth-child(3) .img-container,
-  #caseSaints .segment:nth-child(3n) .img-container img {
-    height: 319px;
-    width: auto;
-  }
-
-  #caseLilacs .segment:first-child .img-container,
-  #caseLilacs .segment:nth-child(3) .img-container,
-  #caseLilacs .segment:first-child .img-container img,
-  #caseLilacs .segment:nth-child(3) .img-container img {
-    height: 177px;
-    width: auto;
-  }
-  #caseLilacs .segment:first-child p,
-  #caseLilacs .segment:nth-child(3n) p {
-    padding-left: 20px;
-    padding-right: 10px;
-  }
-
-  #caseBird img {
-    width: 100%;
-  }
-  #caseBird .segment:first-child .img-container img,
-  #caseBird .segment:nth-child(2) .img-container img {
-    height: 400px;
-    width: auto;
-  }
-
-  #caseWoman .segment:first-child .img-container img {
-    height: 386px;
-    width: auto;
-  }
-
-  #caseVirgin .segment:nth-child(2) .img-container {
-    padding-left: 6px;
-    padding-right: 6px;
-  }
-
-  #caseElephant .case-container {
-    min-height: 80px;
-    padding: 0px;
-  }
-  #caseElephant .info-section {
-    min-height: 50px;
-  }
-  #caseElephant .info-section p {
-    min-height: 50px;
-    text-align: center;
+  .case-nav li.elephant {
+    background-size: 1270%;
+    background-position: -335px 0px;
   }
 
   footer {
@@ -1208,103 +1108,42 @@ footer #contact a {
     height: 100px;
   }
 
-  #caseThmenu ul {
-    width: 785px;
+  .case-nav ul {
+    width: 960px;
   }
-  #caseThmenu li {
-    height: 120px;
-    background-size: 800%;
+  .case-nav li {
+    height: 87px;
+    background-size: 700%;
   }
-  #caseThmenu #thGirl {
-    background-size: 600%;
-    background-position: -30px -10px;
+  .case-nav li.land {
+    background-position: -850px -10px;
   }
-  #caseThmenu #thLandscape {
-    background-size: 400%;
-    background-position: -538px -40px;
+  .case-nav li.man {
+    background-position: -216px -129px;
   }
-  #caseThmenu #thMan {
-    background-position: -430px -240px;
+  .case-nav li.pitt {
+    background-position: -451px -8px;
   }
-  #caseThmenu #thPitt {
-    background-position: -860px -20px;
+  .case-nav li.saints {
+    background-position: -201px -0px;
   }
-  #caseThmenu #thSaints {
-    background-position: -381px -23px;
+  .case-nav li.lilacs {
+    background-position: -101px -153px;
   }
-  #caseThmenu #thLilacs {
-    background-position: -200px -340px;
+  .case-nav li.bird {
+    background-position: -427px -159px;
   }
-  #caseThmenu #thBird {
-    background-position: -825px -285px;
+  .case-nav li.street {
+    background-position: -339px -142px;
   }
-  #caseThmenu #thStreet {
-    background-position: -650px -290px;
+  .case-nav li.woman {
+    background-position: -163px -74px;
   }
-  #caseThmenu #thWoman {
-    background-size: 1000%;
-    background-position: -320px -216px;
+  .case-nav li.virgin {
+    background-position: -5px -165px;
   }
-  #caseThmenu #thVirgin {
-    background-position: -25px -290px;
-  }
-  #caseThmenu #thElephant {
-    background-size: 1100%;
-    background-position: -358px -78px;
-  }
-
-  #caseGirl .img-section {
-    height: 400px;
-  }
-
-  #caseLandscape .img-section {
-    height: 230px;
-  }
-
-  #caseMan .segment:nth-child(2) .img-container,
-  #caseMan .segment:nth-child(5) .img-container {
-    padding: 0px 30px;
-  }
-  #caseMan .segment:nth-child(2) .img-container img,
-  #caseMan .segment:nth-child(5) .img-container img {
-    height: 300px;
-  }
-
-  #caseSaints .case-container {
-    clear: both;
-  }
-  #caseSaints .case-container .segment .img-container img {
-    height: 320px;
-    width: auto;
-  }
-
-  #caseLilacs .segment:first-child .img-container,
-  #caseLilacs .segment:nth-child(3) .img-container,
-  #caseLilacs .segment:first-child .img-container img,
-  #caseLilacs .segment:nth-child(3) .img-container img {
-    height: 252px;
-  }
-
-  #caseWoman .segment .img-container {
-    border: none;
-  }
-  #caseWoman .segment .img-container img {
-    height: 386px;
-    width: auto;
-  }
-
-  #caseElephant .case-container {
-    min-height: 80px;
-  }
-  #caseElephant .case-container > ul > li {
-    padding: 0px 50px;
-  }
-  #caseElephant .info-section {
-    min-height: 50px;
-  }
-  #caseElephant .info-section p {
-    min-height: 50px;
-    text-align: center;
+  .case-nav li.elephant {
+    background-position: -257px 0px;
   }
 
   footer #contact {
@@ -1428,52 +1267,42 @@ footer #contact a {
     background-position: -242px -2px;
   }
 
-  #caseThmenu {
-    padding: 70px 10% 30px;
-  }
-  #caseThmenu ul {
+  .case-nav ul {
     width: 1100px;
-    margin: 30px auto;
   }
-  #caseThmenu li {
+  .case-nav li {
     height: 100px;
+    background-size: 750%;
   }
-  #caseThmenu #thGirl {
-    background-position: -10px -10px;
+  .case-nav li.land {
+    background-position: -394px -10px;
   }
-  #caseThmenu #thLandscape {
-    background-size: 800%;
-    background-position: -435px -15px;
+  .case-nav li.man {
+    background-position: -273px -148px;
   }
-  #caseThmenu #thMan {
-    background-position: -295px -168px;
+  .case-nav li.pitt {
+    background-position: -562px -8px;
   }
-  #caseThmenu #thPitt {
-    background-position: -600px -10px;
+  .case-nav li.saints {
+    background-position: -250px -4px;
   }
-  #caseThmenu #thSaints {
-    background-position: -265px -10px;
+  .case-nav li.lilacs {
+    background-position: -122px -186px;
   }
-  #caseThmenu #thLilacs {
-    background-size: 900%;
-    background-position: -150px -260px;
+  .case-nav li.bird {
+    background-position: -535px -194px;
   }
-  #caseThmenu #thBird {
-    background-position: -575px -195px;
+  .case-nav li.street {
+    background-position: -423px -182px;
   }
-  #caseThmenu #thStreet {
-    background-position: -455px -190px;
+  .case-nav li.woman {
+    background-position: -185px -81px;
   }
-  #caseThmenu #thWoman {
-    background-size: 1000%;
-    background-position: -223px -147px;
+  .case-nav li.virgin {
+    background-position: -5px -194px;
   }
-  #caseThmenu #thVirgin {
-    background-position: -20px -220px;
-  }
-  #caseThmenu #thElephant {
-    background-size: 1250%;
-    background-position: -285px -57px;
+  .case-nav li.elephant {
+    background-position: -291px 0px;
   }
 }
 @media (min-width: 1680px) {
