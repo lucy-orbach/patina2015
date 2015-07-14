@@ -22,17 +22,7 @@ scrollToAnchor ( $('#goAbout'), $('#about') )
 scrollToAnchor ( $('#goContact'), $('#contact') )
 scrollToAnchor ( $('#goWall'), $('#caseWall') )
 
-//********* FUNCTION hide collapse menu ********
 
-$(function hideMenu(){
-	
-		$('.navbar-toggle').click( function(){
-			
-			
-				$('#headNav').slideToggle();
-			
-		});
-});
 
 // ***** OPEN FOOTER MENU MOBILE ****
 

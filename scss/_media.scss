@@ -111,6 +111,12 @@
 			padding-bottom: 20px;
 			border-bottom: 1px solid $dk-zepia;
 			margin-bottom: 20px;
+			h4{
+				color: $dark;
+			}
+			ul {
+				margin-top: 0px;
+			}
 		}
 	}//services
 	#about {
@@ -122,7 +128,7 @@
 	}//about
 	#contactPanel {
 		.title-img {
-			background-image: url('../img/xsm/map.jpg');
+			background-image: url('../img/map.jpg');
 			background-position: top center;
 		}//title-img
 	}//contactPanel
@@ -373,8 +379,7 @@
 			background-position: right 67%;
 		}
 		#contactPanel .title-img {
-			background-image: url('../img/xsm/mapL.jpg');
-			background-position: top center;
+			background-position: center 50%;
 		}//title-img
 		.case {
 			ul.step {
@@ -452,13 +457,13 @@
 	}//framed
 	#intro .framed {
 		background-image: url('../img/intro.jpg');
-		background-size: 70%;
-		background-position: -60px -20px;
+		background-size: 65%;
+		background-position: -60px 0px;
 	}
 	#services	.framed {
 		margin-bottom: 50px;
 		background-image: url('../img/services.jpg');
-		background-size: 100%;
+		background-size: 47%;
 	}//services
 	#about .framed {
 		margin-bottom: 60px;
@@ -500,56 +505,56 @@
 			left: 430px;
 			width: 290px;
 			height: 180px;
-			background-position: -564px 0px;
+			background-position: -586px 0px;
 		}//landscape
 		#manPortrait {
 			top: 195px;
 			left: 495px;
 			width: 225px;
 			height: 300px;
-			background-position: -420px -208px;
+			background-position: -440px -208px;
 		}//manPortrait
 		#mrsPitt  {
 			top: 310px;
 			left: 15px;
 			width: 235px;
 			height: 285px;
-			background-position: -862px 0px;
+			background-position: -897px 0px;
 		}//mrsPitt
 		#saints {
 			top: 0px;
 			left: 265px;
 			width: 150px;
 			height: 180px;
-			background-position: -409px 0px;
+			background-position: -426px 0px;
 		}//saints
 		#lilacs {
 			top: 195px;
 			left: 265px;
 			width: 215px;
 			height: 180px;
-			background-position: -182px -304px;
+			background-position: -192px -318px;
 		}//lilacs
 		#bird {
 			top: 390px;
 			left: 265px;
 			width: 215px;
 			height: 270px;
-			background-position: -855px -305px;
+			background-position: -888px -323px;
 		}//bird	
 		#street {
 			top: 510px;
 			left: 495px;
 			width: 180px;
 			height: 275px;
-			background-position: -668px -197px;
+			background-position: -700px -217px;
 		}//street
 		#womanPortrait {
 			top: 675px;
 			left: 350px;
 			width: 130px;
 			height: 185px;
-			background-position: -271px -104px;
+			background-position: -285px -118px;
 			&.details {
 				padding-top: 10px;
 				padding-bottom: 0px;
@@ -560,15 +565,15 @@
 			left: 0px;
 			width: 180px;
 			height: 248px;
-			background-position: -0px -305px;
+			background-position: -4px -319px;
 		}//virgin
 		#elephant {
 			top: 675px;
 			left: 200px;
 			width: 130px;
 			height: 105px;
-			background-position: -270px -1px;
-		}//elephant
+			background-position: -284px -1px;
+		}//elephsant
 		.details {
 			position: absolute;
 			bottom: -200px;
@@ -829,7 +834,8 @@
 	}//services
 	#about {
 		.framed {
-			background-image: url('../img/md/olga.jpg');	
+			background-size: 50%;
+			background-position: -85px 0px;	
 		}
 		.testimonials {
 			margin-left: -20px;
