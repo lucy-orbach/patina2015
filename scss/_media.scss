@@ -61,10 +61,12 @@
 	
 	#intro,
 	#services,
-	#about {
+	#about,
+	#contactPanel {
 		.title-img {
 			position: relative;
 			height: 250px;
+			background-color: $dark;
 			background-repeat: no-repeat; 
 			background-position: left bottom;
 			background-size: 100%;
@@ -76,6 +78,13 @@
 				margin-bottom: 0px;
 				@include transBr(0.3); 
 			}//h2
+			span{
+				display: block;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				font-size: 12px;
+				color: white
+			}
 		}//img-title
 		.container {
 			position: relative;
@@ -89,44 +98,34 @@
 		}
 	}//intro,services,about
 	#intro .title-img {
-		background-image: url('../img/xsm/intro.jpg');
+		height: 275px;
+		background-image: url('../img/intro.jpg');
+		background-position: left 150%;
+
 	}
-	#services .title-img {
-		background-image: url('../img/xsm/services.jpg');
+	#services { 
+		.title-img {
+			background-image: url('../img/services.jpg');
+		}
+		.txt-container {
+			padding-bottom: 20px;
+			border-bottom: 1px solid $dk-zepia;
+			margin-bottom: 20px;
+		}
 	}//services
 	#about {
 		.title-img {
-		background-image: url('../img/xsm/olga.jpg');
+		background-image: url('../img/olga.jpg');
+		background-size: 110%;
+		background-position: right 80%
 		}//title-img
 	}//about
-
 	#contactPanel {
-		.framed {
-			position: relative;
-			padding-bottom: 270px;
-		}
-		.row, .img-container, .txt-container {
-			padding: 0px;
-			margin: 0px;
-		}
-		li.map {
-			position: absolute;
-			bottom: 20px;
-			width: 90%;
-		}//li with img
-		.img-container {
-			max-width: 95%;
-			height: 200px;
-			background: url('../img/xsm/map.jpg') no-repeat top right;
-			background-size: cover;
-		}
-		.txt-container {
-			ul {
-				margin-top: 0px;
-			}
-		}//txt-container
+		.title-img {
+			background-image: url('../img/xsm/map.jpg');
+			background-position: top center;
+		}//title-img
 	}//contactPanel
-	
 	#caseWall {
 		padding-bottom: 0;
 	}
@@ -149,7 +148,6 @@
 			}//a
 			&:hover {
 				background-color: $zepia;
-				
 				@include transition();
 			}
 			h6 {
@@ -170,10 +168,10 @@
 				display: block;
 				width: 120px;
 				height: 120px;
-				//border: 1px solid $dark;
 				background: url('../img/xsm/sprites.jpg') no-repeat;
+				background-size: 600%;
 			}//:before
-			
+
 			&:after {
 				content: '\e080';
 				position: absolute;
@@ -243,58 +241,31 @@
 		}//manPortrait
 	}//casewall
 
-	#caseContent {
-		> .container {
-			position: relative;
+	.case {
+		text-align: center;
+		h3, h2 {
+				font-size: 18px;
+			}
+		.case-info{
 			padding: 0px;
-		}
-		h3 {
-			padding-top: 40px;
-			padding-left: 12px;
-			font-size: 1.7rem;
-			text-align: left;
-		}
-		h2.title {
-			position: absolute;
-			top: 10px;
-			padding-left: 12px;
-			font-size: 1.7rem;
-			text-align: left;
-		}
-		.row {
-			padding: 0;
-			li.segment {
-				padding: 0;
+			li {
+				width: 100%;
+				padding: 0px 3px;
+				font-size: 11px;
 			}
 		}
-		.step {
-			padding: 0;
+		.segment {
+			margin-bottom: 20px;
 		}
-		.case-info {
-			font-size: 1rem;
-			overflow: hidden;
-			li{
-				text-align: left;
-				&:last-child {
-					width: 100%;
-				}
+		.info-section {
+			margin-top: 20px;
+			font-size: 14px;
+			p {
+				padding-bottom: 20px;
 			}
 		}
-		.info-section{
-			padding: 10px 20px;
-		}
-	}//caseContent
+	}//case
 
-	#caseStreet {
-		.case-container {	
-			padding: 0px 12px;
-		}
-	}
-	#caseWoman {
-		h3 {
-			padding-top: 55px !important;
-		}
-	}
 	#testimonials {
 		li {
 			padding: 0px 0px 30px;
@@ -307,6 +278,7 @@
 			text-align: right;
 		}
 	}
+	
 	footer {
 		position: fixed;
 		bottom: 0px;
@@ -391,21 +363,38 @@
 			&.contact {
 				display: block;
 			}
-		}//.navbar li
-
+		}//.navbar
 		#intro .title-img {
-			background-image: url('../img/xsm/introXSL.jpg');
+			height: 250px;
+			background-position: left bottom;
 		}
-		#services .title-img {
-			background-image: url('../img/xsm/services.jpg');
-		}//services
 		#about .title-img {
-			background-image: url('../img/xsm/olgaXSL.jpg');
-		}//about
-
+			background-size: 100%;
+			background-position: right 67%;
+		}
+		#contactPanel .title-img {
+			background-image: url('../img/xsm/mapL.jpg');
+			background-position: top center;
+		}//title-img
+		.case {
+			ul.step {
+				overflow: hidden;
+				li {
+					float: left;
+				}
+				.img-container {
+					width: 65%;
+					padding: 0px 20px;
+				}
+				.info-section {
+					width: 35%;
+				}
+			}
+		} 
 		footer {
 			position: relative;
 		}
+
 	}//landscape
 }// media mobile
 
@@ -462,25 +451,31 @@
 		}//txt-container
 	}//framed
 	#intro .framed {
-		background-image: url('../img/sm/intro.jpg');
-		//background-size: 70%;
+		background-image: url('../img/intro.jpg');
+		background-size: 70%;
+		background-position: -60px -20px;
 	}
 	#services	.framed {
-		background-image: url('../img/sm/services.jpg');
+		margin-bottom: 50px;
+		background-image: url('../img/services.jpg');
+		background-size: 100%;
 	}//services
 	#about .framed {
 		margin-bottom: 60px;
+		background-image: url('../img/olga.jpg');
+		background-size: 100%;
 	}
 	#contactPanel {
-		.img-container {
-			background: url('../img/sm/map.jpg') no-repeat top left;
+		.framed {
+			overflow: hidden;
+			background: url('../img/map.jpg') no-repeat top left;
 		}//img-container
 	}//contactPanel
 
 	#picWall {
 		.pic-container {
 			position: relative;
-			height: 900px;
+			height: 875px;
 		}
 		.pic-frame {
 			position: absolute;
@@ -629,124 +624,153 @@
 			}
 		}
 	}
-	// #caseContent {
-	// 	h2.title {
-	// 		margin-top: -10px;
-	// 	}
-	// 	.case-info 	li {
-	// 		float: left;
-	// 		font-size: 14px;
-	// 	}//case-info
-	// 	.case-container {
-	// 		padding: 0 5%;
-	// 		.segment p {
-	// 			//min-height: 130px;
-	// 		}
-	// 	}
-	// 	.step {
-	// 		padding: 0% 5%;
-	// 	}
-	// 	.img-section {
-	// 		width: 100%;
+	.case-info {
+		li:first-child {
+				padding-right: 0px;
+			&:after {
+					content: '|';
+					margin-left: 12px;
+					font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			}
+		}
+		span {
+			display: inline-block;
+			padding: 0px 12px;
+		}
+	}
+	.case {
+		padding-top: 50px;
+		.segment {
+			border: 15px solid $sand;
+		}
+		.img-container {
+			height: 300px;
+		}//img-container
+		.info-section {	
+			padding: 20px 0px;
+			margin-bottom: 20px;
+		}	
+		&.girl {
+			.info-section {	
+				height: 150px;
+			}	
+		}
+		&.land {
+			.img-container {
+				height: 175px;
+			}
+			.info-section {
+				height: 200px;
+			}
+		}
+		&.man {
+			.img-container {
+				height: 260px;
+			}
+			.info-section {
+				height: 160px;
+			}
+			.segment:nth-child(3) .info-section,
+			.segment:nth-child(4) .info-section {
+					height: 200px;
+				}
+		}
+		&.pitt {
+			.img-container {
+				padding: 0px 10px;
+			}
+			.info-section {
+				height: 250px;
+			}
+		}
+		&.saints {
+			.segment:nth-child(2n) img,
+			.segment:nth-child(3n) img {
+					height: 100%;
+					width: auto;
+				}
+			.img-container {
+				height: 330px;
+			}
+			.info-section {
+				height: 190px;
+			}
+		}
+		&.lilacs {
+			.segment:nth-child(2n) img,
+			.segment:last-child img {
+					height: 100%;
+					width: auto;
+					max-width: auto;
+				}
+			.img-container {
+				height: 220px;
+			}
+			.info-section {
+				height: 145px;
+			}
+		}
+		&.bird {
+			.img-container {
+				height: 320px;
+			}
+			.segment:nth-child(3n) .img-container,
+			.segment:last-child .img-container {
+					height: 175px;
+				}
+			.info-section {
+				height: 170px;
+			}
+		}
+		&.street {
+			ul.step {
+				overflow: hidden;
+				padding-bottom: 30px;
+				li {
+					float: left;
+				}
+				.img-container {
+					width: 60%;
+					height: 100%;
+					padding: 0px 20px;
+				}
+				.info-section {
+					width: 40%;
+					padding-top: 0px;
+				}
+			}
+		}
+		&.woman {
+			.info-section {
+				height: 210px;
+			}
+		}
+		&.virgin {
+			.img-container {
+				height: 200px;
+			}
+			.info-section {
+				height: 300px;
+			}
+		}
+		&.elephant {
+			.segment {
+				border-left-width: 0px;
+				border-right-width: 0px;
+				height: 290px;	
+				text-align: left;
+			}
+			.img-container {
+				height: 150px;
+				img {
+					height: 150px;
+					width: auto;
+				}
+			}
 			
-	// 		.img-container {
-	// 			width: 100%;
-	// 			height: auto;
-	// 			margin: 20px auto 0px;
-	// 			border: 1px solid $dark;
-	// 			&.none {
-	// 				border: none;
-	// 			}
-	// 		}
-	// 		img {
-	// 			width: 100%;
-	// 			height: auto;
-	// 		}
-	// 	}//img-section
-	// 	.info-section{	
-	// 			min-height: 130px;
-	// 			margin: 0px auto 15px;
-	// 			&.long {
-	// 				height: 200px;
-	// 			}	
-	// 	}//info-section
-	// }//casecontent
+		}
+	}//case
 
-	// #caseMan {
-	// 	.segment:nth-child(2) .img-container,
-	// 	.segment:nth-child(5) .img-container {
-	// 		padding: 0px 30px;
-	// 		img {
-	// 			height: 216px;
-	// 		}
-	// 	}
-	// }
-	// #casePitt {
-	// 	.info-section.long {
-	// 		height: 275px
-	// 	}
-	// }
-	// #caseSaints {
-	// 	.info-section {
-	// 		height: 150px;
-	// 	}
-	// 	.segment:nth-child(2) .img-container img,
-	// 	.segment:nth-child(3) .img-container,
-	// 	.segment:nth-child(3n) .img-container img {
-	// 			height: 319px;
-	// 			width: auto;
-			
-	// 	}
-	// }
-	// #caseLilacs {
-	// 	.segment:first-child .img-container,
-	// 	.segment:nth-child(3) .img-container,
-	// 	.segment:first-child .img-container img,
-	// 	.segment:nth-child(3) .img-container img {
-	// 		height: 177px;
-	// 		width: auto;
-	// 	}
-	// 	.segment:first-child p,
-	// 	.segment:nth-child(3n) p {
-	// 		padding-left: 20px;
-	// 		padding-right: 10px;
-	// 	}
-	// }
-	// #caseBird {
-	// 	img {
-	// 		width: 100%;
-	// 	}
-	// 	.segment:first-child .img-container img,
-	// 	.segment:nth-child(2) .img-container img {
-	// 			height: 400px;
-	// 			width: auto;
-	// 	}
-	// }
-	// #caseWoman {
-	// 	.segment:first-child .img-container img {
-	// 			height: 386px;
-	// 			width: auto;
-	// 	}
-	// }
-	// #caseVirgin {
-	// 	.segment:nth-child(2) .img-container {
-	// 		padding-left: 6px;
-	// 		padding-right: 6px;
-	// 	}
-	// }
-	// #caseElephant {
-	// 	.case-container {
-	// 		min-height: 80px;
-	// 		padding: 0px;
-	// 	}
-	// 	.info-section {
-	// 		min-height: 50px;
-	// 	 p {
-	// 	 		min-height: 50px;
-	// 			text-align: center;
-	// 		}
-	// 	}
-	// }
 	footer {
 		position: relative;
 		#contact {
@@ -795,6 +819,14 @@
 	.section h2 {
 		font-size: 3rem;
 	}
+	#intro .framed {
+		background-size: 45%;
+		background-position: 0px -20px;
+	}
+	#services	.framed {
+		background-size: 40%;
+		background-position: 0px -30px;
+	}//services
 	#about {
 		.framed {
 			background-image: url('../img/md/olga.jpg');	
@@ -823,7 +855,7 @@
 
 	#picWall {
 		.pic-container {
-			height: 800px;
+			height: 750px;
 		}
 		#girl {
 			top: 45px;
@@ -907,8 +939,10 @@
 			width: 960px;
 		}
 		li {
-			height: 87px;
-			background-size: 700%;
+			width: 84px;
+			height: 84px;
+			padding: 0px;
+			background-size: 676%;
 			&.land {
 				background-position: -850px -10px;
 			}
@@ -925,85 +959,89 @@
 				background-position: -101px -153px;
 			}
 			&.bird {
-				background-position: -427px -159px;
+				background-position: -437px -159px;
 			}
 			&.street {
 				background-position: -339px -142px;
 			} 
 			&.woman {
-				background-position: -163px -74px;
+				background-position: -170px -74px;
 			}
 			&.virgin {
-				background-position: -5px -165px;
+				background-position: -3px -165px;
 			}
 			&.elephant {
 				background-position: -257px 0px;
 			}
 		}
 	}
-	
-	// #caseGirl {
-	// 	.img-section {
-	// 		height: 400px;
-	// 	}
-	// }
-	// #caseLandscape {
-	// 	.img-section {
-	// 		height: 230px;
-	// 	}
-	// }
-	// #caseMan {
-	// 	.segment:nth-child(2) .img-container,
-	// 	.segment:nth-child(5) .img-container {
-	// 		padding: 0px 30px;
-	// 		img {
-	// 			height: 300px;
-	// 		}
-	// 	}
-	// }
-	// #caseSaints {
-	// 	.case-container {
-	// 		clear: both;
-	// 	 .segment .img-container img {
-	// 			height: 320px;
-	// 			width: auto;
-	// 		}
-	// 	}
-	// }
-	// #caseLilacs {
-	// 	.segment:first-child .img-container,
-	// 	.segment:nth-child(3) .img-container,
-	// 	.segment:first-child .img-container img,
-	// 	.segment:nth-child(3) .img-container img {
-	// 		height: 252px;
-			
-	// 	}
-	// }
-	// #caseWoman {
-	// 	.segment .img-container  {
-	// 		border:none;
-	// 	}
-	// 	.segment .img-container img {
-	// 			height: 386px;
-	// 			width: auto;
+	.case {
+		.img-container {
+			height: 350px;
+		}//img-container
+		.info-section {	
+			height: 120px;
+		}
+		&.land {
+			.img-container {
+				height: 250px;
+			}
+			.info-section {
+				height: 170px;
+			}
+		}
+		&.man {
+			.info-section {
+				height: 120px;
+			}
+		}	
+		&.pitt {
+			.img-container {
+				height: 385px;
+				padding: 0px 15px;
+			}
+			.info-section {
+				height: 180px;
+			}
+		}	
+		&.saints {
+			.info-section {
+				height: 140px;
+			}
+		}
+		&.lilacs {
+			.info-section {
+				height: 110px;
+			}
+		}	
+		&.bird,
+		&.woman {
+			.info-section {
+				height: 150px;
+			}
+		}
+		&.virgin {
+			.img-container {
+				height: 305px;
+			}
+			.info-section {
+				height: 240px;
+			}
+		}	
+		&.elephant {
+			.segment{
+				height: 300px;
+			}
+			.img-container {
+				height: 210px;
+				padding-top: 0px;
+				img {
+					height: 210px;
+				}
+			}
+		}	
+	}//case
 
-	// 	}
-	// }
-	// #caseElephant {
-	// 	.case-container {
-	// 		min-height: 80px;
-	// 		> ul >li {
-	// 			padding:  0px 50px;
-	// 		}
-	// 	}
-	// 	.info-section {
-	// 		min-height: 50px;
-	// 	 p {
-	// 	 		min-height: 50px;
-	// 			text-align: center;
-	// 		}
-	// 	}
-	// }
 	footer {
 		#contact {
 			width: 80%;
@@ -1033,8 +1071,10 @@
 	}	
 	.section .container {
 		width: 1024px;
-		//max-width: 1030px;
 	}//container
+	#intro .framed {
+		background-size: 40%;
+	}
 	#about .testimonials p {
 		min-height: 175px;
 	}
@@ -1049,7 +1089,7 @@
 			margin: 0px auto;
 		}
 		.pic-container {
-			height: 630px;
+			height: 550px;
 		}
 		#girl {
 			top: 0px;
@@ -1133,43 +1173,44 @@
 	}//picWall
 	.case-nav {
 		ul {
-			width: 1100px;
+			width: 990px;
 		}
 		li {
-			height: 100px;
-			background-size: 750%;
-			&.land {
-				background-position: -394px -10px;
-			}
-			&.man {
-				background-position: -273px -148px;
-			}
-			&.pitt {
-				background-position: -562px -8px;
-			}
+			width: 90px;
+			height: 90px;
+			background-size: 628%;
 			&.saints {
-				background-position: -250px -4px;
-			}
-			&.lilacs {
-				background-position: -122px -186px;
-			}
-			&.bird {
-				background-position: -535px -194px;
+				background-size: 750%;
+				background-position: -245px -10px;
 			}
 			&.street {
-				background-position: -423px -182px;
+				background-size: 675%;
+				background-position: -364px -157px;
 			} 
 			&.woman {
-				background-position: -185px -81px;
+				  background-size: 802%;
 			}
 			&.virgin {
-				background-position: -5px -194px;
+				background-size: 657%;
 			}
 			&.elephant {
-				background-position: -291px 0px;
+				background-position: -285px 0px;
 			}
 		}
 	}
+	.case {
+		.img-container {
+			height: 350px;
+		}//img-container
+		.info-section {	
+			height: 120px;
+		}
+		&.man {
+			.info-section {
+				height: 200px;
+			}
+		}		
+	}//case
 }// media laptop
 
 //=========================

@@ -45,7 +45,6 @@ a, a:link, a:focus, a:visited, a:hover {
 }
 
 .accent,
-#caseWall h6,
 #resources h5 a {
   color: #af1050 !important;
 }
@@ -172,16 +171,40 @@ header {
   font-style: italic;
 }
 
-#caseWall h6 {
+#contactPanel a, #contactPanel a:hover, #contactPanel a:link, #contactPanel a:focus, #contactPanel a:visited {
+  color: #33261c;
+  text-decoration: none;
+}
+#contactPanel a:hover, #contactPanel #email a {
+  text-decoration: underline;
+}
+#contactPanel .txt-container {
+  height: 400px;
+  padding: 50px;
+}
+#contactPanel ul {
+  padding-left: 0px;
+  padding-top: 20px;
+}
+
+#caseWall .container > h6 {
   width: 90%;
-  margin: 0px auto 20px;
+  margin: 50px auto 20px;
   text-align: center;
+  color: #af1050;
 }
 
 #picWall .pic-frame a {
   display: block;
   width: 100%;
   height: 100%;
+}
+#picWall .pic-frame a h6 {
+  color: #fbf9f3;
+  margin-bottom: 0px;
+}
+#picWall .pic-frame a h5 {
+  margin-top: 0px;
 }
 
 .case-nav ul {
@@ -205,10 +228,9 @@ header {
 }
 
 .case {
-  padding-top: 50px;
   text-align: center;
 }
-.case h3, .case .case-info, .case h2 {
+.case h3, .case .case-info, .case h2, .case .case-intro {
   text-align: center;
 }
 .case h3 {
@@ -228,35 +250,36 @@ header {
 .case .case-info li {
   float: left;
   padding: 0px 12px;
+  font-size: 14px;
+}
+.case .case-info span {
+  display: inline-block;
+  padding: 0px 12px;
 }
 .case .case-container {
-  margin-top: 0;
+  margin: 0px;
+  padding: 0px;
 }
-.case .case-container p {
-  padding-top: 15px;
+.case .case-intro {
   text-align: left;
 }
+.case .segment {
+  background-color: #f6f3ec;
+  padding: 30px 30px 0px;
+}
+.case .segment .img-container {
+  overflow: hidden;
+}
+.case .segment .img-container img {
+  max-width: 100%;
+  height: auto;
+}
+.case .segment .info-section {
+  text-align: left;
+  font-size: 14px;
+}
 .case .step {
-  list-style: none;
-}
-.case .img-section {
-  width: 100%;
-}
-.case .img-section .img-container {
-  width: 100%;
-  height: auto;
-  margin: 20px auto 0px;
-  border: 1px solid #33261c;
-}
-.case .img-section .img-container.none {
-  border: none;
-}
-.case .img-section img {
-  width: 100%;
-  height: auto;
-}
-.case .info-section {
-  margin: 0px auto 15px;
+  margin: 0px;
 }
 
 #contactPanel a, #contactPanel a:hover, #contactPanel a:link, #contactPanel a:focus, #contactPanel a:visited {
@@ -266,15 +289,19 @@ header {
 #contactPanel a:hover, #contactPanel #email a {
   text-decoration: underline;
 }
-#contactPanel .container {
-  padding-bottom: 0px;
-}
-#contactPanel .framed {
-  padding: 30px 25px;
+#contactPanel .txt-container {
+  height: 400px;
+  padding: 50px;
 }
 #contactPanel ul {
   padding-left: 0px;
   padding-top: 20px;
+}
+#contactPanel ul #email, #contactPanel ul #address, #contactPanel ul #phone {
+  text-decoration: underline;
+}
+#contactPanel ul #email span, #contactPanel ul #address span, #contactPanel ul #phone span {
+  margin-right: 5px;
 }
 
 #resources .container {
@@ -303,7 +330,7 @@ footer {
 }
 footer .container-fluid {
   padding: 30px 0px 30px;
-  background-color: rgba(51, 38, 28, 0.7);
+  background-color: rgba(51, 38, 28, 0.3);
 }
 footer .container-fluid a {
   color: #f39605;
@@ -399,16 +426,19 @@ footer #contact a {
 
   #intro .title-img,
   #services .title-img,
-  #about .title-img {
+  #about .title-img,
+  #contactPanel .title-img {
     position: relative;
     height: 250px;
+    background-color: #33261c;
     background-repeat: no-repeat;
     background-position: left bottom;
     background-size: 100%;
   }
   #intro .title-img h2,
   #services .title-img h2,
-  #about .title-img h2 {
+  #about .title-img h2,
+  #contactPanel .title-img h2 {
     position: absolute;
     bottom: 0px;
     width: 100%;
@@ -418,64 +448,70 @@ footer #contact a {
   }
   #intro .title-img h2 a,
   #services .title-img h2 a,
-  #about .title-img h2 a {
+  #about .title-img h2 a,
+  #contactPanel .title-img h2 a {
     color: #f39605;
   }
   #intro .title-img h2 a:hover,
   #services .title-img h2 a:hover,
-  #about .title-img h2 a:hover {
+  #about .title-img h2 a:hover,
+  #contactPanel .title-img h2 a:hover {
     color: ocre-lt;
+  }
+  #intro .title-img span,
+  #services .title-img span,
+  #about .title-img span,
+  #contactPanel .title-img span {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: white;
   }
   #intro .container,
   #services .container,
-  #about .container {
+  #about .container,
+  #contactPanel .container {
     position: relative;
     padding: 30px 15px;
   }
   #intro .txt-container,
   #services .txt-container,
-  #about .txt-container {
+  #about .txt-container,
+  #contactPanel .txt-container {
     padding: 0px 0px 40px;
   }
   #intro ul,
   #services ul,
-  #about ul {
+  #about ul,
+  #contactPanel ul {
     padding: 0px 15px;
   }
 
   #intro .title-img {
-    background-image: url("../img/xsm/intro.jpg");
+    height: 275px;
+    background-image: url("../img/intro.jpg");
+    background-position: left 150%;
   }
 
   #services .title-img {
-    background-image: url("../img/xsm/services.jpg");
+    background-image: url("../img/services.jpg");
+  }
+  #services .txt-container {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #a5a099;
+    margin-bottom: 20px;
   }
 
   #about .title-img {
-    background-image: url("../img/xsm/olga.jpg");
+    background-image: url("../img/olga.jpg");
+    background-size: 110%;
+    background-position: right 80%;
   }
 
-  #contactPanel .framed {
-    position: relative;
-    padding-bottom: 270px;
-  }
-  #contactPanel .row, #contactPanel .img-container, #contactPanel .txt-container {
-    padding: 0px;
-    margin: 0px;
-  }
-  #contactPanel li.map {
-    position: absolute;
-    bottom: 20px;
-    width: 90%;
-  }
-  #contactPanel .img-container {
-    max-width: 95%;
-    height: 200px;
-    background: url("../img/xsm/map.jpg") no-repeat top right;
-    background-size: cover;
-  }
-  #contactPanel .txt-container ul {
-    margin-top: 0px;
+  #contactPanel .title-img {
+    background-image: url("../img/xsm/map.jpg");
+    background-position: top center;
   }
 
   #caseWall {
@@ -522,6 +558,7 @@ footer #contact a {
     width: 120px;
     height: 120px;
     background: url("../img/xsm/sprites.jpg") no-repeat;
+    background-size: 600%;
   }
   #picWall .details:after {
     content: '\e080';
@@ -568,52 +605,29 @@ footer #contact a {
     background-position: -600px -120px;
   }
 
-  #caseContent > .container {
-    position: relative;
+  .case {
+    text-align: center;
+  }
+  .case h3, .case h2 {
+    font-size: 18px;
+  }
+  .case .case-info {
     padding: 0px;
   }
-  #caseContent h3 {
-    padding-top: 40px;
-    padding-left: 12px;
-    font-size: 1.7rem;
-    text-align: left;
-  }
-  #caseContent h2.title {
-    position: absolute;
-    top: 10px;
-    padding-left: 12px;
-    font-size: 1.7rem;
-    text-align: left;
-  }
-  #caseContent .row {
-    padding: 0;
-  }
-  #caseContent .row li.segment {
-    padding: 0;
-  }
-  #caseContent .step {
-    padding: 0;
-  }
-  #caseContent .case-info {
-    font-size: 1rem;
-    overflow: hidden;
-  }
-  #caseContent .case-info li {
-    text-align: left;
-  }
-  #caseContent .case-info li:last-child {
+  .case .case-info li {
     width: 100%;
+    padding: 0px 3px;
+    font-size: 11px;
   }
-  #caseContent .info-section {
-    padding: 10px 20px;
+  .case .segment {
+    margin-bottom: 20px;
   }
-
-  #caseStreet .case-container {
-    padding: 0px 12px;
+  .case .info-section {
+    margin-top: 20px;
+    font-size: 14px;
   }
-
-  #caseWoman h3 {
-    padding-top: 55px !important;
+  .case .info-section p {
+    padding-bottom: 20px;
   }
 
   #testimonials li {
@@ -721,15 +735,32 @@ footer #contact a {
   }
 
   #intro .title-img {
-    background-image: url("../img/xsm/introXSL.jpg");
-  }
-
-  #services .title-img {
-    background-image: url("../img/xsm/services.jpg");
+    height: 250px;
+    background-position: left bottom;
   }
 
   #about .title-img {
-    background-image: url("../img/xsm/olgaXSL.jpg");
+    background-size: 100%;
+    background-position: right 67%;
+  }
+
+  #contactPanel .title-img {
+    background-image: url("../img/xsm/mapL.jpg");
+    background-position: top center;
+  }
+
+  .case ul.step {
+    overflow: hidden;
+  }
+  .case ul.step li {
+    float: left;
+  }
+  .case ul.step .img-container {
+    width: 65%;
+    padding: 0px 20px;
+  }
+  .case ul.step .info-section {
+    width: 35%;
   }
 
   footer {
@@ -789,24 +820,31 @@ footer #contact a {
   }
 
   #intro .framed {
-    background-image: url("../img/sm/intro.jpg");
+    background-image: url("../img/intro.jpg");
+    background-size: 70%;
+    background-position: -60px -20px;
   }
 
   #services .framed {
-    background-image: url("../img/sm/services.jpg");
+    margin-bottom: 50px;
+    background-image: url("../img/services.jpg");
+    background-size: 100%;
   }
 
   #about .framed {
     margin-bottom: 60px;
+    background-image: url("../img/olga.jpg");
+    background-size: 100%;
   }
 
-  #contactPanel .img-container {
-    background: url("../img/sm/map.jpg") no-repeat top left;
+  #contactPanel .framed {
+    overflow: hidden;
+    background: url("../img/map.jpg") no-repeat top left;
   }
 
   #picWall .pic-container {
     position: relative;
-    height: 900px;
+    height: 875px;
   }
   #picWall .pic-frame {
     position: absolute;
@@ -961,6 +999,129 @@ footer #contact a {
     background-position: -335px 0px;
   }
 
+  .case-info li:first-child {
+    padding-right: 0px;
+  }
+  .case-info li:first-child:after {
+    content: '|';
+    margin-left: 12px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  .case-info span {
+    display: inline-block;
+    padding: 0px 12px;
+  }
+
+  .case {
+    padding-top: 50px;
+  }
+  .case .segment {
+    border: 15px solid #fbf9f3;
+  }
+  .case .img-container {
+    height: 300px;
+  }
+  .case .info-section {
+    padding: 20px 0px;
+    margin-bottom: 20px;
+  }
+  .case.girl .info-section {
+    height: 150px;
+  }
+  .case.land .img-container {
+    height: 175px;
+  }
+  .case.land .info-section {
+    height: 200px;
+  }
+  .case.man .img-container {
+    height: 260px;
+  }
+  .case.man .info-section {
+    height: 160px;
+  }
+  .case.man .segment:nth-child(3) .info-section,
+  .case.man .segment:nth-child(4) .info-section {
+    height: 200px;
+  }
+  .case.pitt .img-container {
+    padding: 0px 10px;
+  }
+  .case.pitt .info-section {
+    height: 250px;
+  }
+  .case.saints .segment:nth-child(2n) img,
+  .case.saints .segment:nth-child(3n) img {
+    height: 100%;
+    width: auto;
+  }
+  .case.saints .img-container {
+    height: 330px;
+  }
+  .case.saints .info-section {
+    height: 190px;
+  }
+  .case.lilacs .segment:nth-child(2n) img,
+  .case.lilacs .segment:last-child img {
+    height: 100%;
+    width: auto;
+    max-width: auto;
+  }
+  .case.lilacs .img-container {
+    height: 220px;
+  }
+  .case.lilacs .info-section {
+    height: 145px;
+  }
+  .case.bird .img-container {
+    height: 320px;
+  }
+  .case.bird .segment:nth-child(3n) .img-container,
+  .case.bird .segment:last-child .img-container {
+    height: 175px;
+  }
+  .case.bird .info-section {
+    height: 170px;
+  }
+  .case.street ul.step {
+    overflow: hidden;
+    padding-bottom: 30px;
+  }
+  .case.street ul.step li {
+    float: left;
+  }
+  .case.street ul.step .img-container {
+    width: 60%;
+    height: 100%;
+    padding: 0px 20px;
+  }
+  .case.street ul.step .info-section {
+    width: 40%;
+    padding-top: 0px;
+  }
+  .case.woman .info-section {
+    height: 210px;
+  }
+  .case.virgin .img-container {
+    height: 200px;
+  }
+  .case.virgin .info-section {
+    height: 300px;
+  }
+  .case.elephant .segment {
+    border-left-width: 0px;
+    border-right-width: 0px;
+    height: 290px;
+    text-align: left;
+  }
+  .case.elephant .img-container {
+    height: 150px;
+  }
+  .case.elephant .img-container img {
+    height: 150px;
+    width: auto;
+  }
+
   footer {
     position: relative;
   }
@@ -1007,6 +1168,16 @@ footer #contact a {
     font-size: 3rem;
   }
 
+  #intro .framed {
+    background-size: 45%;
+    background-position: 0px -20px;
+  }
+
+  #services .framed {
+    background-size: 40%;
+    background-position: 0px -30px;
+  }
+
   #about .framed {
     background-image: url("../img/md/olga.jpg");
   }
@@ -1030,7 +1201,7 @@ footer #contact a {
   }
 
   #picWall .pic-container {
-    height: 800px;
+    height: 750px;
   }
   #picWall #girl {
     top: 45px;
@@ -1112,8 +1283,10 @@ footer #contact a {
     width: 960px;
   }
   .case-nav li {
-    height: 87px;
-    background-size: 700%;
+    width: 84px;
+    height: 84px;
+    padding: 0px;
+    background-size: 676%;
   }
   .case-nav li.land {
     background-position: -850px -10px;
@@ -1131,19 +1304,67 @@ footer #contact a {
     background-position: -101px -153px;
   }
   .case-nav li.bird {
-    background-position: -427px -159px;
+    background-position: -437px -159px;
   }
   .case-nav li.street {
     background-position: -339px -142px;
   }
   .case-nav li.woman {
-    background-position: -163px -74px;
+    background-position: -170px -74px;
   }
   .case-nav li.virgin {
-    background-position: -5px -165px;
+    background-position: -3px -165px;
   }
   .case-nav li.elephant {
     background-position: -257px 0px;
+  }
+
+  .case .img-container {
+    height: 350px;
+  }
+  .case .info-section {
+    height: 120px;
+  }
+  .case.land .img-container {
+    height: 250px;
+  }
+  .case.land .info-section {
+    height: 170px;
+  }
+  .case.man .info-section {
+    height: 120px;
+  }
+  .case.pitt .img-container {
+    height: 385px;
+    padding: 0px 15px;
+  }
+  .case.pitt .info-section {
+    height: 180px;
+  }
+  .case.saints .info-section {
+    height: 140px;
+  }
+  .case.lilacs .info-section {
+    height: 110px;
+  }
+  .case.bird .info-section, .case.woman .info-section {
+    height: 150px;
+  }
+  .case.virgin .img-container {
+    height: 305px;
+  }
+  .case.virgin .info-section {
+    height: 240px;
+  }
+  .case.elephant .segment {
+    height: 300px;
+  }
+  .case.elephant .img-container {
+    height: 210px;
+    padding-top: 0px;
+  }
+  .case.elephant .img-container img {
+    height: 210px;
   }
 
   footer #contact {
@@ -1172,6 +1393,10 @@ footer #contact a {
     width: 1024px;
   }
 
+  #intro .framed {
+    background-size: 40%;
+  }
+
   #about .testimonials p {
     min-height: 175px;
   }
@@ -1185,7 +1410,7 @@ footer #contact a {
     margin: 0px auto;
   }
   #picWall .pic-container {
-    height: 630px;
+    height: 550px;
   }
   #picWall #girl {
     top: 0px;
@@ -1268,41 +1493,39 @@ footer #contact a {
   }
 
   .case-nav ul {
-    width: 1100px;
+    width: 990px;
   }
   .case-nav li {
-    height: 100px;
-    background-size: 750%;
-  }
-  .case-nav li.land {
-    background-position: -394px -10px;
-  }
-  .case-nav li.man {
-    background-position: -273px -148px;
-  }
-  .case-nav li.pitt {
-    background-position: -562px -8px;
+    width: 90px;
+    height: 90px;
+    background-size: 628%;
   }
   .case-nav li.saints {
-    background-position: -250px -4px;
-  }
-  .case-nav li.lilacs {
-    background-position: -122px -186px;
-  }
-  .case-nav li.bird {
-    background-position: -535px -194px;
+    background-size: 750%;
+    background-position: -245px -10px;
   }
   .case-nav li.street {
-    background-position: -423px -182px;
+    background-size: 675%;
+    background-position: -364px -157px;
   }
   .case-nav li.woman {
-    background-position: -185px -81px;
+    background-size: 802%;
   }
   .case-nav li.virgin {
-    background-position: -5px -194px;
+    background-size: 657%;
   }
   .case-nav li.elephant {
-    background-position: -291px 0px;
+    background-position: -285px 0px;
+  }
+
+  .case .img-container {
+    height: 350px;
+  }
+  .case .info-section {
+    height: 120px;
+  }
+  .case.man .info-section {
+    height: 200px;
   }
 }
 @media (min-width: 1680px) {
