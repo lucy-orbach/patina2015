@@ -394,7 +394,6 @@ footer #contact a {
   }
   .navbar .navbar-collapse {
     background-color: rgba(51, 38, 28, 0.9);
-    transition: all 0.8s;
   }
   .navbar .navbar-collapse a {
     color: #f39605;
@@ -403,88 +402,48 @@ footer #contact a {
     color: ocre-lt;
   }
 
-  .section {
-    padding: 50px 0px 40px;
-  }
-  .section .container {
-    padding: 0px 15px;
-    background-color: #fbf9f3;
-  }
   .section h2 {
     font-size: 2.5rem;
   }
-  .section .row {
-    padding: 20px 10px;
-    margin: 0px;
-  }
-  .section .row > div {
-    padding: 0px;
-  }
-  .section h6.mobile-only {
-    margin-top: 50px;
-  }
-
-  #intro .title-img,
-  #services .title-img,
-  #about .title-img,
-  #contactPanel .title-img {
+  .section .title-img {
     position: relative;
     height: 250px;
     background-color: #33261c;
     background-repeat: no-repeat;
     background-position: left bottom;
     background-size: 100%;
+    overflow: hidden;
   }
-  #intro .title-img h2,
-  #services .title-img h2,
-  #about .title-img h2,
-  #contactPanel .title-img h2 {
+  .section .title-img h2 {
     position: absolute;
     bottom: 0px;
     width: 100%;
+    min-height: 60px;
     padding: 5px 15px;
     margin-bottom: 0px;
     background-color: rgba(51, 38, 28, 0.7);
   }
-  #intro .title-img h2 a,
-  #services .title-img h2 a,
-  #about .title-img h2 a,
-  #contactPanel .title-img h2 a {
+  .section .title-img h2 a {
     color: #f39605;
   }
-  #intro .title-img h2 a:hover,
-  #services .title-img h2 a:hover,
-  #about .title-img h2 a:hover,
-  #contactPanel .title-img h2 a:hover {
+  .section .title-img h2 a:hover {
     color: ocre-lt;
   }
-  #intro .title-img span,
-  #services .title-img span,
-  #about .title-img span,
-  #contactPanel .title-img span {
+  .section .title-img span {
     display: block;
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 12px;
     color: white;
   }
-  #intro .container,
-  #services .container,
-  #about .container,
-  #contactPanel .container {
+  .section .container {
     position: relative;
     padding: 30px 15px;
   }
-  #intro .txt-container,
-  #services .txt-container,
-  #about .txt-container,
-  #contactPanel .txt-container {
+  .section .txt-container {
     padding: 0px 0px 40px;
   }
-  #intro ul,
-  #services ul,
-  #about ul,
-  #contactPanel ul {
+  .section ul {
     padding: 0px 15px;
   }
 
@@ -495,7 +454,7 @@ footer #contact a {
   }
 
   #services .title-img {
-    background-image: url("../img/services.jpg");
+    background-image: url("../img/serv.jpg");
   }
   #services .txt-container {
     padding-bottom: 20px;
@@ -512,21 +471,22 @@ footer #contact a {
   #about .title-img {
     background-image: url("../img/olga.jpg");
     background-size: 110%;
-    background-position: right 80%;
-  }
-
-  #contactPanel .title-img {
-    background-image: url("../img/map.jpg");
-    background-position: top center;
+    background-position: right 65%;
   }
 
   #caseWall {
     padding-bottom: 0;
   }
+  #caseWall .title-img {
+    background-image: url("../img/xsm/cases.jpg");
+    background-position: left 55%;
+  }
+  #caseWall .container {
+    padding: 0px;
+  }
 
   #picWall .container {
     padding: 0px 0px 40px;
-    border-top: 1px dotted #f39605;
   }
   #picWall .pic-frame {
     height: 140px;
@@ -592,13 +552,13 @@ footer #contact a {
   #picWall #bird .details:before {
     background-position: -480px 0px;
   }
-  #picWall #mrsPitt .details:before {
+  #picWall #KnellerPaintingRestoration .details:before {
     background-position: 0px -120px;
   }
   #picWall #virgin .details:before {
     background-position: -120px -120px;
   }
-  #picWall #lilacs .details:before {
+  #picWall #LilacsPaintingRestoration .details:before {
     background-position: -240px -120px;
   }
   #picWall #womanPortrait .details:before {
@@ -612,12 +572,23 @@ footer #contact a {
   }
 
   .case {
+    margin-top: 50px;
     text-align: center;
   }
   .case h3, .case h2 {
     font-size: 18px;
   }
+  .case a.glyphicon {
+    width: 5%;
+    float: left;
+    color: #a5a099;
+  }
+  .case a.glyphicon:hover {
+    text-decoration: none;
+  }
   .case .case-info {
+    width: 90%;
+    float: left;
     padding: 0px;
   }
   .case .case-info li {
@@ -636,6 +607,10 @@ footer #contact a {
     padding-bottom: 20px;
   }
 
+  #testimonials .title-img {
+    background-image: url("../img/xsm/face.jpg");
+    background-position: left bottom;
+  }
   #testimonials li {
     padding: 0px 0px 30px;
     border-bottom: 1px dotted #a5a099;
@@ -645,6 +620,28 @@ footer #contact a {
     display: block;
     width: 100%;
     text-align: right;
+  }
+
+  #contactPanel .title-img {
+    background-image: url("../img/map.jpg");
+    background-position: top center;
+  }
+  #contactPanel .txt-container {
+    padding: 0px;
+    margin: 0px;
+  }
+  #contactPanel h5 {
+    color: #33261c;
+  }
+  #contactPanel ul {
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+
+  #resources .title-img {
+    height: 275px;
+    background-image: url("../img/xsm/detail.jpg");
+    background-position: left 10px;
   }
 
   footer {
@@ -659,7 +656,7 @@ footer #contact a {
     transition: all 0.8s;
   }
   footer.openUp {
-    height: 145px;
+    height: 190px;
     background-color: #33261c;
     transition: all 0.8s;
   }
@@ -682,6 +679,9 @@ footer #contact a {
   footer .container-fluid a:hover {
     color: ocre-lt;
   }
+  footer h6.a {
+    color: #fbf9f3;
+  }
 
   #mNav {
     padding: 0px;
@@ -692,6 +692,15 @@ footer #contact a {
     width: 80%;
     padding: 0px;
     margin: 0px auto;
+  }
+  #mNav ul:after {
+    content: 'Studio Visits By Appointment Only';
+    font-size: 10px;
+    width: 240px;
+    margin: 0px auto;
+    color: #fbf9f3;
+    letter-spacing: normal;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   }
   #mNav li {
     position: relative;
@@ -729,7 +738,7 @@ footer #contact a {
     border-radius: 10px;
   }
   #mNav a:hover {
-    background-color: rgba(251, 249, 243, 0.2);
+    background-color: rgba(243, 150, 5, 0.2);
   }
 }
 @media only screen and (max-width: 767px) and (orientation: landscape) {
@@ -746,12 +755,15 @@ footer #contact a {
   }
 
   #about .title-img {
-    background-size: 100%;
-    background-position: right 67%;
+    background-position: right 55%;
   }
 
   #contactPanel .title-img {
-    background-position: center 50%;
+    background-position: center 38%;
+  }
+
+  #testimonials .title-img {
+    background-position: right 55%;
   }
 
   .case ul.step {
@@ -832,8 +844,9 @@ footer #contact a {
 
   #services .framed {
     margin-bottom: 50px;
-    background-image: url("../img/services.jpg");
-    background-size: 47%;
+    background-image: url("../img/serv.jpg");
+    background-size: 82%;
+    background-position: -190px 0px;
   }
 
   #about .framed {
@@ -885,7 +898,7 @@ footer #contact a {
     height: 300px;
     background-position: -440px -208px;
   }
-  #picWall #mrsPitt {
+  #picWall #KnellerPaintingRestoration {
     top: 310px;
     left: 15px;
     width: 235px;
@@ -899,7 +912,7 @@ footer #contact a {
     height: 180px;
     background-position: -426px 0px;
   }
-  #picWall #lilacs {
+  #picWall #LilacsPaintingRestoration {
     top: 195px;
     left: 265px;
     width: 215px;
@@ -983,7 +996,7 @@ footer #contact a {
   .case-nav li.saints {
     background-position: -269px -0px;
   }
-  .case-nav li.lilacs {
+  .case-nav li.LilacsPaintingRestoration {
     background-position: -137px -200px;
   }
   .case-nav li.bird {
@@ -1066,16 +1079,16 @@ footer #contact a {
   .case.saints .info-section {
     height: 190px;
   }
-  .case.lilacs .segment:nth-child(2n) img,
-  .case.lilacs .segment:last-child img {
+  .case.LilacsPaintingRestoration .segment:nth-child(2n) img,
+  .case.LilacsPaintingRestoration .segment:last-child img {
     height: 100%;
     width: auto;
     max-width: auto;
   }
-  .case.lilacs .img-container {
+  .case.LilacsPaintingRestoration .img-container {
     height: 220px;
   }
-  .case.lilacs .info-section {
+  .case.LilacsPaintingRestoration .info-section {
     height: 145px;
   }
   .case.bird .img-container {
@@ -1140,9 +1153,7 @@ footer #contact a {
   }
 
   #about .framed {
-    background-image: url("../img/sm/olga.jpg");
-    background-size: 100%;
-    background-position: center top;
+    background-position: center 375%;
   }
   #about .framed .txt-container {
     width: 100%;
@@ -1179,8 +1190,12 @@ footer #contact a {
   }
 
   #services .framed {
-    background-size: 40%;
-    background-position: 0px -30px;
+    background-size: 55%;
+    background-position: -97px -15px;
+  }
+  #services .txt-container h4,
+  #services .txt-container ul {
+    margin-left: 30px;
   }
 
   #about .framed {
@@ -1229,7 +1244,7 @@ footer #contact a {
     background-size: 475%;
     background-position: -442px -225px;
   }
-  #picWall #mrsPitt {
+  #picWall #KnellerPaintingRestoration {
     top: 45px;
     left: 700px;
     width: 230px;
@@ -1241,7 +1256,7 @@ footer #contact a {
     background-size: 770%;
     background-position: -377px -2px;
   }
-  #picWall #lilacs {
+  #picWall #LilacsPaintingRestoration {
     top: 510px;
     left: 435px;
     width: 250px;
@@ -1306,7 +1321,7 @@ footer #contact a {
   .case-nav li.saints {
     background-position: -201px -0px;
   }
-  .case-nav li.lilacs {
+  .case-nav li.LilacsPaintingRestoration {
     background-position: -101px -153px;
   }
   .case-nav li.bird {
@@ -1350,7 +1365,7 @@ footer #contact a {
   .case.saints .info-section {
     height: 140px;
   }
-  .case.lilacs .info-section {
+  .case.LilacsPaintingRestoration .info-section {
     height: 110px;
   }
   .case.bird .info-section, .case.woman .info-section {
@@ -1437,7 +1452,7 @@ footer #contact a {
     height: 340px;
     background-position: -459px -220px;
   }
-  #picWall #mrsPitt {
+  #picWall #KnellerPaintingRestoration {
     top: 0px;
     left: 880px;
     height: 290px;
@@ -1450,7 +1465,7 @@ footer #contact a {
     height: 170px;
     background-position: -408px -5px;
   }
-  #picWall #lilacs {
+  #picWall #LilacsPaintingRestoration {
     top: 365px;
     left: 185px;
     width: 205px;

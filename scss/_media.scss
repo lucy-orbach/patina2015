@@ -35,34 +35,14 @@
 		}
 		.navbar-collapse {
 			@include transBr(0.1);
-			@include transition();
+			//@include transition();
+
 		}
 	} //navbar
 	.section {
-		padding: 50px 0px 40px;
-		.container {
-			padding: 0px 15px;
-			background-color: $sand;
-		}
 		h2 {
 			font-size: 2.5rem;
 		}//h2
-		.row {
-			padding: 20px 10px;
-			margin: 0px;
-			> div {
-				padding: 0px;
-			}
-		}
-		h6.mobile-only {
-			margin-top: 50px;
-		}
-	}//section
-	
-	#intro,
-	#services,
-	#about,
-	#contactPanel {
 		.title-img {
 			position: relative;
 			height: 250px;
@@ -70,10 +50,12 @@
 			background-repeat: no-repeat; 
 			background-position: left bottom;
 			background-size: 100%;
+			overflow: hidden;
 			h2 {
 				position: absolute;
 				bottom: 0px;
 				width: 100%;
+				min-height: 60px;
 				padding: 5px 15px;
 				margin-bottom: 0px;
 				@include transBr(0.3); 
@@ -95,17 +77,17 @@
 		}
 		ul {
 			padding: 0px 15px;
+
 		}
-	}//intro,services,about
+	}
 	#intro .title-img {
 		height: 275px;
 		background-image: url('../img/intro.jpg');
 		background-position: left 150%;
-
 	}
 	#services { 
 		.title-img {
-			background-image: url('../img/services.jpg');
+			background-image: url('../img/serv.jpg');
 		}
 		.txt-container {
 			padding-bottom: 20px;
@@ -123,22 +105,23 @@
 		.title-img {
 		background-image: url('../img/olga.jpg');
 		background-size: 110%;
-		background-position: right 80%
+		background-position: right 65%;
 		}//title-img
 	}//about
-	#contactPanel {
-		.title-img {
-			background-image: url('../img/map.jpg');
-			background-position: top center;
-		}//title-img
-	}//contactPanel
+
 	#caseWall {
 		padding-bottom: 0;
+		.title-img {
+			background-image: url('../img/xsm/cases.jpg');
+			background-position: left 55%;
+		}
+		.container {
+			padding: 0px;
+		}
 	}
 	#picWall {
 		.container {
 			padding: 0px 0px 40px;
-			border-top: 1px dotted $ocre;
 		}//container
 		.pic-frame {
 			height: 140px;
@@ -215,21 +198,21 @@
 				background-position: -480px 0px;
 			}		
 		}//bird
-		#mrsPitt  {
+		#KnellerPaintingRestoration  {
 			.details:before {
 				background-position: 0px -120px
 			}
-		}//mrsPitt
+		}//KnellerPaintingRestoration
 		#virgin  {
 			.details:before {
 				background-position: -120px -120px
 			}
 		}//virgin
-		#lilacs {
+		#LilacsPaintingRestoration {
 			.details:before {
 				background-position: -240px -120px
 			}
-		}//lilacs
+		}//LilacsPaintingRestoration
 		#womanPortrait {
 			.details:before {
 				background-position: -360px -120px
@@ -246,13 +229,23 @@
 			}
 		}//manPortrait
 	}//casewall
-
 	.case {
+		margin-top: 50px;
 		text-align: center;
 		h3, h2 {
 				font-size: 18px;
 			}
-		.case-info{
+		a.glyphicon {
+			width: 5%;
+			float: left;
+			color: $dk-zepia;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		.case-info {
+			width: 90%;
+			float: left;
 			padding: 0px;
 			li {
 				width: 100%;
@@ -273,6 +266,10 @@
 	}//case
 
 	#testimonials {
+		.title-img {
+			background-image: url('../img/xsm/face.jpg');
+			background-position: left bottom;
+		}
 		li {
 			padding: 0px 0px 30px;
 			border-bottom: 1px dotted $dk-zepia;
@@ -284,7 +281,28 @@
 			text-align: right;
 		}
 	}
-	
+	#contactPanel {
+		.title-img {
+			background-image: url('../img/map.jpg');
+			background-position: top center;
+		}//title-img
+		.txt-container {
+			padding: 0px;
+			margin: 0px;
+		}
+		h5 {
+			color: $dark;
+		}
+		ul {
+			padding-top: 0px;
+			margin-top: 0px;
+		}
+	}//contactPanel
+	#resources .title-img {
+		height: 275px;
+		background-image: url('../img/xsm/detail.jpg');
+		background-position: left 10px;
+	}
 	footer {
 		position: fixed;
 		bottom: 0px;
@@ -296,7 +314,7 @@
 		cursor: pointer;
 		@include transition();
 		&.openUp {
-			height: 145px;
+			height: 190px;
 			background-color: $dark;
 			@include transition();
 			&:before {
@@ -313,6 +331,9 @@
 			padding-top: 0px;
 			@include transBr(0.1);
 		}
+		h6.a {
+			color: $sand;
+		}
 	}//footer
 	#mNav {
 		padding: 0px;
@@ -322,6 +343,15 @@
 			width: 80%;
 			padding: 0px;
 			margin: 0px auto;
+			&:after {
+				content: 'Studio Visits By Appointment Only';
+				font-size: 10px;
+				width: 240px;
+				margin: 0px auto;
+				color: $sand;
+				letter-spacing: normal;
+				font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+			}
 		}
 		li {
 			position: relative;
@@ -358,7 +388,7 @@
 			text-indent: -9999px;
 			border-radius: 10px;
 			&:hover {
-				background-color: transparentize($sand,0.8);
+				background-color: transparentize($ocre,0.8);
 			}
 		}//a
 	}//mNav
@@ -375,11 +405,13 @@
 			background-position: left bottom;
 		}
 		#about .title-img {
-			background-size: 100%;
-			background-position: right 67%;
+			background-position: right 55%;
 		}
 		#contactPanel .title-img {
-			background-position: center 50%;
+			background-position: center 38%;
+		}//title-img
+		#testimonials .title-img {
+			background-position: right 55%;
 		}//title-img
 		.case {
 			ul.step {
@@ -462,8 +494,9 @@
 	}
 	#services	.framed {
 		margin-bottom: 50px;
-		background-image: url('../img/services.jpg');
-		background-size: 47%;
+		background-image: url('../img/serv.jpg');
+		background-size: 82%;
+		background-position: -190px 0px;
 	}//services
 	#about .framed {
 		margin-bottom: 60px;
@@ -514,13 +547,13 @@
 			height: 300px;
 			background-position: -440px -208px;
 		}//manPortrait
-		#mrsPitt  {
+		#KnellerPaintingRestoration  {
 			top: 310px;
 			left: 15px;
 			width: 235px;
 			height: 285px;
 			background-position: -897px 0px;
-		}//mrsPitt
+		}//KnellerPaintingRestoration
 		#saints {
 			top: 0px;
 			left: 265px;
@@ -528,13 +561,13 @@
 			height: 180px;
 			background-position: -426px 0px;
 		}//saints
-		#lilacs {
+		#LilacsPaintingRestoration {
 			top: 195px;
 			left: 265px;
 			width: 215px;
 			height: 180px;
 			background-position: -192px -318px;
-		}//lilacs
+		}//LilacsPaintingRestoration
 		#bird {
 			top: 390px;
 			left: 265px;
@@ -607,7 +640,7 @@
 			&.saints {
 				background-position: -269px -0px;
 			}
-			&.lilacs {
+			&.LilacsPaintingRestoration {
 				background-position: -137px -200px;
 			}
 			&.bird {
@@ -701,7 +734,7 @@
 				height: 190px;
 			}
 		}
-		&.lilacs {
+		&.LilacsPaintingRestoration {
 			.segment:nth-child(2n) img,
 			.segment:last-child img {
 					height: 100%;
@@ -788,9 +821,7 @@
 		}
 		#about{
 		 	.framed {
-		 		background-image: url('../img/sm/olga.jpg');
-				background-size: 100%;
-				background-position: center top;
+				background-position: center 375%;
 				.txt-container {
 					width: 100%;
 					padding: 30px 10px;
@@ -828,9 +859,16 @@
 		background-size: 45%;
 		background-position: 0px -20px;
 	}
-	#services	.framed {
-		background-size: 40%;
-		background-position: 0px -30px;
+	#services	{
+		.framed {
+			background-size: 55%;
+			background-position: -97px -15px;
+		}
+		.txt-container h4,
+		.txt-container ul,
+		 {
+			margin-left: 30px;
+		}
 	}//services
 	#about {
 		.framed {
@@ -883,11 +921,11 @@
 			background-size: 475%;
 			background-position: -442px -225px;
 		}//manPortrait
-		#mrsPitt  {
+		#KnellerPaintingRestoration  {
 			top: 45px;
 			left: 700px;
 			width: 230px;
-		}//mrsPitt
+		}//KnellerPaintingRestoration
 		#saints {
 			left: 260px;
 			width: 135px;
@@ -895,14 +933,14 @@
 			background-size: 770%;
 			background-position: -377px -2px;
 		}//saints
-		#lilacs {
+		#LilacsPaintingRestoration {
 			top: 510px;
 			left: 435px;
 			width: 250px;
 			height: 200px;
 			background-size: 504%;
 			background-position: -203px -344px;
-		}//lilacs
+		}//LilacsPaintingRestoration
 		#bird {
 			top: 345px;
 			left: 700px;
@@ -961,7 +999,7 @@
 			&.saints {
 				background-position: -201px -0px;
 			}
-			&.lilacs {
+			&.LilacsPaintingRestoration {
 				background-position: -101px -153px;
 			}
 			&.bird {
@@ -1015,7 +1053,7 @@
 				height: 140px;
 			}
 		}
-		&.lilacs {
+		&.LilacsPaintingRestoration {
 			.info-section {
 				height: 110px;
 			}
@@ -1116,27 +1154,27 @@
 			height: 340px;
 			background-position: -459px -220px;
 		}//manPortrait
-		#mrsPitt  {
+		#KnellerPaintingRestoration  {
 			top: 0px;
 			left: 880px;
 			height: 290px;
 			background-size: 470%;
 			background-position: -831px 3px;
-		}//mrsPitt
+		}//KnellerPaintingRestoration
 		#saints {
 			left: 410px;
 			width: 145px;
 			height: 170px;
 			background-position: -408px -5px;
 		}//saints
-		#lilacs {
+		#LilacsPaintingRestoration {
 			top: 365px;
 			left: 185px;
 			width: 205px;
 			height: 165px;
 			background-size: 575%;
 			background-position: -215px -333px;
-		}//lilacs
+		}//LilacsPaintingRestoration
 		#bird {
 			top: 310px;
 			left: 880px;
